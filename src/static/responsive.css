@@ -1,0 +1,157 @@
+@media screen and (max-width: 1200px) {
+    
+
+    .inp-css{
+        font-size: 16px;
+        width: 400px;
+    }
+    .display-1{
+        font-size: 55px;
+    }
+
+
+  }
+@media screen and (max-width: 992px) {
+    
+
+    .inp-css {
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .display-1 {
+        font-size: 40px;
+        margin-bottom: 20px !important;
+    }
+
+    .timer .item .box span {
+        font-size: 35px;
+    }
+    .timer .item .tag {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .btn-css {
+        padding: 15px 35px;
+    }
+    .tag_h4 {
+        font-size: 20px;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-icon li a {
+        margin-right: 15px;
+        font-size: 25px;
+    }
+
+  }
+@media screen and (max-width: 762px) {
+    
+
+    .display-1 {
+        font-size: 30px;
+        margin-bottom: 20px !important;
+    }
+
+    .timer .item .tag {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .tag_h4 {
+        font-size: 17px;
+    }
+
+    .timer .item {
+        margin-right: 20px;
+    }
+
+    .timer .item .box span {
+        font-size: 28px;
+        padding: 10px;
+    }
+    .form {
+        flex-direction: column;
+    }
+
+  }
+
+  @media screen and (max-width: 576px) {
+    .container {
+        width: 400px!important;
+    }
+    .tag_h4 {
+        font-size: 11px;
+    }
+    .display-1 {
+        font-size: 22px;
+        margin-bottom: 15px !important;
+    }
+    .subscription.w-75.mt-5 {
+        margin-top: 25px !important;
+    }
+    .timer .item .box span {
+        font-size: 20px;
+        padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .content.w-50 {
+        width: 100% !important;
+      }
+    .container {
+        width: 200px!important;
+    }
+    .tag_h4 {
+	font-size: 15px;
+	margin-bottom: 10px !important;
+}
+.display-1 {
+	font-size: 25px;
+	margin-bottom: 29px !important;
+	margin-top: 18px !important;
+}
+    .timer.d-flex.text-center {
+        flex-direction: column;
+    }
+    .timer .item .box span {
+        padding: 10px;
+    }
+
+    .timer .item {
+        flex-basis: 80px;
+    }
+
+    .timer .item {
+        margin-right: 0;
+    }
+
+    .subscription.w-75.mt-5 {
+        width: 100% !important;
+    }
+
+    .btn.btn-primary.btn-css {
+        display: block;
+        width: 100%;
+        padding: 13px;
+        font-size: 17px;
+    }
+    .inp-css {
+        font-size: 15px;
+        display: block;
+        width: 100% !important;
+    }
+
+    .footer-icon {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    footer p {
+        color: #62629f;
+        padding: 0 0px 0 0;
+        font-size: 11px;
+    }
+    
+  }
