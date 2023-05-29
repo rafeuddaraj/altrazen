@@ -44,6 +44,18 @@
         font-size: 25px;
     }
 
+    .history-box .col-lg-4 {
+        margin-bottom: 100px;
+    }
+    .history-box .col-lg-4 img{
+        height: 100px;
+        position: relative;
+        top: 25px;
+    }
+    .history-box .col-lg-4 .card-body{
+        text-align: center;
+    }
+
   }
 @media screen and (max-width: 762px) {
     
@@ -155,3 +167,4 @@
     }
     
   }
+

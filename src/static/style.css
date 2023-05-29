@@ -2,9 +2,14 @@ h1,h2,h3,h4,h5,h6,span,a,p{
     font-family: "rafe";
 }
 
+body{
+    background-color: #292879;
+}
+
 .container{
     width: 1150px !important;
 }
+
 
 .hero{
     background: url("../assets/banner.jpg") no-repeat center center;
@@ -115,4 +120,13 @@ footer p a{
 footer p a:hover{
     color: #fff;
     
+}
+
+.history-box {
+    margin-top: 180px;
+}
+.history-box .card-body img {
+    height: 150px;
+    margin-top: -125px;
+    margin-bottom: 30px;
 }
