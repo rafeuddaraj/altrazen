@@ -80,10 +80,9 @@ body{
     font-weight: 500;
     padding: 25px 60px;
     color: #fff;
-    border: none;
+    border: 1px solid #fff;
     border-radius: 10px;
     background: none;
-    background-color: #3a96ff;
     transition: 0.3s;
 }
 .btn-css:hover{
@@ -130,3 +129,61 @@ footer p a:hover{
     margin-top: -125px;
     margin-bottom: 30px;
 }
+.history-box .card a{
+    transition: .4s;
+}
+.history-box .card:hover a{
+    background-color: #3a96ff;
+    color: #fff;
+}
+
+.history-box .card .card-body a:hover{
+    background-color: #111;
+}
+
+.history-box .col-lg-4:nth-child(1) .card{
+    animation: card_ani 1s ease-in-out infinite ;
+}
+.history-box .col-lg-4:nth-child(2) .card{
+    animation: card_ani 1.4s ease-in-out infinite ;
+}
+.history-box .col-lg-4:nth-child(3) .card{
+    animation: card_ani 1.8s ease-in-out infinite ;
+}
+
+.subscription{
+    animation: card_ani 1s ease-in infinite;
+}
+
+
+.timer .item:nth-child(1){
+    animation: card_ani 4s ease infinite;
+}
+.timer .item:nth-child(2){
+    animation: card_ani 3.4s ease infinite;
+}
+.timer .item:nth-child(3){
+    animation: card_ani 3.6s ease infinite;
+}
+.timer .item:nth-child(4){
+    animation: card_ani 3.8s ease infinite;
+}
+
+@keyframes card_ani {
+    0%{
+        transform: translate(0px,0px);
+    }
+    25%{
+        transform: translate(0px,10px);
+    }
+    50%{
+        transform: translate(0px,15px);
+    }
+    75%{
+        transform: translate(0px,10px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+

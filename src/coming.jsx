@@ -146,7 +146,7 @@ const Countdown = ({ targetDate }) => {
                     <li><a href="https://www.linkedin.com/company/altrazen/" target="_blank"><i className="fa-brands fa-linkedin"></i></a></li> 
                     <li><a href="https://www.facebook.com/altrazen" target="_blank"><i className="fa-brands fa-facebook"></i></a></li> 
                   </ul>
-                  <p className="text-end">&copy;2023 <a href="#">Altrazen</a>, all rights reserved</p>
+                  <p className="text-end">&copy;2023 <a href="/">Altrazen</a>, all rights reserved</p>
               </footer>
           </section>
       </section>
