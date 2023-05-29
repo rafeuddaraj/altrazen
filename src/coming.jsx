@@ -57,7 +57,9 @@ const Countdown = ({ targetDate }) => {
           {flag? (<div className="alert alert-success alert_css" role="alert">
                   Wow thank you for connecting with us. We will update you soon
                 </div>): ''}
-              <h2 className="text-light pt-3"> <i className="fa-thin fa-leaf"></i> Altraze<sup>n</sup></h2>
+              <a href="/" className='text-decoration-none'>
+              <h2 className="text-light pt-3 d-inline-block"> <i className="fa-thin fa-leaf"></i> Altraze<sup>n</sup></h2>
+              </a>
               <div className="content w-50">
                   <h4 className="text-light tag_h4 font fw-light tag mb-3">Stay tuned for something amazing</h4>
                   <h1 className="display-1 text-light tag fw-bolder mb-5">
