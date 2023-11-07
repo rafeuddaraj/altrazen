@@ -129,16 +129,6 @@ const Countdown = ({ targetDate }) => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-4">
-                    <div class="card border-0 shadow mb-4">
-                      <div class="card-body">
-                        <img class="rounded-circle" src={mah} style={{width:'150px'}} alt=""/>
-                        <h3 class="card-title mb-2">Mahjujah Usrat Vina</h3>
-                        <h5 class="card-subtitle mb-3">Co-Founder</h5>
-                        <a href="https://www.linkedin.com/in/mahjujah-usrat-vina/" target='_blank' class="btn my-4 btn-outline-primary">Linkedin</a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
             </div>
             <footer className="py-5">
