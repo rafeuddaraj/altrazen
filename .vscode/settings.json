@@ -1,0 +1,81 @@
+{
+    "editor.fontSize": 20,
+    "files.autoSave": "afterDelay",
+    "editor.fontWeight": "400",
+    "editor.fontFamily": "Dank Mono, Lws, Operator Mono",
+    "editor.wordWrap": "on",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.smoothScrolling": true,
+    "editor.tabSize": 4,
+    "workbench.sideBar.location": "right",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "line",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyleInactive": "none",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.tslint": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "eslint.run": "onSave",
+    "prettier.tabWidth": 4,
+    // "workbench.fontAliasing": "antialiased",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.fontFamily": "Dank Mono, Lws, Geist Mono, Operator Mono,SF Mono",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.iconTheme": "vscode-icons",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true,
+    "javascript.suggest.autoImports": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "editor.scrollbar.verticalScrollbarSize": 4,
+    "path-autocomplete.extensionOnImport": true,
+    "path-autocomplete.excludedItems": {
+        "*/.js": {
+            "when": "**"
+        },
+        "*/.jsx": {
+            "when": "**"
+        }
+    },
+    "workbench.colorTheme": "Altrazen Dracula Version",
+    "tabnine.experimentalAutoImports": true,
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.enabled": true,
+    "editor.minimap.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.suggest.showStatusBar": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}
