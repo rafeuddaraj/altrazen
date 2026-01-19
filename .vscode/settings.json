@@ -67,9 +67,14 @@
     "git.enabled": true,
     "editor.minimap.enabled": false,
     "github.copilot.enable": {
-        "*": false,
+        "*.js": false,
+        "*.ts": false,
+        "*.jsx": false,
+        "*.tsx": false,
+        "*.json": false,
+        "*": true,
         "plaintext": false,
-        "markdown": true,
+        "markdown": false,
         "scminput": false
     },
     "github.copilot.nextEditSuggestions.enabled": true,
