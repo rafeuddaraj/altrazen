@@ -3,25 +3,7 @@
     "links": [
       {
         "label": "Services",
-        "href": "/services",
-        "children": [
-          {
-            "label": "Web Development",
-            "href": "/services/web-development"
-          },
-          {
-            "label": "Product Engineering",
-            "href": "/services/product-engineering"
-          },
-          {
-            "label": "Mobile Development",
-            "href": "/services/mobile-development"
-          },
-          {
-            "label": "software Rescue",
-            "href": "/services/rescue-and-support"
-          }
-        ]
+        "href": "/services"
       },
       {
         "label": "Work",
@@ -47,27 +29,6 @@
   },
   "footer": {
     "columns": [
-      {
-        "title": "Services",
-        "links": [
-          {
-            "label": "Web Development",
-            "href": "/services/web-development"
-          },
-          {
-            "label": "Product Engineering",
-            "href": "/services/product-engineering"
-          },
-          {
-            "label": "Mobile Development",
-            "href": "/services/mobile-development"
-          },
-          {
-            "label": "software Rescue",
-            "href": "/services/rescue-and-support"
-          }
-        ]
-      },
       {
         "title": "Studio",
         "links": [

@@ -2,12 +2,25 @@ import Link from 'next/link'
 import type { Route } from 'next'
 import { Button } from '@/components/ui/button'
 import { Logo } from '@/components/layout/logo'
-import { getCompany, getNavigation } from '@/lib/content'
+import { getCompany, getNavigation, getServices } from '@/lib/content'
 
 export function Footer() {
   const company = getCompany()
   const { footer } = getNavigation()
   const year = new Date().getFullYear()
+
+  // Built from the services collection, so the footer can never advertise a
+  // service under a name the service page no longer uses.
+  const columns = [
+    {
+      title: 'Services',
+      links: getServices().map((service) => ({
+        label: service.title,
+        href: `/services/${service.slug}`,
+      })),
+    },
+    ...footer.columns,
+  ]
 
   return (
     <footer className="border-t border-border/40 px-6 py-16">
@@ -36,7 +49,7 @@ export function Footer() {
             ) : null}
           </div>
 
-          {footer.columns.map((column) => (
+          {columns.map((column) => (
             <nav key={column.title} aria-label={column.title} className="flex flex-col gap-5">
               <h2 className="text-xs uppercase tracking-widest text-foreground">{column.title}</h2>
               <ul className="flex flex-col gap-3">
