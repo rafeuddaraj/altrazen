@@ -1,9 +1,11 @@
 import { cn } from '@/lib/utils'
 
 /**
- * Shell for a diagram. Wide diagrams scroll inside this container rather than
- * making the page scroll, and the caption is the accessible description —
- * so `children` may be decorative.
+ * Frame for an image, with an optional caption.
+ *
+ * Wide content scrolls inside this container rather than making the page
+ * scroll sideways. When `caption` is omitted the image is treated as
+ * decorative, which is correct for the placeholder art.
  */
 export function Figure({
   caption,
@@ -11,27 +13,25 @@ export function Figure({
   children,
   className,
 }: {
-  caption: string
-  /** Short label above the diagram, e.g. "Request path". */
+  caption?: string
+  /** Small label above the frame, for example "Our studio". */
   label?: string
   children: React.ReactNode
   className?: string
 }) {
   return (
-    <figure
-      className={cn('overflow-hidden rounded-lg border border-border/40 bg-card/20', className)}
-    >
+    <figure className={cn('overflow-hidden', className)}>
       {label ? (
-        <div className="border-b border-border/40 px-5 py-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            {label}
-          </span>
-        </div>
+        <span className="mb-3 block font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          {label}
+        </span>
       ) : null}
-      <div className="overflow-x-auto p-6">{children}</div>
-      <figcaption className="border-t border-border/40 px-5 py-3 text-xs font-light leading-relaxed text-muted-foreground">
-        {caption}
-      </figcaption>
+      {children}
+      {caption ? (
+        <figcaption className="mt-3 text-xs font-light leading-relaxed text-muted-foreground">
+          {caption}
+        </figcaption>
+      ) : null}
     </figure>
   )
 }

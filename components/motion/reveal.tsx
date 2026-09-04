@@ -8,14 +8,23 @@ type RevealElement = 'div' | 'section' | 'li' | 'article' | 'figure' | 'span'
 /**
  * Scroll-triggered entrance, as an enhancement only.
  *
- * The server renders `data-reveal="hidden"`, but the hidden styles are scoped
- * to `.js` on <html> — a class added by the bootstrap script in the root
- * layout. So without JavaScript, and for any crawler, the content is simply
- * visible. `prefers-reduced-motion` cancels the hidden state in CSS too.
+ * Deliberately NOT built on the motion library, even though the library is
+ * installed and used elsewhere. Motion's `whileInView` with an `initial` prop
+ * renders `style="opacity:0"` into the server HTML, so a visitor with
+ * JavaScript disabled sees a permanently blank page. That was verified against
+ * a real build, not assumed.
+ *
+ * Instead the server renders `data-reveal="hidden"`, and the hidden styles are
+ * scoped to a `.js` class added by the bootstrap script in the root layout. No
+ * JavaScript means no class, which means the content is simply visible.
+ * `prefers-reduced-motion` cancels the hidden state in CSS as well.
  *
  * The observer writes the attribute directly rather than going through state:
  * there is nothing to re-render, and a page with fifty reveals should not
- * schedule fifty React updates while the user scrolls.
+ * schedule fifty React updates while the visitor scrolls.
+ *
+ * Use `Lift` and `Parallax` for the interaction and scroll-linked work the
+ * library genuinely does better.
  */
 export function Reveal({
   children,
