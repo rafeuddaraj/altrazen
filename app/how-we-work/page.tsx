@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
-import { getBookPage } from '@/lib/content'
+import { getHowWeWorkPage } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
 import { PageShell, PhasePlaceholder } from '@/components/layout/page-shell'
 
 export function generateMetadata(): Metadata {
-  return buildMetadata({ ...getBookPage().seo, pathname: '/book' })
+  return buildMetadata({ ...getHowWeWorkPage().seo, pathname: '/how-we-work' })
 }
 
 export default function Page() {
-  const page = getBookPage()
+  const page = getHowWeWorkPage()
   return (
     <PageShell hero={page.hero}>
-      <PhasePlaceholder phase="phase 8" />
+      <PhasePlaceholder phase="phase 5" />
     </PageShell>
   )
 }

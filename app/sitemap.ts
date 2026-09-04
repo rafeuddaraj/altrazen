@@ -23,15 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: [string, number][] = [
     ['/', 1],
     ['/services', 0.9],
-    ['/how-it-works', 0.9],
+    ['/how-we-work', 0.9],
+    ['/technologies', 0.8],
     ['/about', 0.7],
     ['/work', 0.6],
-    ['/products', 0.5],
     ['/careers', 0.5],
     ['/blog', 0.7],
     ['/faq', 0.7],
     ['/contact', 0.8],
-    ['/book', 0.8],
     ['/terms', 0.2],
     ['/privacy', 0.2],
   ]

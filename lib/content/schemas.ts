@@ -67,7 +67,8 @@ export const companySchema = z.object({
   responseTime: nonEmpty,
   foundedYear: z.number().int().min(2000),
   social: z.array(z.object({ label: nonEmpty, url: z.url() })),
-  bookingUrl: z.url(),
+  /** null until a real scheduling link exists. See docs/LAUNCH-CHECKLIST.md */
+  bookingUrl: z.url().nullable(),
 })
 
 export const seoDefaultsSchema = z.object({
@@ -96,22 +97,29 @@ export const navigationSchema = z.object({
  * Collections
  * ------------------------------------------------------------------ */
 
+/**
+ * No pricing fields by design. Company sites do not publish rates; how an
+ * engagement is shaped is described by `engagementModels` instead.
+ */
 export const serviceSchema = z.object({
   slug: nonEmpty,
   title: nonEmpty,
   shortTitle: nonEmpty,
   tagline: nonEmpty,
   summary: nonEmpty,
+  /** Exactly one service is the flagship; the home page gives it its own section. */
+  isFlagship: z.boolean().default(false),
   problem: nonEmpty,
-  whatWeDo: z.array(nonEmpty).min(1),
+  outcomes: z.array(nonEmpty).min(1),
+  whatWeDo: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
   whatYouGet: z.array(nonEmpty).min(1),
   whatsNotIncluded: z.array(nonEmpty).min(1),
   timeline: nonEmpty,
-  startingPrice: nonEmpty,
-  tiers: z
-    .array(z.object({ name: nonEmpty, price: nonEmpty, description: nonEmpty }))
-    .optional(),
   process: z.array(stepSchema).min(1),
+  /** ids into how-we-work.json → engagementModels.items */
+  engagementModels: z.array(nonEmpty).min(1),
+  /** ids into technologies.json → categories[].items[].id */
+  technologies: z.array(nonEmpty),
   faqs: z.array(nonEmpty),
   relatedServices: z.array(nonEmpty),
   icon: nonEmpty,
@@ -142,18 +150,6 @@ export const caseStudySchema = z
     error: 'a case study needs either clientName or anonymisedLabel',
     path: ['clientName'],
   })
-
-export const productSchema = z.object({
-  slug: nonEmpty,
-  name: nonEmpty,
-  status: z.enum(['live', 'beta', 'coming-soon']),
-  tagline: nonEmpty,
-  description: nonEmpty,
-  features: z.array(nonEmpty),
-  url: z.url().nullable(),
-  isExternal: z.boolean(),
-  seo: seoSchema,
-})
 
 export const teamMemberSchema = z.object({
   id: nonEmpty,
@@ -190,7 +186,7 @@ export const faqSchema = z.object({
   id: nonEmpty,
   question: nonEmpty,
   answer: nonEmpty,
-  category: z.enum(['general', 'process', 'pricing', 'security', 'technical']),
+  category: z.enum(['general', 'process', 'engagement', 'security', 'technical']),
 })
 
 export const testimonialSchema = z.object({
@@ -239,25 +235,33 @@ export const homePageSchema = z.object({
     subheadline: nonEmpty,
     primaryCta: linkSchema,
     secondaryCta: linkSchema,
+    marquee: z.array(nonEmpty).min(4),
   }),
   trustStrip: z.object({ line: z.string().nullable() }),
-  problem: z.object({
+  positioning: z.object({
     eyebrow: nonEmpty,
     heading: nonEmpty,
     paragraphs: z.array(nonEmpty).min(1),
+    points: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
   }),
-  commonIssues: z.object({
+  capabilities: z.object({
     eyebrow: nonEmpty,
     heading: nonEmpty,
     description: nonEmpty,
-    items: z
-      .array(
-        z.object({ label: nonEmpty, description: nonEmpty, severity: severitySchema }),
-      )
-      .min(1),
+    cta: linkSchema,
   }),
-  servicesOverview: heroSchema.extend({ description: nonEmpty, cta: linkSchema }),
-  howItWorks: z.object({
+  /** The flagship offering gets one dedicated section, not the whole page. */
+  flagship: z.object({
+    eyebrow: nonEmpty,
+    heading: nonEmpty,
+    description: nonEmpty,
+    serviceSlug: nonEmpty,
+    findings: z
+      .array(z.object({ label: nonEmpty, description: nonEmpty, severity: severitySchema }))
+      .min(1),
+    cta: linkSchema,
+  }),
+  howWeWork: z.object({
     eyebrow: nonEmpty,
     heading: nonEmpty,
     steps: z
@@ -272,16 +276,23 @@ export const homePageSchema = z.object({
       .min(1),
     cta: linkSchema,
   }),
-  pricing: z.object({
+  standards: z.object({
+    eyebrow: nonEmpty,
+    heading: nonEmpty,
+    description: nonEmpty,
+    items: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
+  }),
+  technologies: z.object({
+    eyebrow: nonEmpty,
+    heading: nonEmpty,
+    description: nonEmpty,
+    cta: linkSchema,
+  }),
+  whoWeAre: z.object({
     eyebrow: nonEmpty,
     heading: nonEmpty,
     paragraphs: z.array(nonEmpty).min(1),
     cta: linkSchema,
-  }),
-  whoYouWorkWith: z.object({
-    eyebrow: nonEmpty,
-    heading: nonEmpty,
-    paragraphs: z.array(nonEmpty).min(1),
   }),
   faqPreview: z.object({
     eyebrow: nonEmpty,
@@ -326,7 +337,47 @@ export const howItWorksPageSchema = z.object({
     description: nonEmpty,
     items: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
   }),
+  engagementModels: z.object({
+    eyebrow: nonEmpty,
+    heading: nonEmpty,
+    description: nonEmpty,
+    items: z
+      .array(
+        z.object({
+          id: nonEmpty,
+          name: nonEmpty,
+          description: nonEmpty,
+          bestFor: nonEmpty,
+          whatYouGet: z.array(nonEmpty).min(1),
+        }),
+      )
+      .min(1),
+  }),
   faqIds: z.array(nonEmpty),
+  cta: ctaBlockSchema,
+})
+
+export const technologiesPageSchema = z.object({
+  seo: seoSchema,
+  hero: heroSchema,
+  intro: z.object({ heading: nonEmpty, paragraphs: z.array(nonEmpty).min(1) }),
+  categories: z
+    .array(
+      z.object({
+        id: nonEmpty,
+        label: nonEmpty,
+        description: nonEmpty,
+        items: z
+          .array(z.object({ id: nonEmpty, name: nonEmpty, note: nonEmpty }))
+          .min(1),
+      }),
+    )
+    .min(1),
+  principles: z.object({
+    eyebrow: nonEmpty,
+    heading: nonEmpty,
+    items: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
+  }),
   cta: ctaBlockSchema,
 })
 
@@ -362,12 +413,6 @@ export const workIndexPageSchema = z.object({
   emptyState: emptyStateSchema,
 })
 
-export const productsPageSchema = z.object({
-  seo: seoSchema,
-  hero: heroSchema,
-  emptyState: emptyStateSchema,
-})
-
 export const careersIndexPageSchema = z.object({
   seo: seoSchema,
   hero: heroSchema,
@@ -398,14 +443,6 @@ export const faqPageSchema = z.object({
   cta: ctaBlockSchema,
 })
 
-export const bookPageSchema = z.object({
-  seo: seoSchema,
-  hero: heroSchema,
-  expectations: z.object({ heading: nonEmpty, items: z.array(nonEmpty).min(1) }),
-  requirements: z.object({ heading: nonEmpty, items: z.array(nonEmpty).min(1) }),
-  fallback: z.object({ description: nonEmpty }),
-})
-
 /* ------------------------------------------------------------------ *
  * Inferred types
  * ------------------------------------------------------------------ */
@@ -420,7 +457,6 @@ export type Navigation = z.infer<typeof navigationSchema>
 export type NavLink = Navigation['header']['links'][number]
 export type Service = z.infer<typeof serviceSchema>
 export type CaseStudy = z.infer<typeof caseStudySchema>
-export type Product = z.infer<typeof productSchema>
 export type TeamMember = z.infer<typeof teamMemberSchema>
 export type Job = z.infer<typeof jobSchema>
 export type Faq = z.infer<typeof faqSchema>
@@ -432,10 +468,11 @@ export type LegalFrontmatter = z.infer<typeof legalFrontmatterSchema>
 export type HomePage = z.infer<typeof homePageSchema>
 export type ServicesIndexPage = z.infer<typeof servicesIndexPageSchema>
 export type HowItWorksPage = z.infer<typeof howItWorksPageSchema>
+export type EngagementModel = HowItWorksPage['engagementModels']['items'][number]
+export type TechnologiesPage = z.infer<typeof technologiesPageSchema>
+export type TechCategory = TechnologiesPage['categories'][number]
 export type AboutPage = z.infer<typeof aboutPageSchema>
 export type WorkIndexPage = z.infer<typeof workIndexPageSchema>
-export type ProductsPage = z.infer<typeof productsPageSchema>
 export type CareersIndexPage = z.infer<typeof careersIndexPageSchema>
 export type ContactPage = z.infer<typeof contactPageSchema>
 export type FaqPage = z.infer<typeof faqPageSchema>
-export type BookPage = z.infer<typeof bookPageSchema>

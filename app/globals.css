@@ -60,7 +60,7 @@
   --secondary: #171717;
   --secondary-foreground: #fafafa;
   --muted: #171717;
-  --muted-foreground: #737373;
+  --muted-foreground: #8a8a8a;
   --accent: #06b6d4;
   --accent-foreground: #000000;
   --destructive: #ef4444;
@@ -84,6 +84,11 @@
 }
 
 @theme inline {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 620ms;
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --color-background: var(--background);
@@ -146,4 +151,67 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* ------------------------------------------------------------------ *
+ * Motion
+ *
+ * Scroll reveal is an enhancement, never a prerequisite for reading the
+ * page. Content ships visible; the hidden state applies only once the
+ * inline bootstrap script in the root layout has added `.js` to <html>,
+ * so with JS disabled — and for crawlers — everything renders as normal
+ * static markup.
+ * ------------------------------------------------------------------ */
+@layer utilities {
+  .js [data-reveal='hidden'] {
+    opacity: 0;
+    transform: translateY(var(--reveal-shift, 1.25rem));
+  }
+
+  [data-reveal] {
+    transition:
+      opacity var(--duration-slow) var(--ease-out-quart) var(--reveal-delay, 0ms),
+      transform var(--duration-slow) var(--ease-out-quart) var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal='visible'] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Duplicated track scrolls one full copy, then resets — seamless. */
+  .marquee-track {
+    animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track,
+  .marquee[data-paused='true'] .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Reveal must not leave content invisible when transitions are collapsed. */
+  .js [data-reveal='hidden'] {
+    opacity: 1;
+    transform: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Cross-document view transitions where the browser supports them. */
+@view-transition {
+  navigation: auto;
 }

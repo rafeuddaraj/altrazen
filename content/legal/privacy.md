@@ -13,8 +13,6 @@ This website has no server, no database and no user accounts. It is a set of sta
 
 **Contact form submissions.** When you submit the contact form, we receive your name, email address, whatever you entered in the optional company or product URL and repository link fields, your selected enquiry type, and your message. We receive this because you sent it to us.
 
-**Booking details.** If you book a call, you provide your name, email address and a time slot to our scheduling provider. We receive those details so we can attend the call.
-
 **Nothing else, automatically.** We do not run analytics on this site. There is no tracking pixel, no advertising tag, and no tag manager. We do not set any cookie of our own.
 
 ## Third parties this site uses
@@ -22,10 +20,11 @@ This website has no server, no database and no user accounts. It is a set of sta
 The site is static, so anything requiring a server is handled by an external provider. These are the only ones:
 
 - **Web3Forms** processes contact form submissions and delivers them to us by email. Your submission passes through their systems. They apply automated spam filtering to it.
-- **Calendly** provides the scheduler on the booking page. Its script loads only on that page, and only when you open it. Calendly may set its own cookies within its embedded widget, under its own privacy policy.
-- **Google Maps** provides the embedded map on the contact page. It loads only on that page and may set cookies under Google's privacy policy.
 - **Google Fonts** files are served from our own domain rather than fetched from Google at page load, so opening this site does not contact Google.
 - Our **hosting provider** serves the site's files and, like any web host, processes standard server request logs including IP addresses, for security and reliability purposes.
+
+There is no embedded map, no scheduling widget and no third-party script of any
+other kind on this site.
 
 Each of these providers has its own privacy policy governing what it does with data it receives.
 
@@ -39,7 +38,7 @@ Enquiries that do not become engagements are deleted within twelve months. Recor
 
 ## Client code and data
 
-If you engage us, we may be granted access to your source code, systems and, in limited circumstances during stabilisation work, systems containing your users' data.
+If you engage us, we may be granted access to your source code, systems and, in limited circumstances, systems containing your users' data.
 
 - We ask for the narrowest access that allows us to do the work, and read-only access wherever it is sufficient.
 - Credentials you share with us are stored in an encrypted password manager, never in email, chat or shared documents.

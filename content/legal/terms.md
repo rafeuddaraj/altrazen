@@ -9,7 +9,7 @@ These terms govern services provided by Altrazen ("we", "us") to you, the client
 
 ## 2. Services
 
-We provide codebase audits, stabilisation work, ongoing maintenance, and automation and integration work for existing clients. The exact scope of any engagement is set out in the written quote you accept. Work outside that scope is quoted separately before it begins.
+We provide software design and engineering services: web application development, product and platform engineering, mobile application development, and the audit, stabilisation and ongoing maintenance of existing codebases. The exact scope of any engagement is set out in the written proposal you accept. Work outside that scope is quoted separately before it begins.
 
 ## 3. Access
 
@@ -23,13 +23,13 @@ You agree to provide access in a reasonable timeframe, to respond to decisions w
 
 ## 5. Fees and payment
 
-Fees are set out in the quote you accept. Audits and stabilisation are billed as fixed-price engagements. Maintenance is billed monthly in advance. Invoices are payable within fourteen days unless agreed otherwise in writing. We may pause work on overdue accounts after written notice.
+Fees are set out in the proposal you accept. Fixed-scope projects are billed against agreed milestones. Retainers and dedicated team arrangements are billed monthly in advance. Invoices are payable within fourteen days unless agreed otherwise in writing. We may pause work on overdue accounts after written notice.
 
 ## 6. Cancellation
 
-Maintenance agreements are rolling and may be cancelled by either party with thirty days' written notice. On cancellation we provide a written handover covering what we changed, what we monitored, and where credentials are held.
+Retainers and dedicated team arrangements are rolling and may be cancelled by either party with thirty days' written notice. On cancellation we provide a written handover covering what we built or changed, what we monitored, where credentials are held, and any known outstanding issues.
 
-Fixed-price engagements cancelled after work has begun are billed for work completed to that point.
+Fixed-scope projects cancelled after work has begun are billed for work completed to that point.
 
 ## 7. Intellectual property
 
@@ -43,7 +43,7 @@ We treat your code, data, business information and anything else we encounter as
 
 ## 9. Warranties and limits
 
-We perform our work with reasonable skill and care. We do not warrant that an audit will identify every defect or vulnerability in a codebase, that a stabilised system will never fail, or that maintenance will prevent all outages. Software systems fail, and no engagement can change that.
+We perform our work with reasonable skill and care. We do not warrant that software will be free of defects, that an audit will identify every defect or vulnerability in a codebase, or that maintenance will prevent all outages. Software systems fail, and no engagement can change that.
 
 To the extent permitted by law, our total liability arising from any engagement is limited to the fees you paid us for that engagement. We are not liable for indirect or consequential loss, including lost profit, lost revenue or lost data.
 
@@ -55,7 +55,7 @@ Our services may involve third-party providers such as hosting platforms, monito
 
 ## 11. Changes to these terms
 
-We may update these terms. The version in force for your engagement is the version published on the date you accepted your quote. The date at the top of this page shows when it was last changed.
+We may update these terms. The version in force for your engagement is the version published on the date you accepted your proposal. The date at the top of this page shows when it was last changed.
 
 ## 12. Contact
 

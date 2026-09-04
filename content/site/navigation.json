@@ -5,41 +5,49 @@
         "label": "Services",
         "href": "/services",
         "children": [
-          { "label": "Codebase Audit", "href": "/services/codebase-audit" },
-          { "label": "Stabilisation", "href": "/services/stabilisation" },
-          { "label": "Monthly Maintenance", "href": "/services/maintenance" },
-          { "label": "Automation & AI", "href": "/services/automation-ai" }
+          { "label": "Web Development", "href": "/services/web-development" },
+          { "label": "Product Engineering", "href": "/services/product-engineering" },
+          { "label": "Mobile Development", "href": "/services/mobile-development" },
+          { "label": "Codebase Rescue", "href": "/services/codebase-rescue" }
         ]
       },
-      { "label": "How it works", "href": "/how-it-works" },
       { "label": "Work", "href": "/work" },
+      { "label": "How we work", "href": "/how-we-work" },
+      { "label": "Technologies", "href": "/technologies" },
       { "label": "About", "href": "/about" },
       { "label": "Blog", "href": "/blog" }
     ],
-    "cta": { "label": "Book a call", "href": "/book" }
+    "cta": { "label": "Start a project", "href": "/contact" }
   },
   "footer": {
     "columns": [
       {
         "title": "Services",
         "links": [
-          { "label": "Codebase Audit", "href": "/services/codebase-audit" },
-          { "label": "Stabilisation", "href": "/services/stabilisation" },
-          { "label": "Monthly Maintenance", "href": "/services/maintenance" },
-          { "label": "Automation & AI", "href": "/services/automation-ai" }
+          { "label": "Web Development", "href": "/services/web-development" },
+          { "label": "Product Engineering", "href": "/services/product-engineering" },
+          { "label": "Mobile Development", "href": "/services/mobile-development" },
+          { "label": "Codebase Rescue", "href": "/services/codebase-rescue" }
         ]
       },
       {
-        "title": "Company",
+        "title": "Studio",
         "links": [
           { "label": "About", "href": "/about" },
-          { "label": "How it works", "href": "/how-it-works" },
+          { "label": "How we work", "href": "/how-we-work" },
+          { "label": "Technologies", "href": "/technologies" },
           { "label": "Work", "href": "/work" },
-          { "label": "Products", "href": "/products" },
           { "label": "Careers", "href": "/careers" },
-          { "label": "Blog", "href": "/blog" },
+          { "label": "Blog", "href": "/blog" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Contact", "href": "/contact" },
           { "label": "FAQ", "href": "/faq" },
-          { "label": "Contact", "href": "/contact" }
+          { "label": "Terms", "href": "/terms" },
+          { "label": "Privacy", "href": "/privacy" }
         ]
       }
     ],
@@ -47,6 +55,6 @@
       { "label": "Terms", "href": "/terms" },
       { "label": "Privacy", "href": "/privacy" }
     ],
-    "trustLine": "This site is statically built and monitored. If it ever goes down, we hear about it before you do."
+    "trustLine": "This site is statically built, accessibility-tested and monitored. We hold our own work to the standards we sell."
   }
 }

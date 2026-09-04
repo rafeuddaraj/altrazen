@@ -1,24 +1,24 @@
 {
   "seo": {
     "title": "FAQ",
-    "description": "Answers to what people actually ask us: do I have to give you my code, what if my code is bad, do I have to commit monthly, what if I want to leave."
+    "description": "Answers to what clients actually ask Altrazen: who owns the code, how long projects take, why prices are not published, and what happens to your repository."
   },
   "hero": {
     "eyebrow": "Questions",
     "heading": "The things people actually ask",
-    "description": "Including the awkward ones. If yours is not here, ask it on a call."
+    "description": "Including the awkward ones. If yours is not here, ask it on a call — we will answer it the same way."
   },
   "categories": [
-    { "id": "general", "label": "General" },
+    { "id": "general", "label": "About the studio" },
     { "id": "process", "label": "Process" },
-    { "id": "pricing", "label": "Pricing & commitment" },
+    { "id": "engagement", "label": "Working together" },
     { "id": "security", "label": "Security & confidentiality" },
     { "id": "technical", "label": "Technical" }
   ],
   "cta": {
     "heading": "Still have a question?",
     "description": "Ask it directly. Thirty minutes, no preparation needed.",
-    "primaryCta": { "label": "Book a call", "href": "/book" },
-    "secondaryCta": { "label": "Or send a message", "href": "/contact" }
+    "primaryCta": { "label": "Start a conversation", "href": "/contact" },
+    "secondaryCta": { "label": "See our services", "href": "/services" }
   }
 }

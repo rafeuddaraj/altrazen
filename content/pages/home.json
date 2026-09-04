@@ -1,108 +1,186 @@
 {
   "seo": {
-    "title": "Your AI built it. We keep it running.",
-    "description": "Altrazen audits, stabilises and maintains applications built with AI coding tools. Free 30 minute review. Find out what is wrong before it costs you a customer."
+    "title": "Altrazen — Software studio",
+    "description": "Altrazen is a software studio building web applications, SaaS products and mobile apps in TypeScript — and rescuing the codebases other people left behind."
   },
   "hero": {
-    "eyebrow": "Codebase audit, stabilisation & maintenance",
-    "headline": "Your AI built it. We keep it running.",
-    "subheadline": "Altrazen audits, stabilises, and maintains applications built with AI coding tools, so you can keep shipping without wondering what's about to break.",
-    "primaryCta": { "label": "Book a free 30-minute review", "href": "/book" },
-    "secondaryCta": { "label": "See how it works", "href": "/how-it-works" }
-  },
-  "trustStrip": {
-    "line": null
-  },
-  "problem": {
-    "eyebrow": "The gap",
-    "heading": "You shipped fast. That was the right call.",
-    "paragraphs": [
-      "You had an idea and a tool that could build it, and you used it. Six months of engineering time turned into a weekend. The product exists, people can use it, and some of them are paying. Nobody sensible would tell you that was the wrong decision.",
-      "But AI coding tools write code that works. They do not write code that lasts. There is a difference, and it only shows up later.",
-      "Your AI did not set up backups. It did not tell you your API keys are sitting in your git history. It did not add a way to know when the site goes down, so the first person who finds out is a customer, and they find out by leaving."
+    "eyebrow": "Software studio",
+    "headline": "Software built to be maintained.",
+    "subheadline": "We build web applications, SaaS products and mobile apps — and we take over the codebases that were shipped fast and now have to be safe to run.",
+    "primaryCta": { "label": "Start a conversation", "href": "/contact" },
+    "secondaryCta": { "label": "See what we build", "href": "/services" },
+    "marquee": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "PostgreSQL",
+      "AWS",
+      "Docker"
     ]
   },
-  "commonIssues": {
-    "eyebrow": "What we find",
-    "heading": "Six things that are almost always wrong",
-    "description": "Not a scare list. This is what we actually find, over and over, in codebases built with Lovable, Cursor, Bolt, v0 and Replit.",
-    "items": [
+  "trustStrip": { "line": null },
+  "positioning": {
+    "eyebrow": "What we are",
+    "heading": "A studio that stays after launch",
+    "paragraphs": [
+      "Most software fails slowly. It ships, it works, and then eighteen months later nobody can change it without breaking something, the person who understood the deploy has gone, and a rewrite starts to look cheaper than another patch.",
+      "We build to avoid that outcome, and we take on the systems where it has already happened. The two halves feed each other: reading other people's broken codebases is the best education there is in what not to do in your own."
+    ],
+    "points": [
       {
-        "label": "Secrets in the code",
-        "description": "API keys, database URLs and tokens committed to the repository. Deleting them later does not help, because the git history keeps them.",
-        "severity": "critical"
+        "title": "We write for the next developer",
+        "description": "Small pull requests, real documentation, and architecture decisions recorded with their reasoning. If only one person can maintain something, that is a defect we introduced."
       },
       {
-        "label": "No backups",
-        "description": "No automated backup, or one that has never been restored. An untested backup is a belief, not a backup.",
-        "severity": "critical"
+        "title": "Everything lives in your accounts",
+        "description": "Repository, hosting, domains, store listings, monitoring — set up under your ownership from the first commit. Leaving us should never be technically difficult."
       },
       {
-        "label": "Auth in the wrong place",
-        "description": "Permission checks written in the browser rather than on the server. Anyone who opens developer tools can walk straight past them.",
-        "severity": "critical"
-      },
-      {
-        "label": "Silent failures",
-        "description": "Errors caught and swallowed with no logging and no alert. The application looks fine while quietly losing writes.",
-        "severity": "high"
-      },
-      {
-        "label": "No way to roll back",
-        "description": "Deploys go straight to production with no staging and no one-step revert. A bad release becomes an emergency instead of an inconvenience.",
-        "severity": "high"
-      },
-      {
-        "label": "Stale dependencies",
-        "description": "Packages months or years behind, several with published vulnerabilities, and now far enough behind that upgrading is its own project.",
-        "severity": "high"
+        "title": "We say no early",
+        "description": "If a project is too small for us, outside our stack, or would be better solved by not building software at all, you hear it on the first call rather than three weeks in."
       }
     ]
   },
-  "servicesOverview": {
+  "capabilities": {
     "eyebrow": "Services",
-    "heading": "Three steps, in order",
-    "description": "The audit tells you what is wrong. Stabilisation fixes it. Maintenance keeps it that way.",
+    "heading": "Four things we do properly",
+    "description": "A short list we go deep on, rather than a long one we would be learning on your budget.",
     "cta": { "label": "All services", "href": "/services" }
   },
-  "howItWorks": {
-    "eyebrow": "How it works",
-    "heading": "From first call to a system someone is watching",
+  "flagship": {
+    "eyebrow": "Our specialism",
+    "heading": "The codebase nobody wants to touch",
+    "description": "Software built fast — by a previous agency, a developer who left, or an AI coding tool — usually works and is usually unsafe. These are the findings that come up again and again when we open one.",
+    "serviceSlug": "codebase-rescue",
+    "findings": [
+      {
+        "label": "Secrets in the repository",
+        "description": "API keys and database URLs committed to git. Deleting them later does not help — the history keeps them.",
+        "severity": "critical"
+      },
+      {
+        "label": "Backups that have never been restored",
+        "description": "An automated backup nobody has tested is a belief, not a backup.",
+        "severity": "critical"
+      },
+      {
+        "label": "Authorisation in the browser",
+        "description": "Permission checks written in client code. Anyone who opens developer tools walks straight past them.",
+        "severity": "critical"
+      },
+      {
+        "label": "Errors caught and discarded",
+        "description": "Failures swallowed with no logging and no alert. The application looks healthy while quietly losing writes.",
+        "severity": "high"
+      },
+      {
+        "label": "No way back",
+        "description": "Deploys go straight to production with no staging and no one-step revert, so a bad release becomes an emergency.",
+        "severity": "high"
+      },
+      {
+        "label": "Dependencies left behind",
+        "description": "Packages years out of date with published vulnerabilities, now far enough behind that upgrading is a project of its own.",
+        "severity": "high"
+      }
+    ],
+    "cta": { "label": "How a rescue works", "href": "/services/codebase-rescue" }
+  },
+  "howWeWork": {
+    "eyebrow": "Process",
+    "heading": "No proposal theatre",
     "steps": [
-      { "number": "01", "title": "Audit", "duration": "3 to 5 days", "outcome": "A written report telling you exactly what is broken and what it would cost you." },
-      { "number": "02", "title": "Stabilise", "duration": "1 to 3 weeks", "outcome": "The critical findings closed, backups working, monitoring live, rollback in place." },
-      { "number": "03", "title": "Maintain", "duration": "Monthly", "outcome": "Patched, monitored and answered for, so it stays fixed." }
+      {
+        "number": "01",
+        "title": "Talk",
+        "duration": "30 minutes",
+        "outcome": "You describe the problem. We tell you whether we are the right people, including when we are not."
+      },
+      {
+        "number": "02",
+        "title": "Scope",
+        "duration": "Within a week",
+        "outcome": "A written proposal: what we will build, what we will not, the timeline, and the risks we can already see."
+      },
+      {
+        "number": "03",
+        "title": "Build",
+        "duration": "Weekly",
+        "outcome": "Working software on a preview URL every week, in pull requests small enough to read, with a written update."
+      },
+      {
+        "number": "04",
+        "title": "Hand over or keep going",
+        "duration": "Your choice",
+        "outcome": "Documentation and a walkthrough, then either your team runs it or we maintain it. Both are fine."
+      }
     ],
-    "cta": { "label": "See the full process", "href": "/how-it-works" }
+    "cta": { "label": "The full process", "href": "/how-we-work" }
   },
-  "pricing": {
-    "eyebrow": "Pricing",
-    "heading": "What this costs",
-    "paragraphs": [
-      "An audit starts at $250. Stabilisation starts at $600 and is quoted exactly once we have read the code. Maintenance runs from $150 a month.",
-      "For most people this lands somewhere between a fraction of a part-time engineer and the cost of one bad outage. The difference is that you only pay for the second one after it has already happened.",
-      "We will give you an exact number after a 30-minute call. Not a range, and not an hourly rate that grows quietly."
-    ],
-    "cta": { "label": "Get an exact number", "href": "/book" }
-  },
-  "whoYouWorkWith": {
-    "eyebrow": "Who you'll work with",
-    "heading": "You talk to the person doing the work",
-    "paragraphs": [
-      "Altrazen is deliberately small. There is no account manager, no handoff to a delivery team, and nobody translating your problem into a ticket for someone who has never spoken to you.",
-      "The engineer who reads your codebase is the engineer who writes your report, joins your walkthrough call, and answers your message four months later. That is not a limitation we are hiding. It is the reason the work is any good."
+  "standards": {
+    "eyebrow": "Engineering standards",
+    "heading": "What we hold ourselves to",
+    "description": "These are not aspirations. Each one is a rule we apply on every engagement, and each one costs us something.",
+    "items": [
+      {
+        "title": "Nothing ships without a way back",
+        "description": "Every deploy is reversible in one step, and we test the rollback before launch rather than during an incident."
+      },
+      {
+        "title": "Secrets never touch the repository",
+        "description": "Not in any branch, not at any point in history. Where we inherit them, rotating and purging is the first thing we do."
+      },
+      {
+        "title": "Every alert reaches a person",
+        "description": "An alert that only lands on a dashboard nobody opens is not monitoring. If it cannot wake someone, it does not count."
+      },
+      {
+        "title": "Tests where failure costs money",
+        "description": "Payment, authentication and data writes get covered. We do not chase a coverage percentage — that optimises the number, not the risk."
+      },
+      {
+        "title": "Accessibility is a build requirement",
+        "description": "WCAG 2.2 AA, keyboard paths tested by hand, checked in CI. Not a phase that gets cut when the date slips."
+      },
+      {
+        "title": "We tell you about our own mistakes",
+        "description": "Immediately, in plain language, with what we are doing about it. Finding out later from your users is not an option we accept."
+      }
     ]
+  },
+  "technologies": {
+    "eyebrow": "Stack",
+    "heading": "Boring technology, chosen deliberately",
+    "description": "One language across the stack and a short list of tools we know deeply. Everything we use has to be hireable, reversible, and observable in production.",
+    "cta": { "label": "See the full stack", "href": "/technologies" }
+  },
+  "whoWeAre": {
+    "eyebrow": "The studio",
+    "heading": "Small, and growing on purpose",
+    "paragraphs": [
+      "Altrazen is a small engineering studio. That is a deliberate size, not a stage we are trying to escape: it means the people who talk to you are the people writing the code, and nothing gets translated through an account manager who has never seen the repository.",
+      "It also means we take on fewer engagements at a time than a larger agency, and we turn down work that is not a fit. If you are looking for a team that will tell you when the answer is no, that is the trade."
+    ],
+    "cta": { "label": "About the studio", "href": "/about" }
   },
   "faqPreview": {
     "eyebrow": "Questions",
-    "heading": "The things people actually ask",
-    "faqIds": ["process-give-code", "process-code-is-bad", "pricing-monthly-commit", "general-too-early", "security-who-sees"],
+    "heading": "What people actually ask",
+    "faqIds": [
+      "engagement-no-prices",
+      "process-who-owns-code",
+      "process-timeline",
+      "engagement-small-project",
+      "technical-stacks"
+    ],
     "cta": { "label": "All questions", "href": "/faq" }
   },
   "finalCta": {
-    "heading": "Not sure if you need this?",
-    "description": "Send us your repo link and we'll tell you the three things we'd fix first. No charge, no pitch.",
-    "primaryCta": { "label": "Request a free repo review", "href": "/contact" },
-    "secondaryCta": { "label": "Or book a call", "href": "/book" }
+    "heading": "Tell us what you're building",
+    "description": "Or what is already broken. One conversation is usually enough to know whether we are the right studio for it — and we will say so either way.",
+    "primaryCta": { "label": "Start a conversation", "href": "/contact" },
+    "secondaryCta": { "label": "Read how we work", "href": "/how-we-work" }
   }
 }

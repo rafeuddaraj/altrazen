@@ -5,7 +5,6 @@ import type {
   Faq,
   FaqCategory,
   Job,
-  Product,
   Service,
   TeamMember,
 } from './schemas'
@@ -27,16 +26,16 @@ export const getNavigation = () => loadJson('site/navigation.json', s.navigation
 export const getHomePage = () => loadJson('pages/home.json', s.homePageSchema)
 export const getServicesIndexPage = () =>
   loadJson('pages/services-index.json', s.servicesIndexPageSchema)
-export const getHowItWorksPage = () =>
-  loadJson('pages/how-it-works.json', s.howItWorksPageSchema)
+export const getHowWeWorkPage = () =>
+  loadJson('pages/how-we-work.json', s.howItWorksPageSchema)
+export const getTechnologiesPage = () =>
+  loadJson('pages/technologies.json', s.technologiesPageSchema)
 export const getAboutPage = () => loadJson('pages/about.json', s.aboutPageSchema)
 export const getWorkIndexPage = () => loadJson('pages/work-index.json', s.workIndexPageSchema)
-export const getProductsPage = () => loadJson('pages/products.json', s.productsPageSchema)
 export const getCareersIndexPage = () =>
   loadJson('pages/careers-index.json', s.careersIndexPageSchema)
 export const getContactPage = () => loadJson('pages/contact.json', s.contactPageSchema)
 export const getFaqPage = () => loadJson('pages/faq.json', s.faqPageSchema)
-export const getBookPage = () => loadJson('pages/book.json', s.bookPageSchema)
 
 /* ------------------------------------------------------------------ *
  * Services
@@ -76,14 +75,6 @@ export function getCaseStudySlugs(): string[] {
 
 export function getFeaturedCaseStudy(): CaseStudy | undefined {
   return getPublicCaseStudies()[0]
-}
-
-/* ------------------------------------------------------------------ *
- * Products
- * ------------------------------------------------------------------ */
-
-export function getProducts(): Product[] {
-  return loadJsonArray('collections/products.json', s.productSchema)
 }
 
 /* ------------------------------------------------------------------ *

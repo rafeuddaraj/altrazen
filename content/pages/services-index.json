@@ -1,34 +1,36 @@
 {
   "seo": {
     "title": "Services",
-    "description": "Codebase audit, stabilisation, monthly maintenance and automation for applications built with AI coding tools. From $250."
+    "description": "Web development, product engineering, mobile development and codebase rescue. A short list of things we do deeply, in TypeScript."
   },
   "hero": {
     "eyebrow": "Services",
-    "heading": "Find it, fix it, keep it fixed",
-    "description": "Three services in a deliberate order, plus a fourth that only exists because of the first three."
+    "heading": "Four things, done properly",
+    "description": "We would rather be genuinely good at a few things than available for everything. Here is what we take on, and what we deliberately do not."
   },
   "funnelExplanation": {
-    "heading": "Why the order matters",
+    "heading": "How the four fit together",
     "paragraphs": [
-      "The audit tells you what is wrong. Stabilisation fixes the parts that can hurt you. Maintenance stops it drifting back. Automation and AI work grows out of that relationship, once we know a codebase well enough to build on it safely.",
-      "You can stop after any step. Most people buy the audit first, read it, and then decide. That is exactly how it is meant to work, and plenty of people take the report to their own developer instead. We would rather that than sell you a fix for a problem you did not have."
+      "Three of these build software: a web application, a product with customers and billing behind it, or an app in the stores. Which one you need is usually obvious within ten minutes of the first call, and sometimes the answer is that you need two of them.",
+      "The fourth is different. Codebase Rescue takes over software that already exists and is not safe to run — inherited from an agency that moved on, a developer who left, or an AI coding tool. It is our specialism, and it feeds everything else: reading other people's failures is the fastest way to learn what not to build."
     ]
   },
   "whatWeDontDo": {
     "heading": "What we don't do",
-    "description": "Being clear about this saves everyone a call.",
+    "description": "Being specific about this saves everyone a call, and a studio that claims everything is telling you nothing.",
     "items": [
-      "New builds from scratch for people we have not worked with. We take over existing systems.",
-      "Design, branding or UI work. We keep what you have running; we do not restyle it.",
-      "Marketing, SEO or content. Different job, different people.",
+      "Brand identity, logo design or naming — we will happily work alongside whoever does.",
+      "Marketing, SEO campaigns, content strategy or paid acquisition.",
+      "Games, real-time 3D, or embedded and hardware firmware.",
+      "Ongoing development in stacks we do not work in. We will say so rather than learn on your budget.",
       "Penetration testing or formal security certification. We find the obvious holes; we are not an accredited auditor.",
-      "Staff augmentation. We are not a body you rent by the hour."
+      "Staff augmentation by the hour. Our dedicated team model is close, but it comes with our standards attached."
     ]
   },
   "cta": {
-    "heading": "Start with a conversation",
-    "description": "Thirty minutes, no preparation needed. We will tell you which of these you actually need, including if the answer is none of them.",
-    "primaryCta": { "label": "Book a call", "href": "/book" }
+    "heading": "Not sure which one you need?",
+    "description": "That is a normal place to start. One conversation is usually enough to work it out, and we will tell you if the answer is none of them.",
+    "primaryCta": { "label": "Start a conversation", "href": "/contact" },
+    "secondaryCta": { "label": "Read how we work", "href": "/how-we-work" }
   }
 }

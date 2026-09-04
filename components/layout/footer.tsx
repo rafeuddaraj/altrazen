@@ -18,6 +18,7 @@ export function Footer() {
             <p className="max-w-xs text-sm font-light leading-relaxed text-muted-foreground text-pretty">
               {company.positioning}
             </p>
+            {company.social.length > 0 ? (
             <ul className="flex flex-wrap gap-4">
               {company.social.map((social) => (
                 <li key={social.url}>
@@ -32,6 +33,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            ) : null}
           </div>
 
           {footer.columns.map((column) => (
@@ -77,8 +79,8 @@ export function Footer() {
                 {company.location.city}, {company.location.country}
               </li>
             </ul>
-            <Button href="/book" size="sm" variant="outline" className="self-start">
-              Book a call
+            <Button href="/contact" size="sm" variant="outline" className="self-start">
+              Start a project
             </Button>
           </div>
         </div>
