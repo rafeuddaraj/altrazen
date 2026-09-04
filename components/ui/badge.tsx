@@ -3,7 +3,9 @@ import type { Severity } from '@/lib/content'
 
 const severityStyles: Record<Severity, string> = {
   critical: 'border-destructive/40 bg-destructive/10 text-destructive',
-  high: 'border-chart-2/40 bg-chart-2/10 text-chart-2',
+  // chart-1 rather than chart-2: chart-2 in the light theme is only 3.68:1
+  // against white, which fails AA at this 10px size.
+  high: 'border-chart-1/40 bg-chart-1/10 text-chart-1',
   medium: 'border-border bg-muted text-muted-foreground',
   low: 'border-border/60 bg-transparent text-muted-foreground',
 }

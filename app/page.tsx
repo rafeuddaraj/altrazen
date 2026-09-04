@@ -1,29 +1,38 @@
 import type { Metadata } from 'next'
 import { getHomePage } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
+import { Hero } from '@/components/home/hero'
+import { TrustStrip } from '@/components/home/trust-strip'
+import { Problem } from '@/components/home/problem'
+import { CommonIssues } from '@/components/home/common-issues'
+import { ServicesOverview } from '@/components/home/services-overview'
+import { HowItWorks } from '@/components/home/how-it-works'
+import { Proof } from '@/components/home/proof'
+import { Pricing } from '@/components/home/pricing'
+import { WhoYouWorkWith } from '@/components/home/who-you-work-with'
+import { FaqPreview } from '@/components/home/faq-preview'
+import { FinalCta } from '@/components/home/final-cta'
 
 export function generateMetadata(): Metadata {
-  const page = getHomePage()
-  return buildMetadata({ ...page.seo, pathname: '/' })
+  return buildMetadata({ ...getHomePage().seo, pathname: '/' })
 }
 
-/** Placeholder. The full eleven-section home page is built in phase 3. */
 export default function HomePage() {
-  const { hero } = getHomePage()
+  const page = getHomePage()
 
   return (
-    <main id="main" className="flex min-h-screen flex-col items-center justify-center px-6">
-      <div className="mx-auto max-w-4xl text-center">
-        <span className="mb-4 block text-xs uppercase tracking-widest text-primary/70">
-          {hero.eyebrow}
-        </span>
-        <h1 className="mb-6 text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-7xl">
-          {hero.headline}
-        </h1>
-        <p className="mx-auto max-w-2xl text-lg font-light leading-relaxed text-muted-foreground text-balance">
-          {hero.subheadline}
-        </p>
-      </div>
+    <main id="main">
+      <Hero content={page.hero} />
+      <TrustStrip content={page.trustStrip} />
+      <Problem content={page.problem} />
+      <CommonIssues content={page.commonIssues} />
+      <ServicesOverview content={page.servicesOverview} />
+      <HowItWorks content={page.howItWorks} />
+      <Proof />
+      <Pricing content={page.pricing} />
+      <WhoYouWorkWith content={page.whoYouWorkWith} />
+      <FaqPreview content={page.faqPreview} />
+      <FinalCta content={page.finalCta} />
     </main>
   )
 }
