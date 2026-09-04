@@ -131,6 +131,25 @@ export function getFaqsByIds(ids: readonly string[]): Faq[] {
   })
 }
 
+/**
+ * Resolve engagement model ids referenced by a service. An id that matches
+ * nothing is a content bug, so it throws rather than quietly rendering a
+ * shorter list than the author intended.
+ */
+export function getEngagementModelsByIds(ids: readonly string[]) {
+  const all = getHowWeWorkPage().engagementModels.items
+  return ids.map((id) => {
+    const model = all.find((entry) => entry.id === id)
+    if (!model) {
+      throw new Error(
+        `\n\nContent validation failed: unknown engagement model "${id}".\n` +
+          `Referenced but not defined in content/pages/how-we-work.json.\n`,
+      )
+    }
+    return model
+  })
+}
+
 export function getFaqsByCategory(category: FaqCategory): Faq[] {
   return getFaqs().filter((faq) => faq.category === category)
 }

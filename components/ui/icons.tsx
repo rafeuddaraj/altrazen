@@ -58,3 +58,15 @@ export const LogoMark = ({ className }: IconProps) => (
     <circle cx="16" cy="16" r="3" className="fill-primary" />
   </svg>
 )
+
+export const CheckIcon = ({ className }: IconProps) => (
+  <svg className={className ?? 'size-4'} {...strokeProps}>
+    <path d="m4.5 12.5 5 5 10-11" />
+  </svg>
+)
+
+export const CrossIcon = ({ className }: IconProps) => (
+  <svg className={className ?? 'size-4'} {...strokeProps}>
+    <path d="M6 6l12 12M18 6 6 18" />
+  </svg>
+)
