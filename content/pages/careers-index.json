@@ -1,48 +1,48 @@
 {
   "seo": {
     "title": "Careers",
-    "description": "Working at Altrazen: what the job is, who it suits, and how hiring works. We are growing carefully and hire for judgement over years of experience."
+    "description": "Working at Altrazen: what the job is, who it suits, and how hiring works. We are growing carefully and hire for judgement over years on a CV."
   },
   "hero": {
     "eyebrow": "Careers",
-    "heading": "Engineering, without the theatre",
-    "description": "We are a small studio growing carefully. That means fewer people, more responsibility each, and no layer of process between you and the work."
+    "heading": "Real work, no theatre",
+    "description": "We are a small studio growing carefully. That means fewer people, more responsibility each, and nothing standing between you and the work."
   },
   "whatItsLike": {
-    "heading": "What it's like here",
+    "heading": "What it is like here",
     "paragraphs": [
-      "You own things end to end. Not a ticket queue and not a slice of someone else's design — a problem, from understanding it to running it in production. That is more responsibility than most junior roles carry and it is the fastest way anyone learns.",
-      "You talk to clients directly. There is no account manager between you and the person whose business depends on what you are building, which means being able to explain a technical trade-off to someone who does not write software.",
-      "You read a lot of other people's code. Some of it is strange, much of it was written under pressure, and none of it is your fault. Curiosity survives this better than perfectionism does.",
-      "The work is small and reviewable. Nobody here ships a two-thousand-line pull request, and nobody is asked to review one.",
-      "We are remote and asynchronous by default, with a few hours of overlap for calls. We measure what ships, not hours logged."
+      "You own things from end to end. Not a queue of tasks and not a slice of someone else's design, but a problem, from understanding it to keeping it running once it is live. That is more responsibility than most junior roles carry, and it is the fastest way anyone learns.",
+      "You talk to clients directly. There is nobody between you and the person whose business depends on what you are building, which means being able to explain a trade off to someone who does not work in software.",
+      "You will read a lot of other people's work. Some of it is strange, much of it was done under pressure, and none of it is your fault. Curiosity survives this better than perfectionism does.",
+      "Work arrives in small pieces. Nobody here delivers a week of changes in one go, and nobody is asked to review one.",
+      "We work remotely, with a few overlapping hours for calls. We care about what gets finished, not hours logged."
     ]
   },
   "whoFits": {
     "heading": "Who this suits",
     "items": [
-      "You would rather delete code than add it.",
-      "You find a well-placed index more satisfying than a new framework.",
-      "You can write clearly. Reports, documentation and client updates are half the job here.",
-      "You are comfortable saying \"I don't know yet\" to a client, and then going and finding out.",
-      "You have actual opinions about backups, error handling and what belongs in version control.",
-      "You care whether the thing works for someone using a keyboard and a screen reader."
+      "You would rather remove something than add to it.",
+      "You get more satisfaction from making an existing thing faster than from starting something new.",
+      "You can write clearly. Reports, instructions and client updates are half of this job.",
+      "You are comfortable telling a client you do not know yet, and then going to find out.",
+      "You have real opinions about backups and about what happens when things go wrong.",
+      "You care whether the thing works for someone using a keyboard or a screen reader."
     ]
   },
   "hiringProcess": {
     "heading": "How hiring works",
     "steps": [
-      { "step": 1, "title": "You write to us", "description": "A short note about what you have built and what you want to work on. No cover letter theatre, and we do not need a portfolio site. A repository or a description of something you are proud of is worth more than a CV." },
-      { "step": 2, "title": "A conversation", "description": "Forty-five minutes about how you think and what you have worked on. Not a quiz on algorithms you last used at university." },
-      { "step": 3, "title": "A paid exercise", "description": "A real, small piece of work that looks like the actual job — usually reading a messy codebase and writing up what is wrong with it. Paid at our normal rate, timeboxed, and yours to keep whatever we decide." },
-      { "step": 4, "title": "A decision, quickly", "description": "You hear back within a week either way, with a real reason. We will not leave you waiting or send a template rejection." }
+      { "step": 1, "title": "You write to us", "description": "A short note about what you have built and what you want to work on. No cover letter theatre, and you do not need a portfolio site. Something you are proud of is worth more than a CV." },
+      { "step": 2, "title": "A conversation", "description": "Forty five minutes about how you think and what you have worked on. Not a quiz on things you last used at university." },
+      { "step": 3, "title": "A paid exercise", "description": "A real, small piece of work that looks like the actual job, usually reading something messy and writing up what is wrong with it. Paid at our normal rate, with a time limit, and yours to keep whatever we decide." },
+      { "step": 4, "title": "A decision, quickly", "description": "You hear back within a week either way, with a real reason. We will not leave you waiting or send you a template." }
     ]
   },
   "openRoles": {
     "heading": "Open roles",
     "emptyState": {
-      "heading": "No roles open right now",
-      "description": "We are growing, but we post roles only when we are genuinely ready to hire — collecting applications for jobs that do not exist wastes your time. If you work the way this page describes and want to be first in line when that changes, send us a note about what you have built and we will keep it on file.",
+      "heading": "Nothing open right now",
+      "description": "We are growing, but we only post a role when we are genuinely ready to hire. Collecting applications for jobs that do not exist wastes your time. If you work the way this page describes and want to be first in line when that changes, send us a note about what you have built and we will keep it.",
       "cta": { "label": "Send us a note", "href": "/contact" }
     }
   }

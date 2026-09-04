@@ -44,7 +44,7 @@ If you engage us, we may be granted access to your source code, systems and, in 
 - Credentials you share with us are stored in an encrypted password manager, never in email, chat or shared documents.
 - We do not copy production databases onto our own machines.
 - Only the engineer working on your engagement has access.
-- We do not disclose what we find in your codebase to anyone.
+- We do not disclose what we find in your software to anyone.
 - Access is revoked at the end of an engagement.
 
 This is covered in more detail by the mutual non-disclosure agreement we sign before any access is granted.

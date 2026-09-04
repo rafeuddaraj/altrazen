@@ -1,117 +1,117 @@
 {
   "seo": {
     "title": "How we work",
-    "description": "How an Altrazen engagement runs end to end: first conversation, proposal, discovery, build, launch and ongoing support — plus how we handle your code and credentials."
+    "description": "How a project with Altrazen runs from the first call to launch and beyond, including how we handle your access and keep your information private."
   },
   "hero": {
-    "eyebrow": "Process",
-    "heading": "How an engagement actually runs",
-    "description": "No discovery phase you pay for before knowing whether we are a fit, and no proposal deck. Here is the whole thing, including what we need from you at each point."
+    "eyebrow": "How it works",
+    "heading": "How a project actually runs",
+    "description": "There is no discovery phase you pay for before knowing whether we are a fit, and no sales presentation. Here is the whole thing, including what we need from you at each point."
   },
   "timeline": [
     {
       "day": "Week 0",
       "title": "First conversation",
-      "description": "Thirty to forty-five minutes. You describe what you are building or what is going wrong; we ask what exists today, who depends on it and what the deadline really is. By the end of the call you know whether we are the right people. Sometimes we are not, and we say so.",
-      "whatWeNeed": "Half an hour and honest answers. No documents, no preparation."
+      "description": "Thirty to forty five minutes. You describe what you want built or what is going wrong. We ask what exists today, who depends on it, and what the deadline really is. By the end you know whether we are the right people. Sometimes we are not, and we say so on that call.",
+      "whatWeNeed": "Half an hour and honest answers. No documents and nothing to prepare."
     },
     {
-      "day": "Week 0–1",
-      "title": "Proposal and scope",
-      "description": "A written proposal: what we will build, what we will not, which engagement model fits, the timeline, and the risks we can already see. If we cannot scope it responsibly without looking at something first, we say that rather than guessing at a number.",
-      "whatWeNeed": "A read, and your questions. Push back here — it is much cheaper than pushing back in week six."
+      "day": "Week 0 to 1",
+      "title": "A written plan and a price",
+      "description": "What we will build, what we will not, how we will work together, how long it will take, what it costs, and the risks we can already see. If we cannot price something responsibly without looking at it first, we tell you that instead of guessing.",
+      "whatWeNeed": "A read and your questions. Push back here. It is far cheaper than pushing back in week six."
     },
     {
       "day": "Week 1",
-      "title": "Discovery",
-      "description": "The short, focused version: users, constraints, integrations, the data model, and what already exists. For a rescue engagement this is the audit instead — read-only access and a written report.",
-      "whatWeNeed": "Access to whatever exists, and time with whoever knows the domain best."
+      "title": "Understanding the detail",
+      "description": "The short, focused version: who uses it, what it has to connect to, what information it holds, and what already exists. For existing software this is the check instead, which means reading it and giving you a written report.",
+      "whatWeNeed": "Access to whatever exists, and some time with whoever knows the business best."
     },
     {
-      "day": "Week 1–2",
-      "title": "Technical plan",
-      "description": "Architecture, data model, third-party dependencies and the decisions that would be expensive to reverse, written down with their reasoning. You approve the shape before anyone writes production code.",
+      "day": "Week 1 to 2",
+      "title": "Agreeing the shape",
+      "description": "How the parts fit together, and the decisions that would be expensive to change later. Those get written down with the reasoning, so nobody has to guess in a year's time. You approve the shape before the main build starts.",
       "whatWeNeed": "One review session and a decision."
     },
     {
       "day": "Ongoing",
-      "title": "Build in reviewable slices",
-      "description": "Working software on a preview URL every week, arriving as pull requests small enough to actually read. A weekly written update covering what shipped, what is next and anything that changed. No status theatre and no fortnight of silence.",
-      "whatWeNeed": "About an hour a week, and answers when a decision is genuinely yours to make."
+      "title": "Building, one week at a time",
+      "description": "A working version on a private link every week, and a short written update covering what is done, what is next, and anything that changed. Changes arrive in small pieces that are easy to check. No status theatre and no fortnight of silence.",
+      "whatWeNeed": "About an hour a week, and answers when a decision is genuinely yours."
     },
     {
       "day": "Before launch",
-      "title": "Harden",
-      "description": "Accessibility pass, performance budget, error tracking, backups restored in front of you, and a rollback path you have watched being used. This is part of the build, not a phase that gets cut when the date slips.",
-      "whatWeNeed": "Your accounts for hosting, monitoring and any third-party services, so everything lives under your ownership from day one."
+      "title": "Making it solid",
+      "description": "Speed checks, accessibility checks, backups restored in front of you, alerts switched on and tested, and a way to undo a bad change that you have watched being used. This is part of the work, not a step that gets cut when the date gets close.",
+      "whatWeNeed": "Your accounts for hosting and anything else the project needs, so everything is in your name from the start."
     },
     {
       "day": "After launch",
-      "title": "Handover, or keep going",
-      "description": "Documentation, runbooks and a walkthrough with whoever takes it on. Then either your team runs it, or we do under a maintenance retainer. Both are genuinely fine, and we will tell you which one we think fits your situation.",
+      "title": "Hand over, or keep going",
+      "description": "Written instructions and a walkthrough with whoever takes it on. Then either your team runs it, or we look after it for a monthly fee. Both are genuinely fine, and we will tell you which one we think suits your situation.",
       "whatWeNeed": "A decision, and fifteen minutes a month to read the report if we continue."
     }
   ],
   "engagementModels": {
     "eyebrow": "Working together",
-    "heading": "Three ways to engage",
-    "description": "We do not publish rates, because a number without a scope is meaningless to both of us. What we can be clear about is the shape of the arrangement. Every proposal names one of these three.",
+    "heading": "Three ways to work with us",
+    "description": "We do not publish prices, because a number without a clear scope is meaningless to both of us. What we can be clear about is the shape of the arrangement. Every written plan names one of these three.",
     "items": [
       {
         "id": "fixed-scope",
-        "name": "Fixed-scope project",
-        "description": "A defined outcome, a fixed price and a delivery date, agreed before work starts. Change requests are quoted separately rather than absorbed silently or argued about later.",
-        "bestFor": "A well-understood piece of work: a site, an app, an audit, a stabilisation.",
+        "name": "Fixed price project",
+        "description": "A defined result, a fixed price and a delivery date, all agreed before work starts. If you want something added later, it is priced separately rather than absorbed quietly or argued about at the end.",
+        "bestFor": "A well understood piece of work: a website, an app, a check of existing software.",
         "whatYouGet": [
-          "A price that does not move unless the scope does",
-          "A written scope naming what is excluded, not only what is included",
-          "Weekly demos against an agreed plan",
-          "Full handover at the end"
+          "A price that does not move unless the work does",
+          "A written scope that says what is excluded, not only what is included",
+          "Something working to look at every week",
+          "A full handover at the end"
         ]
       },
       {
         "id": "retainer",
-        "name": "Monthly retainer",
-        "description": "A recurring block of engineering time each month for maintenance, small changes and improvements. Rolling, cancellable with thirty days' notice, and it always ends with a handover document.",
-        "bestFor": "Software that is live and needs to stay patched, monitored and gently improved.",
+        "name": "Monthly support",
+        "description": "A set amount of our time each month for looking after your software, making small changes and improving things gradually. It rolls on monthly, can be stopped with thirty days' notice, and always ends with a handover document.",
+        "bestFor": "Software that is live and needs to stay safe, up to date and working.",
         "whatYouGet": [
-          "A named engineer who knows your codebase rather than a ticket queue",
-          "Security patching, dependency upgrades and verified backups on a schedule",
-          "Monitoring answered by us before you notice",
-          "A written monthly report you can forward to anyone"
+          "A named person who knows your software, rather than a ticket queue",
+          "Security updates and tested backups on a schedule",
+          "Someone watching for faults, so you are not the one who finds them",
+          "A short written report each month you can forward to anyone"
         ]
       },
       {
         "id": "dedicated-team",
         "name": "Dedicated team",
-        "description": "One or more engineers working only on your product for an agreed period, planning with you week to week. Effectively your engineering team, without the hiring cycle.",
-        "bestFor": "Ongoing product development where the roadmap will change as you learn.",
+        "description": "One or more people working only on your product for an agreed period, planning with you week by week. In practice it is your software team, without the hiring.",
+        "bestFor": "Ongoing product work where the plan will change as you learn from customers.",
         "whatYouGet": [
-          "Consistent people who build context rather than rotating staff",
-          "Weekly planning and a shared backlog you control",
-          "Direct access to the engineers, with no account manager relaying",
+          "The same people throughout, building real knowledge of your business",
+          "Weekly planning and a shared list of work that you control",
+          "Direct contact with the people doing the work",
           "The ability to change direction without renegotiating a contract"
         ]
       }
     ]
   },
   "security": {
-    "eyebrow": "Access and confidentiality",
-    "heading": "What happens to your code",
+    "eyebrow": "Access and privacy",
+    "heading": "What happens to your information",
     "description": "This is the question everyone has and most people are too polite to ask, so here is the answer in public.",
     "items": [
-      { "title": "Mutual NDA first", "description": "Signed before you grant any access at all. It covers your code, your data, your business model and anything we happen to see along the way." },
-      { "title": "The narrowest access that works", "description": "An audit needs to read your code, not change it, so it gets read-only. Write access exists only where the work requires it, only on a working branch, and only after you have agreed to it." },
-      { "title": "Credentials in an encrypted manager", "description": "Anything you send us goes into an encrypted password manager. Never email, never chat, never a shared document. We ask you to revoke our access when the engagement ends." },
-      { "title": "No subcontractors", "description": "Only the people working on your engagement see your repository. We do not pass your code to a third party or an outsourced team." },
-      { "title": "Your accounts, from day one", "description": "Hosting, domains, app store listings, monitoring and third-party services are set up under your ownership, not ours. Nothing about leaving us is difficult by design." },
-      { "title": "Findings stay private", "description": "We do not discuss what we found in your codebase with anyone. Anything that ever appears in a public case study is anonymised and shown to you for approval first. If you say no, it does not go up." }
+      { "title": "A confidentiality agreement first", "description": "Signed before you give us access to anything. It covers your software, your business information, and anything else we happen to see along the way." },
+      { "title": "The least access that works", "description": "Checking your software means reading it, so that is all we ask for. The ability to change things exists only where the work requires it, and only after you have agreed." },
+      { "title": "Passwords kept in a locked manager", "description": "Anything you send us goes into a password manager, never into email, chat or a shared document. We ask you to remove our access when the work ends." },
+      { "title": "Nobody outside our team", "description": "Only the people working on your project can see it. We do not pass your work to another company or an outsourced team." },
+      { "title": "Your accounts, from day one", "description": "Hosting, your web address, app store listings and every other service are set up in your name, not ours. Nothing about leaving is made difficult on purpose." },
+      { "title": "What we find stays private", "description": "We do not discuss what we found in your software with anyone. If something ever appears in a public write up, your name is removed and you approve it first. If you say no, it does not go up." }
     ]
   },
-  "faqIds": ["process-who-owns-code", "engagement-models", "process-timeline", "process-team-handover", "security-credentials", "security-disclosure"],
+  "faqIds": ["process-who-owns", "engagement-models", "process-timeline", "process-team-handover", "security-passwords", "security-disclosure"],
   "cta": {
     "heading": "Start at week zero",
-    "description": "Thirty minutes, no preparation needed. We will tell you honestly whether we are the right people for it.",
+    "description": "Thirty minutes, nothing to prepare. We will tell you honestly whether we are the right people.",
     "primaryCta": { "label": "Start a conversation", "href": "/contact" }
   }
 }

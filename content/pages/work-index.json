@@ -1,16 +1,16 @@
 {
   "seo": {
-    "title": "Work",
-    "description": "Selected projects from the Altrazen studio — what the problem was, what we built, and what changed as a result."
+    "title": "Our work",
+    "description": "Projects from the Altrazen studio: what the problem was, what we built, and what changed as a result."
   },
   "hero": {
-    "eyebrow": "Work",
+    "eyebrow": "Our work",
     "heading": "What the work looks like",
-    "description": "Every project here is published with the client's written approval, and anonymised wherever they asked for that."
+    "description": "Everything here is published with the client's written permission, with names removed wherever they asked for that."
   },
   "emptyState": {
-    "heading": "Case studies are being written",
-    "description": "We have projects to show and we are working through them properly — which means getting written approval from each client and checking the numbers before anything is published. We would rather this page stay empty for another month than fill it with borrowed logos and invented metrics. In the meantime, the services and process pages describe the work in more detail than most case studies do.",
+    "heading": "Write ups are being prepared",
+    "description": "We have projects to show and we are working through them properly, which means getting written permission from each client and checking every number before it goes up. We would rather this page stayed empty for another month than fill it with borrowed logos and invented results. In the meantime, the services and process pages describe the work in more detail than most write ups do.",
     "primaryCta": { "label": "How we work", "href": "/how-we-work" },
     "secondaryCta": { "label": "Ask us directly", "href": "/contact" }
   }

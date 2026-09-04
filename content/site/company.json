@@ -1,9 +1,9 @@
 {
   "name": "Altrazen",
   "legalName": "Altrazen",
-  "tagline": "Software built to be maintained.",
-  "positioning": "Altrazen is a software studio building web, product and mobile software — and rescuing the codebases other people left behind.",
-  "description": "Altrazen is a software studio. We build web applications, SaaS products and mobile apps in TypeScript, and we take over existing codebases that need to be made safe to run.",
+  "tagline": "Software that keeps working.",
+  "positioning": "Altrazen is a software studio. We build websites, online products and mobile apps, and we look after software that other people built.",
+  "description": "Altrazen is a software studio. We build websites, online products and mobile apps, and we take on software that was built in a hurry and now needs to be safe and reliable.",
   "url": "https://altrazen.com",
   "email": "hello@altrazen.com",
   "phone": null,
@@ -13,7 +13,7 @@
     "addressLine": null
   },
   "businessHours": "Sunday to Thursday, 10:00 to 18:00 (GMT+6)",
-  "responseTime": "We reply to every enquiry within one business day.",
+  "responseTime": "We reply to every message within one working day.",
   "foundedYear": 2025,
   "social": [],
   "bookingUrl": null

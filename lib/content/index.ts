@@ -28,8 +28,6 @@ export const getServicesIndexPage = () =>
   loadJson('pages/services-index.json', s.servicesIndexPageSchema)
 export const getHowWeWorkPage = () =>
   loadJson('pages/how-we-work.json', s.howItWorksPageSchema)
-export const getTechnologiesPage = () =>
-  loadJson('pages/technologies.json', s.technologiesPageSchema)
 export const getAboutPage = () => loadJson('pages/about.json', s.aboutPageSchema)
 export const getWorkIndexPage = () => loadJson('pages/work-index.json', s.workIndexPageSchema)
 export const getCareersIndexPage = () =>

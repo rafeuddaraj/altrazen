@@ -7,7 +7,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: 'Blog',
     description:
-      'Notes on auditing, stabilising and maintaining applications built with AI coding tools.',
+      'Plain English writing about building software, looking after it, and the mistakes that cost businesses the most.',
     pathname: '/blog',
   })
 }
@@ -18,8 +18,8 @@ export default function BlogIndexPage() {
   return (
     <PageShell
       hero={{
-        eyebrow: 'Insights',
-        heading: 'Notes from other people’s codebases',
+        eyebrow: 'Writing',
+        heading: 'What we have learned, written down',
         description: `${posts.length} published ${posts.length === 1 ? 'post' : 'posts'}.`,
       }}
     >

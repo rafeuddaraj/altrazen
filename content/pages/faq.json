@@ -1,23 +1,23 @@
 {
   "seo": {
-    "title": "FAQ",
-    "description": "Answers to what clients actually ask Altrazen: who owns the code, how long projects take, why prices are not published, and what happens to your repository."
+    "title": "Questions",
+    "description": "Answers to what clients actually ask: who owns the work, how long projects take, why there are no prices on the site, and what happens to your information."
   },
   "hero": {
     "eyebrow": "Questions",
-    "heading": "The things people actually ask",
-    "description": "Including the awkward ones. If yours is not here, ask it on a call — we will answer it the same way."
+    "heading": "What people actually ask",
+    "description": "Including the awkward ones. If yours is not here, ask it on a call and you will get the same kind of answer."
   },
   "categories": [
     { "id": "general", "label": "About the studio" },
-    { "id": "process", "label": "Process" },
+    { "id": "process", "label": "How projects run" },
     { "id": "engagement", "label": "Working together" },
-    { "id": "security", "label": "Security & confidentiality" },
-    { "id": "technical", "label": "Technical" }
+    { "id": "security", "label": "Privacy and access" },
+    { "id": "technical", "label": "Practical questions" }
   ],
   "cta": {
     "heading": "Still have a question?",
-    "description": "Ask it directly. Thirty minutes, no preparation needed.",
+    "description": "Ask it directly. Thirty minutes, nothing to prepare.",
     "primaryCta": { "label": "Start a conversation", "href": "/contact" },
     "secondaryCta": { "label": "See our services", "href": "/services" }
   }

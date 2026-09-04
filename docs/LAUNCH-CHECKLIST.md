@@ -32,10 +32,8 @@ that way until real entries exist.
 
 ## Needs your confirmation
 
-- **`content/pages/technologies.json`** — written from the stack this repository
-  demonstrates plus what the four services imply. Read it and remove anything
-  the studio does not genuinely use in production. Claiming a tool you do not
-  use is the one place on this site where a factual error would be easy to make.
+- **~~`content/pages/technologies.json`~~ — page removed. The site is written for
+  readers who do not work in software, so a list of tool names has no place on it.
 - **`content/pages/contact.json` → `map.enabled`** — currently `false`. There is
   no public office address, so an embedded city map would be decoration. Set it
   to `true` only if there is a real address worth showing.

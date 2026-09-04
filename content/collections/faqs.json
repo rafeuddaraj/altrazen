@@ -3,150 +3,150 @@
     "id": "general-what-we-do",
     "category": "general",
     "question": "What does Altrazen do?",
-    "answer": "We are a software studio. We build web applications, SaaS products and mobile apps, and we take over existing codebases that need to be made safe to run. Most of our work is in the TypeScript ecosystem, and most of it is either building something new or making something existing dependable."
+    "answer": "We are a software studio. We build websites, online products and mobile apps for businesses. We also take on software that already exists and has become risky or difficult to run, whether that is because the people who built it have moved on or because it was put together in a hurry."
   },
   {
     "id": "general-why-rescue",
     "category": "general",
-    "question": "Why is codebase rescue such a big part of what you do?",
-    "answer": "Because building software got dramatically cheaper and running it did not. A lot of products now exist with real customers on foundations nobody has ever inspected — built by an agency that moved on, a developer who left, or an AI coding tool that writes code that works without writing code that lasts. That gap is real, it is common, and comparatively few teams want the work. We do."
+    "question": "Why is rescuing existing software such a big part of what you do?",
+    "answer": "Because building software got much cheaper and quicker over the last few years, while looking after it did not. A lot of businesses now depend on software that nobody has ever properly checked. It works, so nobody worries, until the day it stops. Comparatively few companies want that job. We do, and doing it makes us better at building things that will not end up in the same state."
   },
   {
     "id": "general-size",
     "category": "general",
-    "question": "How big is the team?",
-    "answer": "Small and growing. That is deliberate: it means the people who talk to you are the people who write the code, and there is no account manager translating your problem into a ticket for someone who has never spoken to you. It also means we take on fewer projects at once than a larger agency would."
+    "question": "How big is your team?",
+    "answer": "Small, and growing carefully. That is on purpose. It means the people you talk to are the people doing the work, and there is nobody in the middle turning your problem into a note for someone who has never spoken to you. It also means we take on fewer projects at once than a large agency would."
   },
   {
     "id": "general-location",
     "category": "general",
-    "question": "Where are you, and does it matter?",
-    "answer": "We work remotely with clients across time zones. In practice what matters is overlap for calls and a predictable weekly rhythm, both of which we commit to in the proposal. Written updates mean you are never waiting on a time zone to find out where something stands."
+    "question": "Where are you based, and does it matter?",
+    "answer": "We work remotely with clients in different countries. What matters in practice is having enough overlapping hours for calls and a predictable weekly rhythm, and we commit to both in writing before we start. You also get a written update every week, so you are never waiting on a time difference to find out where something stands."
   },
   {
-    "id": "process-who-owns-code",
+    "id": "process-who-owns",
     "category": "process",
-    "question": "Who owns the code you write?",
-    "answer": "You do, on payment, including everything we produce along the way. It lives in your repository under your account from the first commit, not ours. Hosting, domains, app store listings and third-party services are all set up in your name too. Nothing about leaving us is difficult by design."
+    "question": "Who owns what you build?",
+    "answer": "You do, once it is paid for, including everything produced along the way. It lives in your accounts from the first day, not ours. Hosting, your web address, app store listings and any other service are all set up in your name. Nothing about leaving us is made difficult on purpose."
   },
   {
     "id": "process-timeline",
     "category": "process",
     "question": "How long will my project take?",
-    "answer": "A website or a focused web application is usually six to twelve weeks. A first SaaS release is three to six months. A mobile app is two to four months to the first store release. A codebase audit is three to five days. These are honest starting ranges — the proposal gives you a real timeline once we understand the scope, and we would rather quote longer and be right."
+    "answer": "A website or a focused web application is usually six to twelve weeks. A first release of an online product is three to six months. A mobile app is two to four months to the first store release. Checking existing software takes three to five days. Those are honest starting ranges. You get a real date in the written plan once we understand the job, and we would rather quote longer and be right."
   },
   {
     "id": "process-involvement",
     "category": "process",
     "question": "How much of my time will this take?",
-    "answer": "About an hour a week during a build: one call, plus answering decisions that are genuinely yours to make. You also get a written update every week, so nothing depends on being in a meeting. Discovery weeks are heavier — expect a few hours."
+    "answer": "About an hour a week while we are building. One call, plus answering the decisions that are genuinely yours to make. You also get a written update every week, so nothing depends on you being in a meeting. The early weeks are heavier, usually a few hours."
   },
   {
     "id": "process-after-launch",
     "category": "process",
     "question": "What happens after launch?",
-    "answer": "You get documentation, runbooks and a walkthrough with whoever will look after it. Then either your team runs it, or we keep it running under a monthly retainer. Both are fine and we will tell you which we think fits. What we will not do is disappear on the day of launch and leave you with an undocumented system."
+    "answer": "You get written instructions and a walkthrough with whoever will look after it. Then either your own team runs it, or we keep looking after it for a monthly fee. Both are fine, and we will tell you which one we think suits you. What we will not do is disappear on launch day and leave you with something nobody understands."
   },
   {
     "id": "process-team-handover",
     "category": "process",
     "question": "Can our own developers work alongside you?",
-    "answer": "Yes, and it usually goes well. We work in small pull requests specifically so someone else can review them. We will agree conventions up front, and we are happy for your team to own parts of the codebase while we own others, as long as the boundary is written down."
+    "answer": "Yes, and it usually goes well. We work in small pieces specifically so that someone else can check them. We agree how we will work together at the start, and we are happy for your team to own parts of the work while we own others, as long as the line between them is written down."
   },
   {
     "id": "process-change-mind",
     "category": "process",
     "question": "What if we change direction halfway through?",
-    "answer": "That is normal and the process expects it. On a fixed-scope project a change is re-quoted, so you decide with a number in front of you. On a retainer or dedicated team it is just next week's plan. What we avoid is silent scope creep, where work expands without anyone acknowledging it and the date slips without explanation."
+    "answer": "That is normal and the way we work expects it. On a fixed price project a change is priced again, so you decide with a number in front of you. On ongoing work it is simply next week's plan. What we avoid is work quietly expanding while the date slips and nobody says anything."
   },
   {
     "id": "engagement-models",
     "category": "engagement",
-    "question": "How do you structure engagements?",
-    "answer": "Three ways. A fixed-scope project for a defined outcome with a fixed price and date. A monthly retainer for software that is live and needs maintaining. Or a dedicated team, where engineers work only on your product for an agreed period. Every proposal names one of the three so there is no ambiguity about what you are buying."
+    "question": "How do you structure the work?",
+    "answer": "Three ways. A fixed price project for a clearly defined piece of work. A monthly arrangement for software that is live and needs looking after. Or a dedicated team, where people work only on your product for an agreed period. Every written plan names one of the three, so there is never any confusion about what you are buying."
   },
   {
     "id": "engagement-no-prices",
     "category": "engagement",
-    "question": "Why aren't your prices on the site?",
-    "answer": "Because a number without a scope would mislead you. The same sentence describing a project can mean four weeks or four months depending on what already exists and what it has to integrate with. You get a real, fixed number in the proposal after one conversation — not a range that quietly grows."
+    "question": "Why are there no prices on the site?",
+    "answer": "Because a number without a clear scope would mislead you. The same sentence describing a project can mean four weeks or four months depending on what already exists and what it has to connect to. You get a real, fixed number in writing after one conversation, rather than a range that quietly grows."
   },
   {
     "id": "engagement-commitment",
     "category": "engagement",
-    "question": "Am I locked into a long contract?",
-    "answer": "No. Fixed-scope projects end when the work is delivered. Retainers are rolling monthly with thirty days' notice. Dedicated team arrangements run for an agreed period and are renewed by choice. We would rather you stay because leaving would be a downgrade than because a contract says so."
+    "question": "Am I tied into a long contract?",
+    "answer": "No. Fixed price projects end when the work is delivered. Monthly arrangements roll on and can be stopped with thirty days' notice. Dedicated team arrangements run for an agreed period and continue only if you want them to. We would rather you stayed because leaving would be a step backwards, not because a contract says so."
   },
   {
     "id": "engagement-leaving",
     "category": "engagement",
     "question": "What if I want to leave?",
-    "answer": "You give notice and we spend part of it writing a handover document for whoever comes next: what we built, what we monitor, where credentials live, what we would have done next quarter, and the known rough edges. Everything is already in your accounts. You do not get held hostage by knowledge only we have."
+    "answer": "You give notice, and we spend part of that time writing a handover document for whoever comes next. What we built, what we watch, where the passwords are kept, what we would have done next, and any rough edges we know about. Everything already sits in your accounts. You are never held hostage by something only we know."
   },
   {
     "id": "engagement-small-project",
     "category": "engagement",
     "question": "Is my project too small for you?",
-    "answer": "Possibly, and we will tell you on the first call rather than three weeks in. A single page or a one-day fix is usually better served by a freelancer, and we will say that. An audit is deliberately a small, self-contained piece of work, so it is often the right first step if you are unsure."
+    "answer": "Possibly, and we will tell you on the first call rather than three weeks in. A single page or a one day fix is usually better handled by a freelancer, and we will say so. Checking existing software is deliberately a small, self contained piece of work, so it is often the right first step if you are unsure."
   },
   {
     "id": "security-who-sees",
     "category": "security",
-    "question": "Who sees my code?",
-    "answer": "Only the people working on your engagement. We do not pass your repository to a subcontractor, an outsourced team or a rotating pool of contractors. Access is granted narrowly and revoked when the work ends."
+    "question": "Who at your company sees my work?",
+    "answer": "Only the people actually working on it. We do not pass your work to another company, an outsourced team, or a rotating group of contractors. Access is given narrowly and taken away when the work ends."
   },
   {
-    "id": "security-credentials",
+    "id": "security-passwords",
     "category": "security",
-    "question": "How do you handle credentials?",
-    "answer": "Anything you send us goes into an encrypted password manager — never email, never chat, never a shared document. We ask for the narrowest access that lets us do the work and ask you to revoke it when we are done. If we find secrets committed to your git history, rotating them is the first thing in the report."
+    "question": "How do you handle passwords and access?",
+    "answer": "Anything you send us goes into a locked password manager, never into email, chat or a shared document. We ask for the least access that lets us do the job, and we ask you to remove it when we are finished. If we find your passwords sitting somewhere unsafe inside your own software, changing them is the first thing in the report."
   },
   {
     "id": "security-disclosure",
     "category": "security",
-    "question": "Will you tell anyone what you found in my code?",
-    "answer": "No. Findings are confidential and covered by the NDA we sign before any access is granted. Anything that ever appears in a public case study is anonymised and shown to you for approval before publication. If you say no, it does not go up."
+    "question": "Will you tell anyone what you found?",
+    "answer": "No. What we find is confidential and covered by the agreement we sign before we get access to anything. If something ever appears in a public write up, your name is removed and you see it and approve it before it goes anywhere. If you say no, it does not go up."
   },
   {
     "id": "security-data",
     "category": "security",
-    "question": "Do you need our production data?",
-    "answer": "Almost never, and we do not ask for it. Audits work from the code. Development runs against seeded or anonymised data. Where work genuinely touches a live database it happens in your infrastructure, not on a copy on our machines."
+    "question": "Do you need our customers' information?",
+    "answer": "Almost never, and we do not ask for it. A check is done by reading the software, nothing more. While building, we use made up test information. Where the work genuinely has to touch live customer information, it happens inside your own systems, not on our computers."
   },
   {
-    "id": "technical-stacks",
+    "id": "technical-what-we-build-with",
     "category": "technical",
-    "question": "Which technologies do you work with?",
-    "answer": "TypeScript across the stack: React and Next.js on the web, React Native for mobile, Node on the server, PostgreSQL for data, with Docker, AWS and GitHub Actions around them. We keep the list short on purpose — depth in a few tools beats familiarity with many. If your problem needs something outside it, we will say so instead of taking the work."
+    "question": "What do you build things with?",
+    "answer": "We use a small set of well established, widely used tools rather than a long list we have each touched once. That matters to you for one reason: when you need to hire someone else later, or hand the work to another company, there are plenty of people who can pick it up. If you have a technical person who wants the detail, we are happy to go through it on a call."
   },
   {
     "id": "technical-mobile-platforms",
     "category": "technical",
-    "question": "Do you build native iOS and Android separately?",
-    "answer": "We build cross-platform in React Native and drop to native modules where a specific platform capability requires it. For most products that is the right trade: one codebase, both platforms, and native performance where it actually matters. If your app genuinely needs fully native — heavy graphics, deep platform integration — we will tell you that we are not the right studio."
+    "question": "Do you build separate apps for iPhone and Android?",
+    "answer": "We build one app that runs on both, and use the phone's own features directly where something genuinely needs it. For most businesses that is the right trade, because it costs far less to build and much less to keep updated. If your app needs the very last drop of performance, such as a game or heavy graphics, we will tell you honestly that we are not the right studio."
   },
   {
     "id": "technical-existing-stack",
     "category": "technical",
-    "question": "Our system is in a language you don't list. Can you still help?",
-    "answer": "For an audit, often yes — many of the things that go wrong are structural rather than language-specific: exposed secrets, missing backups, authorisation in the wrong layer, no rollback. For ongoing development in a stack we do not work in, no, and we would rather say so than learn on your budget."
+    "question": "Our software was built with something you do not use. Can you still help?",
+    "answer": "For a check, usually yes. Most of what goes wrong is not specific to the tools: passwords left where they should not be, no working backup, the wrong people able to reach information, no safe way to undo a change. For ongoing building work in tools we do not use, no, and we would rather say so than learn at your expense."
   },
   {
-    "id": "rescue-give-code",
+    "id": "rescue-give-access",
     "category": "technical",
-    "question": "Do I have to give you my code for an audit?",
-    "answer": "We need to read it, and read-only access is enough. We sign a mutual NDA before you grant anything. We do not need write access, deploy access or your production database to tell you what is wrong."
+    "question": "Do I have to give you access to my software?",
+    "answer": "We need to be able to read it, and that is all. We sign a confidentiality agreement before you give us anything. We do not need the ability to change anything, and we do not need your customers' information, to tell you what is wrong."
   },
   {
     "id": "rescue-code-is-bad",
     "category": "technical",
-    "question": "My codebase is a mess. Will you judge it?",
-    "answer": "No, and not out of politeness. Almost every codebase we open looks like this, because it was written under time pressure with tools that optimise for shipping. The mess is the job. What we care about is what it would cost you if it broke, not how it got that way."
+    "question": "I think our software is a mess. Will you judge us?",
+    "answer": "No, and not out of politeness. Almost everything we open looks like this, because it was built under time pressure by people trying to get something working. The mess is the job. What we care about is what it would cost you if it broke, not how it got that way."
   },
   {
-    "id": "rescue-ai-tools",
+    "id": "rescue-built-with-ai",
     "category": "technical",
-    "question": "Does it matter which AI tool the code was built with?",
-    "answer": "Not much. Different assistants produce different flavours of the same handful of structural problems — secrets in the repository, authorisation enforced in the browser, no backups, errors swallowed silently. Knowing which tool was used mostly tells us where to look first."
+    "question": "Ours was largely built using AI tools. Is that a problem?",
+    "answer": "It is common, and it is fixable. These tools are good at producing something that works and poor at the parts nobody sees: backups, keeping passwords safe, telling someone when a fault happens. Knowing which tool was used mostly tells us where to look first. It does not change the price or the approach."
   }
 ]

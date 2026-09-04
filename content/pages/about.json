@@ -1,50 +1,50 @@
 {
   "seo": {
     "title": "About",
-    "description": "Altrazen is a software studio built around one idea: software should be written for the person who maintains it next, not just for the day it ships."
+    "description": "Altrazen is a software studio built around one idea: software should be written for the person who looks after it next, not only for the day it launches."
   },
   "hero": {
     "eyebrow": "About",
-    "heading": "Building software got cheap. Running it did not.",
-    "description": "That gap is the reason this studio exists, and it shapes everything about how we work."
+    "heading": "Building software got cheap. Looking after it did not.",
+    "description": "That gap is why this studio exists, and it shapes how we work."
   },
   "story": {
     "heading": "Why we started",
     "paragraphs": [
-      "In a short space of time, the cost of producing working software collapsed. Better frameworks, better hosting and AI coding assistants turned what used to take a small team a season into something one determined person can do in a fortnight. That is a genuinely good change, and the people taking advantage of it are not cutting corners.",
-      "But nothing made software cheaper to run. Backups still have to exist and be tested. Credentials still have to stay out of public repositories. Somebody still has to be told when the system goes down. Dependencies still need patching. None of that got faster, and none of it is what the tools are optimised to produce.",
-      "So there is now an enormous amount of software in production — real customers, real revenue — sitting on foundations nobody has ever inspected. And there is a second problem underneath it: even software that was built carefully tends to become unmaintainable, because it was written for the launch and not for the person who inherits it eighteen months later.",
-      "Altrazen was built around both halves. We write software for the next developer rather than for the demo, and we take over the systems where that did not happen."
+      "In a short space of time, building working software got dramatically cheaper. Better tools turned what used to take a small team a season into something a determined person can put together in a fortnight. That is a genuinely good change, and the people taking advantage of it are not cutting corners.",
+      "But nothing made software cheaper to look after. Backups still have to exist and be tested. Passwords still have to be kept somewhere safe. Somebody still has to be told when things stop working. None of that got faster, and none of it is what the new tools are built to produce.",
+      "So there is now an enormous amount of software running real businesses, with real customers and real money going through it, that nobody has ever properly checked. Underneath that sits a second problem: even carefully built software tends to become impossible to change, because it was written for launch day and not for the person who inherits it a year later.",
+      "We built Altrazen around both halves. We write software for whoever comes next rather than for the demo, and we take on the software where that never happened."
     ]
   },
   "mission": {
-    "heading": "Mission",
-    "statement": "To build software that the people who inherit it can understand, change and rely on — and to rescue the software where that was never true."
+    "heading": "What we are here to do",
+    "statement": "Build software that the people who inherit it can understand, change and rely on, and rescue the software where that was never true."
   },
   "vision": {
-    "heading": "Vision",
-    "statement": "To be the engineering studio teams call when the work has to be right: for what they are building next, and for what they have already built and can no longer trust."
+    "heading": "Where we are going",
+    "statement": "To be the studio businesses call when the work has to be right: for what they are building next, and for what they have already built and can no longer trust."
   },
   "values": {
     "eyebrow": "How we operate",
-    "heading": "Five values, each with a cost",
-    "description": "A value that never changes a decision is decoration. Each of these has turned down work, extended a timeline or lost us money.",
+    "heading": "Five rules, each with a cost",
+    "description": "A value that never changes a decision is decoration. Each of these has turned down work, extended a deadline or cost us money.",
     "items": [
       {
-        "title": "Honest over impressive",
-        "description": "If your codebase is fine we tell you it is fine and do not sell you an audit. If a rewrite is the right answer we say so, even when the patch would have been our invoice. A report that inflates severity to justify a fee is worth nothing to you, and we will not write one."
+        "title": "Honest before impressive",
+        "description": "If your software is fine, we tell you it is fine and do not sell you a check. If starting again is the right answer, we say so, even when patching it would have been our invoice. A report that exaggerates how bad things are to justify a fee is worth nothing to you, and we will not write one."
       },
       {
-        "title": "Ownership, not tickets",
-        "description": "When something breaks, the answer is never that it was outside scope. Someone owns your system end to end and follows a problem to wherever it actually lives, including into the parts nobody assigned them."
+        "title": "We own the problem, not the ticket",
+        "description": "When something breaks, the answer is never that it was outside the agreement. Someone owns your project from end to end and follows a problem to wherever it actually lives, including into parts nobody assigned them."
       },
       {
-        "title": "Boring technology wins",
-        "description": "We reach for the least interesting solution that works. A well-placed index beats a new service almost every time. We will not introduce a technology into your stack because we wanted to learn it."
+        "title": "Dull choices win",
+        "description": "We reach for the least exciting solution that works. Something well established and widely used beats something clever almost every time, because you can hire for it later. We will not add something to your project because we wanted to learn it."
       },
       {
-        "title": "Document everything",
-        "description": "If only one person understands how something works, that is a defect we introduced. Every change comes with a written record of what and why, so you are never held hostage by knowledge only we have — including on the day you decide to leave."
+        "title": "Write everything down",
+        "description": "If only one person understands how something works, we have created a problem. Every change comes with a written record of what and why, so you are never dependent on knowledge that only we have. That includes the day you decide to leave."
       },
       {
         "title": "Say no early",
@@ -53,26 +53,26 @@
     ]
   },
   "howWeWork": {
-    "eyebrow": "Engineering standards",
-    "heading": "The rules we actually apply",
+    "eyebrow": "Our standards",
+    "heading": "The rules we actually follow",
     "items": [
-      "Small, reviewable pull requests. Nobody should have to read a two-thousand-line diff to know what changed.",
-      "Nothing ships without a way to undo it, and the rollback is tested before launch rather than during an incident.",
-      "Tests where a failure costs money — payment, authentication, data writes — rather than tests chasing a coverage number.",
-      "Secrets never touch the repository, in any branch, at any point in history.",
-      "Every alert reaches a person. An alert that only lands on a dashboard is not monitoring.",
-      "Accessibility to WCAG 2.2 AA is a build requirement, checked in CI, not a phase that gets cut when the date slips.",
-      "Architecture decisions that are expensive to reverse get written down with their reasoning.",
-      "Clients hear about problems we caused immediately, in plain language, with what we are doing about them."
+      "Changes arrive in small pieces. Nobody should have to read a week of work at once to know what changed.",
+      "Nothing goes live without a way to undo it, and we test that before launch rather than during an emergency.",
+      "We test the parts where a fault costs money: payments, signing in, and anything that saves customer information.",
+      "Passwords are never left anywhere they could be found, at any point in a project.",
+      "Every alert reaches a person. An alert that only appears on a screen nobody opens is not an alert.",
+      "What we build works for people using a keyboard, a screen reader or an old phone, and that is checked automatically.",
+      "Decisions that would be expensive to reverse get written down with the reasoning behind them.",
+      "Clients hear about problems we caused straight away, in plain language, with what we are doing about it."
     ]
   },
   "team": {
     "eyebrow": "Team",
-    "heading": "Who you'll work with",
-    "description": "A small engineering team, growing carefully. The people who talk to you are the people who write the code — there is no account manager in between.",
+    "heading": "Who you will work with",
+    "description": "A small team, growing carefully. The people you talk to are the people doing the work, with nobody in between.",
     "emptyState": {
       "heading": "Profiles are being written",
-      "description": "We are growing, and rather than fill this section with stock photographs and invented titles we would rather leave it until the profiles are real. If you want to know exactly who would work on your project, ask on the first call and we will tell you.",
+      "description": "We are growing, and rather than fill this space with stock photographs and invented job titles we would rather leave it until the profiles are real. If you want to know exactly who would work on your project, ask on the first call and we will tell you.",
       "cta": { "label": "Start a conversation", "href": "/contact" }
     }
   },
@@ -80,6 +80,6 @@
     "heading": "Work with us",
     "description": "Start with a conversation. We will tell you honestly whether we are the right studio for what you need.",
     "primaryCta": { "label": "Start a conversation", "href": "/contact" },
-    "secondaryCta": { "label": "See open roles", "href": "/careers" }
+    "secondaryCta": { "label": "Join the team", "href": "/careers" }
   }
 }

@@ -118,8 +118,6 @@ export const serviceSchema = z.object({
   process: z.array(stepSchema).min(1),
   /** ids into how-we-work.json → engagementModels.items */
   engagementModels: z.array(nonEmpty).min(1),
-  /** ids into technologies.json → categories[].items[].id */
-  technologies: z.array(nonEmpty),
   faqs: z.array(nonEmpty),
   relatedServices: z.array(nonEmpty),
   icon: nonEmpty,
@@ -282,12 +280,6 @@ export const homePageSchema = z.object({
     description: nonEmpty,
     items: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
   }),
-  technologies: z.object({
-    eyebrow: nonEmpty,
-    heading: nonEmpty,
-    description: nonEmpty,
-    cta: linkSchema,
-  }),
   whoWeAre: z.object({
     eyebrow: nonEmpty,
     heading: nonEmpty,
@@ -354,30 +346,6 @@ export const howItWorksPageSchema = z.object({
       .min(1),
   }),
   faqIds: z.array(nonEmpty),
-  cta: ctaBlockSchema,
-})
-
-export const technologiesPageSchema = z.object({
-  seo: seoSchema,
-  hero: heroSchema,
-  intro: z.object({ heading: nonEmpty, paragraphs: z.array(nonEmpty).min(1) }),
-  categories: z
-    .array(
-      z.object({
-        id: nonEmpty,
-        label: nonEmpty,
-        description: nonEmpty,
-        items: z
-          .array(z.object({ id: nonEmpty, name: nonEmpty, note: nonEmpty }))
-          .min(1),
-      }),
-    )
-    .min(1),
-  principles: z.object({
-    eyebrow: nonEmpty,
-    heading: nonEmpty,
-    items: z.array(z.object({ title: nonEmpty, description: nonEmpty })).min(1),
-  }),
   cta: ctaBlockSchema,
 })
 
@@ -469,8 +437,6 @@ export type HomePage = z.infer<typeof homePageSchema>
 export type ServicesIndexPage = z.infer<typeof servicesIndexPageSchema>
 export type HowItWorksPage = z.infer<typeof howItWorksPageSchema>
 export type EngagementModel = HowItWorksPage['engagementModels']['items'][number]
-export type TechnologiesPage = z.infer<typeof technologiesPageSchema>
-export type TechCategory = TechnologiesPage['categories'][number]
 export type AboutPage = z.infer<typeof aboutPageSchema>
 export type WorkIndexPage = z.infer<typeof workIndexPageSchema>
 export type CareersIndexPage = z.infer<typeof careersIndexPageSchema>

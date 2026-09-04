@@ -9,7 +9,7 @@ These terms govern services provided by Altrazen ("we", "us") to you, the client
 
 ## 2. Services
 
-We provide software design and engineering services: web application development, product and platform engineering, mobile application development, and the audit, stabilisation and ongoing maintenance of existing codebases. The exact scope of any engagement is set out in the written proposal you accept. Work outside that scope is quoted separately before it begins.
+We provide software design and engineering services: web application development, product and platform engineering, mobile application development, and the audit, stabilisation and ongoing maintenance of existing software. The exact scope of any engagement is set out in the written proposal you accept. Work outside that scope is quoted separately before it begins.
 
 ## 3. Access
 
@@ -43,7 +43,7 @@ We treat your code, data, business information and anything else we encounter as
 
 ## 9. Warranties and limits
 
-We perform our work with reasonable skill and care. We do not warrant that software will be free of defects, that an audit will identify every defect or vulnerability in a codebase, or that maintenance will prevent all outages. Software systems fail, and no engagement can change that.
+We perform our work with reasonable skill and care. We do not warrant that software will be free of defects, that an audit will identify every defect or vulnerability in a software, or that maintenance will prevent all outages. Software systems fail, and no engagement can change that.
 
 To the extent permitted by law, our total liability arising from any engagement is limited to the fees you paid us for that engagement. We are not liable for indirect or consequential loss, including lost profit, lost revenue or lost data.
 

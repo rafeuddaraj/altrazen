@@ -1,18 +1,17 @@
 {
-  "defaultTitle": "Altrazen — Software studio",
+  "defaultTitle": "Altrazen | Software studio",
   "titleTemplate": "%s | Altrazen",
-  "defaultDescription": "A software studio building web applications, SaaS products and mobile apps in TypeScript — and rescuing the codebases other people left behind.",
+  "defaultDescription": "A software studio that builds websites, online products and mobile apps, and looks after software that other people built.",
   "defaultOgImage": "/og-default.png",
   "twitterHandle": "@altrazen",
   "locale": "en_US",
   "keywords": [
     "software studio",
+    "website development",
     "web application development",
-    "SaaS development",
-    "React Native development",
-    "TypeScript development agency",
-    "codebase audit",
-    "legacy code maintenance",
-    "software maintenance"
+    "mobile app development",
+    "software maintenance",
+    "software support",
+    "custom software company"
   ]
 }

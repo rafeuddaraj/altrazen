@@ -1,25 +1,25 @@
 {
   "seo": {
     "title": "Contact",
-    "description": "Talk to Altrazen about a web application, a SaaS product, a mobile app, or a codebase that needs taking over. We reply within one business day."
+    "description": "Talk to Altrazen about a website, an online product, a mobile app, or software that needs taking on. We reply within one working day."
   },
   "hero": {
     "eyebrow": "Contact",
-    "heading": "Tell us what you're building",
-    "description": "Or what is already broken. Give us a couple of paragraphs and we will tell you honestly whether we are the right studio — and if we are not, who you should be talking to instead."
+    "heading": "Tell us what you need",
+    "description": "Or what has already gone wrong. Give us a couple of paragraphs and we will tell you honestly whether we are the right studio, and if we are not, who you should be talking to instead."
   },
   "form": {
     "heading": "Send a message",
     "enquiryTypes": [
-      { "value": "web-development", "label": "Web development" },
-      { "value": "product-engineering", "label": "Product engineering / SaaS" },
-      { "value": "mobile-development", "label": "Mobile app" },
-      { "value": "codebase-rescue", "label": "Existing codebase / audit" },
-      { "value": "careers", "label": "Careers" },
+      { "value": "web-development", "label": "A website or web app" },
+      { "value": "product-engineering", "label": "An online product" },
+      { "value": "mobile-development", "label": "A mobile app" },
+      { "value": "rescue-and-support", "label": "Existing software that needs help" },
+      { "value": "careers", "label": "Working with you" },
       { "value": "other", "label": "Something else" }
     ],
-    "successMessage": "Message sent. We reply to every enquiry within one business day.",
-    "errorMessage": "That did not send. Nothing you typed has been lost — try again, or email us directly.",
+    "successMessage": "Message sent. We reply to every message within one working day.",
+    "errorMessage": "That did not send. Nothing you typed has been lost, so try again, or email us directly.",
     "submitLabel": "Send message"
   },
   "map": {
@@ -29,6 +29,6 @@
   },
   "alternatives": {
     "heading": "What happens next",
-    "description": "We read every message ourselves and reply within one business day. If there is enough to talk about we will suggest a call; if we are not the right fit we will say so in the reply rather than booking a call to tell you."
+    "description": "We read every message ourselves and reply within one working day. If there is enough to talk about we will suggest a call. If we are not the right fit, we will say so in the reply rather than booking a call to tell you."
   }
 }

@@ -1,290 +1,414 @@
 [
   {
     "slug": "web-development",
-    "title": "Web Development",
+    "title": "Websites and Web Apps",
     "shortTitle": "Web",
-    "tagline": "Web applications that are still fast a year after launch.",
-    "summary": "Marketing sites, dashboards, internal tools and storefronts, built to be maintained rather than rebuilt.",
+    "tagline": "A website that still works well a year from now.",
+    "summary": "Company websites, online shops, customer portals and internal tools, built so they stay fast and stay easy to change.",
     "isFlagship": false,
-    "problem": "Most web projects are judged on how they look the week they ship. The bill arrives later: the page that was quick with fifty rows crawls at fifty thousand, nobody can add a field without touching six files, and the one person who understood the deploy has moved on. None of that is visible at launch, which is exactly why it keeps happening.",
+    "problem": "Most websites are judged on how they look in the first week. The real bill arrives later. Pages that felt quick with fifty customers crawl with fifty thousand. A small change turns into a week of work. The one person who knew how to update it has moved on, and nobody else can. None of this is visible on launch day, which is why it keeps happening to good businesses.",
     "outcomes": [
-      "A codebase your next developer can read without a handover call",
-      "Performance budgets that are enforced in CI, not hoped for",
-      "Accessibility built in from the first component rather than retrofitted",
-      "A deploy that can be reversed in one step"
+      "A site that stays quick as your business grows",
+      "Changes that take hours instead of weeks",
+      "Something any competent developer can pick up later, so you are never stuck with one person",
+      "A safe way to undo a change if something goes wrong"
     ],
     "whatWeDo": [
       {
-        "title": "Application development",
-        "description": "Dashboards, admin panels, internal tools and customer-facing applications in React and TypeScript, with server-side rendering where it earns its cost and static rendering where it does not."
+        "title": "Company and marketing websites",
+        "description": "The site your customers judge you by. Fast to load on a phone, easy for your team to update without calling a developer, and built so search engines can read it properly."
       },
       {
-        "title": "Marketing and content sites",
-        "description": "Statically generated sites wired to a headless CMS, so a marketing team can publish without a deploy and the site still scores well on Core Web Vitals."
+        "title": "Customer portals and dashboards",
+        "description": "The place your customers log in to see their account, their orders or their data. This is where most of the real work sits, and where most of the mistakes get made."
       },
       {
-        "title": "Commerce",
-        "description": "Storefronts and checkout flows on headless commerce platforms, with the payment and inventory paths covered by tests because those are the ones that cost money when they break."
+        "title": "Internal tools",
+        "description": "The screens your own staff use every day. Usually the least glamorous part of a business and the one where a few hours of work saves someone a few hours a week, forever."
       },
       {
-        "title": "API and data layer",
-        "description": "REST and typed RPC layers, database schema design, indexing and query work. Most \"the app is slow\" tickets end here rather than in the interface."
+        "title": "Online shops",
+        "description": "Product pages, carts and checkout. We put extra care into payment, because that is the part where a small fault costs real money and nobody notices for days."
       },
       {
-        "title": "Accessibility and performance",
-        "description": "WCAG 2.2 AA as a build requirement, keyboard paths tested by hand, and a performance budget that fails the build when it is exceeded."
+        "title": "Speed and search",
+        "description": "Pages that load quickly on an ordinary phone on an ordinary connection, and that search engines can index cleanly. Both are measured before we call anything finished."
       },
       {
-        "title": "Migration and replatforming",
-        "description": "Moving an existing site off a framework or host that no longer fits, in reviewable stages, without a big-bang cutover weekend."
+        "title": "Moving an existing site",
+        "description": "If your current site sits on something that no longer fits, we move it across in stages, with the old one running until the new one is proven. No weekend where everything is switched at once and hoped for."
       }
     ],
     "whatYouGet": [
-      "The full source, in your repository, under your account, from the first commit",
-      "A README that a developer who has never met us can follow to a running local environment",
-      "Architecture notes explaining why things are where they are",
-      "A deployment pipeline with preview environments and one-step rollback",
-      "Tests covering the paths where a failure costs you money"
+      "Everything we build, owned by you, in your own accounts from the first day",
+      "Written instructions any developer can follow, so you are never dependent on us",
+      "A way to publish changes and undo them in one step",
+      "Checks that run automatically before anything reaches your customers",
+      "A site people can use with a keyboard or a screen reader"
     ],
     "whatsNotIncluded": [
-      "Brand identity, logo design or naming",
-      "Copywriting and content strategy, though we will tell you where the content is doing the heavy lifting",
-      "Paid marketing, SEO campaigns or link building",
-      "Native desktop applications"
+      "Logo design, brand identity or naming",
+      "Writing your marketing copy, though we will tell you where the words are doing the heavy lifting",
+      "Paid advertising and search marketing campaigns",
+      "Desktop software you install on a computer"
     ],
-    "timeline": "Typically six to twelve weeks, scoped after a discovery call",
+    "timeline": "Usually six to twelve weeks, agreed after a first conversation",
     "process": [
-      { "step": 1, "title": "Discovery", "description": "We work out what the software has to do, who uses it, and what already exists. If a smaller version of this would answer the question faster, we say so here rather than after the invoice." },
-      { "step": 2, "title": "Technical plan", "description": "Architecture, data model, third-party dependencies and the risks we can see, written down. You approve a scope and a shape before anyone writes code." },
-      { "step": 3, "title": "Build in reviewable slices", "description": "Working software every week on a preview URL, in pull requests small enough to actually read. You see progress rather than hearing about it." },
-      { "step": 4, "title": "Harden", "description": "Accessibility pass, performance budget, error tracking, backups and the rollback path. This is part of the build, not a phase you can cut when the date slips." },
-      { "step": 5, "title": "Handover", "description": "Documentation, a walkthrough with whoever takes it on, and access transferred to your accounts. You are not locked to us afterwards." }
+      {
+        "step": 1,
+        "title": "Understand the job",
+        "description": "What the site has to do, who uses it, and what already exists. If a smaller version would answer your question faster and cheaper, we say so now rather than after you have paid."
+      },
+      {
+        "step": 2,
+        "title": "Agree the plan",
+        "description": "A written plan covering what we will build, what we will not, how long it takes, and the risks we can already see. You approve it before any work starts."
+      },
+      {
+        "step": 3,
+        "title": "Build in small pieces",
+        "description": "Every week you get a working version on a private link and a short written update. You watch it take shape instead of waiting for a reveal at the end."
+      },
+      {
+        "step": 4,
+        "title": "Make it solid",
+        "description": "Speed checks, accessibility checks, backups, and a tested way to undo a bad change. This is part of the work, not a step that gets dropped when the date gets close."
+      },
+      {
+        "step": 5,
+        "title": "Hand it over",
+        "description": "Written instructions, a walkthrough with whoever takes it on, and everything transferred into your accounts. Leaving us should never be difficult."
+      }
     ],
-    "engagementModels": ["fixed-scope", "retainer"],
-    "technologies": ["typescript", "react", "nextjs", "tailwind", "node", "postgresql", "vercel"],
-    "faqs": ["process-who-owns-code", "process-timeline", "technical-stacks", "process-after-launch"],
-    "relatedServices": ["product-engineering", "codebase-rescue"],
+    "engagementModels": [
+      "fixed-scope",
+      "retainer"
+    ],
+    "faqs": [
+      "process-who-owns",
+      "process-timeline",
+      "process-after-launch",
+      "engagement-small-project"
+    ],
+    "relatedServices": [
+      "product-engineering",
+      "rescue-and-support"
+    ],
     "icon": "browser",
     "order": 1,
     "seo": {
-      "title": "Web Development",
-      "description": "Web applications, dashboards and content sites in React and TypeScript, built to be maintained. Accessibility and performance budgets enforced in CI."
+      "title": "Websites and Web Apps",
+      "description": "Company websites, customer portals, internal tools and online shops. Built to stay fast and easy to change, and owned by you from day one."
     }
   },
   {
     "slug": "product-engineering",
-    "title": "Product Engineering",
-    "shortTitle": "Product",
-    "tagline": "From first version to something a team can run.",
-    "summary": "SaaS and platform work: the multi-tenancy, billing, permissions and operational plumbing that a product needs once real customers arrive.",
+    "title": "Online Products",
+    "shortTitle": "Products",
+    "tagline": "From a first version to something a real business can run on.",
+    "summary": "Subscription products and platforms, including the accounts, payments, permissions and behind the scenes work a product needs once paying customers arrive.",
     "isFlagship": false,
-    "problem": "The first version of a product is the easy half. What breaks a young SaaS is everything the demo never needed: a second customer whose data must not touch the first one's, a failed payment that silently keeps an account active, a background job that retries forever, and a support request nobody can answer because there is no admin view. These are not features anyone asks for, and they decide whether the product survives its first hundred users.",
+    "problem": "Getting a first version working is the easy half. What breaks a young product is everything the demo never needed. A second customer whose information must never be visible to the first. A failed card payment that quietly leaves an account switched on. A task that fails at three in the morning and tells nobody. A support question your team cannot answer because there is no screen that shows them the answer. Nobody asks for any of this, and it decides whether the product survives its first hundred customers.",
     "outcomes": [
-      "Tenant isolation you can explain to a security reviewer",
-      "Billing that stays in step with access, including on failure and refund",
-      "Background work that fails loudly and can be replayed",
-      "An admin surface so support does not mean a database query"
+      "Each customer's information kept properly separate from every other customer's",
+      "Payments and access that stay in step, including when a card fails or someone cancels",
+      "Automatic work that tells someone when it fails, instead of failing quietly",
+      "A screen your own team can use to answer customer questions, without asking a developer"
     ],
     "whatWeDo": [
       {
-        "title": "MVP to first customers",
-        "description": "The smallest version that answers the real question, built so the second version is not a rewrite. We are explicit about which shortcuts are deliberate and what they will cost to undo."
+        "title": "First working version",
+        "description": "The smallest version that answers the real question, built so version two is not a fresh start. Where we take a shortcut, we tell you it is a shortcut and what it will cost to undo."
       },
       {
-        "title": "Multi-tenancy and permissions",
-        "description": "Tenant isolation at the data layer rather than in application conditionals, plus roles and permissions that survive the first enterprise customer asking for custom access."
+        "title": "Accounts and permissions",
+        "description": "Signing in, teams, and who is allowed to see what. Built to hold up when your first large customer asks for their own rules, rather than being bolted on later."
       },
       {
-        "title": "Billing and subscriptions",
-        "description": "Subscription lifecycle wired to a payment provider: trials, upgrades, downgrades, dunning, proration and cancellation, with webhooks that are idempotent because they will be delivered twice."
+        "title": "Payments and subscriptions",
+        "description": "Free trials, upgrades, downgrades, failed cards, refunds and cancellations. The unglamorous cases are the ones that lose money quietly, so they get the most attention."
       },
       {
-        "title": "Background jobs and integrations",
-        "description": "Queues, scheduled work and third-party integrations with retry limits, dead-letter handling and alerting. A job that fails silently is worse than one that never ran."
+        "title": "Work that runs on its own",
+        "description": "Scheduled reports, reminders, imports and anything that talks to another company's system. Set up so that when something fails, a person is told and it can be run again safely."
       },
       {
-        "title": "Observability",
-        "description": "Structured logging, error tracking, uptime and the handful of product metrics worth watching, wired to reach a person instead of a dashboard nobody opens."
+        "title": "Knowing what is happening",
+        "description": "Alerts when something breaks, and a small set of numbers worth watching. Set up to reach a person, not to sit on a screen nobody opens."
       },
       {
-        "title": "Scaling work",
-        "description": "Finding and fixing the specific query, index or N+1 that is actually slow, rather than adding infrastructure and hoping."
+        "title": "Handling growth",
+        "description": "Finding the specific thing that is actually slow and fixing it, rather than paying for a bigger server and hoping the problem goes away."
       }
     ],
     "whatYouGet": [
-      "A product that a team other than ours can operate and extend",
-      "Runbooks for the failures that are likely rather than the ones that are interesting",
-      "An admin interface for the support questions you will actually get",
-      "Monitoring and alerting configured and tested, not just installed",
-      "A written architecture decision record for the choices that are expensive to reverse"
+      "A product a team other than ours can run and keep building on",
+      "Written instructions for the problems that are likely, not the ones that are interesting",
+      "An admin screen for the questions your support team will really get",
+      "Alerts that have been tested, not just switched on",
+      "A written record of the decisions that would be expensive to reverse, and why we made them"
     ],
     "whatsNotIncluded": [
-      "Market research, pricing strategy or go-to-market work",
-      "Fundraising material",
-      "Data science or model training",
-      "24/7 on-call, unless it is agreed separately as part of a retainer"
+      "Market research, pricing strategy or launch marketing",
+      "Investor material",
+      "Round the clock emergency cover, unless it is agreed separately",
+      "Anything that needs a licence or certification we do not hold"
     ],
-    "timeline": "Three to six months for a first release, then ongoing",
+    "timeline": "Three to six months to a first release, then ongoing",
     "process": [
-      { "step": 1, "title": "Shape the problem", "description": "What the product must do, for whom, and what has to be true for it to be worth building. We push back here if the scope is larger than the question." },
-      { "step": 2, "title": "Architecture and decisions", "description": "Data model, tenancy strategy, auth approach and the integrations. The decisions that are expensive to reverse get written down with their reasoning." },
-      { "step": 3, "title": "Build the spine first", "description": "Auth, tenancy, billing and deployment before features, because retrofitting any of them into a working product costs several times more than starting with them." },
-      { "step": 4, "title": "Feature iterations", "description": "Weekly increments on a preview environment, prioritised together and re-planned as you learn from real usage." },
-      { "step": 5, "title": "Operate", "description": "Monitoring, runbooks and either a handover to your team or an ongoing retainer with us. Both are fine; we tell you which we think fits." }
+      {
+        "step": 1,
+        "title": "Understand the problem",
+        "description": "What the product must do, for whom, and what has to be true for it to be worth building. We push back here if the plan is bigger than the question it answers."
+      },
+      {
+        "step": 2,
+        "title": "Agree the shape",
+        "description": "How the product will be put together and which decisions would be expensive to change later. Those get written down with the reasoning, so nobody has to guess in a year."
+      },
+      {
+        "step": 3,
+        "title": "Build the foundation first",
+        "description": "Accounts, payments, permissions and publishing before features. Adding any of them to a working product later costs several times more than starting with them."
+      },
+      {
+        "step": 4,
+        "title": "Build features weekly",
+        "description": "A working version every week on a private link, planned together and adjusted as you learn from real customers."
+      },
+      {
+        "step": 5,
+        "title": "Keep it running",
+        "description": "Alerts, written instructions, and either a handover to your team or ongoing support from us. Both are fine, and we tell you which one we think suits you."
+      }
     ],
-    "engagementModels": ["dedicated-team", "retainer", "fixed-scope"],
-    "technologies": ["typescript", "react", "nextjs", "node", "postgresql", "redis", "docker", "aws"],
-    "faqs": ["process-who-owns-code", "process-timeline", "technical-stacks", "process-team-handover"],
-    "relatedServices": ["web-development", "codebase-rescue"],
+    "engagementModels": [
+      "dedicated-team",
+      "retainer",
+      "fixed-scope"
+    ],
+    "faqs": [
+      "process-who-owns",
+      "process-timeline",
+      "process-team-handover",
+      "engagement-models"
+    ],
+    "relatedServices": [
+      "web-development",
+      "rescue-and-support"
+    ],
     "icon": "layers",
     "order": 2,
     "seo": {
-      "title": "Product Engineering",
-      "description": "SaaS and platform engineering: multi-tenancy, billing, permissions, background jobs and observability. From first release to a product a team can run."
+      "title": "Online Products",
+      "description": "Subscription products and platforms, including accounts, payments, permissions and support tooling. From a first release to something a business can run on."
     }
   },
   {
     "slug": "mobile-development",
-    "title": "Mobile Development",
+    "title": "Mobile Apps",
     "shortTitle": "Mobile",
-    "tagline": "Apps that work on the train, not just on the demo Wi-Fi.",
-    "summary": "Cross-platform iOS and Android applications in React Native, with the offline behaviour, release process and store work that mobile actually requires.",
+    "tagline": "An app that works on the train, not only on office wifi.",
+    "summary": "Apps for iPhone and Android, built once and released to both, including the parts most teams forget until the reviews arrive.",
     "isFlagship": false,
-    "problem": "Mobile punishes assumptions that the web forgives. The connection drops mid-write. The user is two versions behind and will not update. A rejected release costs a week, and a bug you shipped is live until Apple approves the fix. Teams that treat a mobile app as a web app in a smaller window discover all of this after launch, from their reviews.",
+    "problem": "Phones punish assumptions that a website forgives. The signal drops halfway through saving something. A customer is two versions behind and will never update. A rejected release costs a week of waiting. A fault you released is live until Apple approves the fix. Teams who treat an app as a website in a smaller window find all of this out afterwards, from their star ratings.",
     "outcomes": [
-      "A defined offline story rather than a spinner and a hope",
-      "Old app versions that keep working against a changing API",
-      "A repeatable release process instead of one person's laptop",
-      "Crash reporting that maps to real source, not minified frames"
+      "A clear answer to what happens with no signal, instead of a spinning circle",
+      "Older versions that keep working for the customers who never update",
+      "Releases that anyone on your team can publish, not just one person on one laptop",
+      "Crash reports that point at the real cause"
     ],
     "whatWeDo": [
       {
-        "title": "Cross-platform applications",
-        "description": "One React Native codebase for iOS and Android, dropping to native modules where a platform capability genuinely requires it rather than as a default."
+        "title": "One app, both phones",
+        "description": "Built once and released to both iPhone and Android, which keeps the cost and the ongoing work far lower than building the same app twice."
       },
       {
-        "title": "Offline and sync",
-        "description": "Local persistence, an explicit conflict-resolution rule and a queue for writes made without a connection. Decided at design time, because it cannot be added later without touching everything."
+        "title": "Working without a signal",
+        "description": "What the app does on a train or in a lift, and what happens to anything saved while offline. Decided at the start, because it cannot be added neatly afterwards."
       },
       {
-        "title": "API versioning for mobile",
-        "description": "Backend contracts that keep working for the users who will not update, and a deprecation path that does not brick installed apps."
+        "title": "Keeping older versions working",
+        "description": "A meaningful number of your customers will not update for months. The app keeps working for them while you keep releasing for everyone else."
       },
       {
-        "title": "Push and deep links",
-        "description": "Notification handling across both platforms including permission states, plus deep links that survive a cold start."
+        "title": "Notifications and links",
+        "description": "Push notifications handled properly on both phones, including when someone refuses permission, and links that open the right screen even from a cold start."
       },
       {
-        "title": "Release engineering",
-        "description": "Automated builds, TestFlight and Play internal testing tracks, staged rollout, and over-the-air updates for the changes that qualify for them."
+        "title": "Releasing",
+        "description": "Test versions your team can install, releases rolled out gradually so a fault reaches few people, and small fixes that can go out without waiting for approval."
       },
       {
-        "title": "Store submission",
-        "description": "Store listings, privacy declarations, and the review-rejection cycle. We have read the guidelines so you do not have to."
+        "title": "Getting through the app stores",
+        "description": "Store listings, screenshots, privacy declarations and the review process. We have read the rules so you do not have to, and we budget time for the rejection that sometimes comes."
       }
     ],
     "whatYouGet": [
-      "An app in your own App Store and Play Console accounts, never ours",
-      "Signing credentials and certificates handed over in an encrypted manager",
-      "A documented release process any developer on your team can run",
-      "Crash reporting with readable stack traces",
-      "The store listing assets and privacy declarations the platforms require"
+      "The app published under your own Apple and Google accounts, never ours",
+      "Every key and certificate handed over securely",
+      "A release process written down so anyone on your team can run it",
+      "Crash reports that point at the real cause",
+      "The store listing material both companies require"
     ],
     "whatsNotIncluded": [
-      "Games or heavy real-time 3D",
-      "Fully native Swift or Kotlin rewrites of an existing app",
-      "App store optimisation and paid user acquisition",
-      "Hardware or embedded device firmware"
+      "Games or heavy three dimensional graphics",
+      "Rebuilding an existing app separately for each phone",
+      "App store advertising and paid installs",
+      "Software for physical devices and hardware"
     ],
-    "timeline": "Two to four months to first store release",
+    "timeline": "Two to four months to the first store release",
     "process": [
-      { "step": 1, "title": "Platform decisions", "description": "Which platforms, which minimum OS versions, what has to work offline, and which native capabilities are genuinely required. These four answers determine most of the cost." },
-      { "step": 2, "title": "Foundation", "description": "Navigation, state, local persistence and the API contract. The offline rule is decided now, because it is not something that can be retrofitted." },
-      { "step": 3, "title": "Build with real devices", "description": "Weekly TestFlight and Play internal builds on actual hardware. Simulators hide performance problems and every permission dialog." },
-      { "step": 4, "title": "Release preparation", "description": "Store listings, privacy declarations, screenshots and the review submission, with time budgeted for the rejection that may well come." },
-      { "step": 5, "title": "Post-launch", "description": "Crash monitoring, staged rollout and a first patch release, because there is always a first patch release." }
+      {
+        "step": 1,
+        "title": "Answer four questions",
+        "description": "Which phones, how old a phone we support, what has to work without a signal, and which phone features you genuinely need. These four answers decide most of the cost."
+      },
+      {
+        "step": 2,
+        "title": "Build the foundation",
+        "description": "Moving between screens, saving information on the phone, and how the app talks to your system. The offline rule is settled now, not later."
+      },
+      {
+        "step": 3,
+        "title": "Test on real phones",
+        "description": "A test version every week on actual devices. Simulators on a developer's computer hide slowness and hide every permission prompt."
+      },
+      {
+        "step": 4,
+        "title": "Prepare the release",
+        "description": "Store listings, screenshots, privacy declarations and submission, with time set aside for a rejection."
+      },
+      {
+        "step": 5,
+        "title": "After launch",
+        "description": "Watch the crash reports, release gradually, and ship the first fix. There is always a first fix."
+      }
     ],
-    "engagementModels": ["fixed-scope", "dedicated-team", "retainer"],
-    "technologies": ["typescript", "react-native", "expo", "node", "postgresql"],
-    "faqs": ["technical-mobile-platforms", "process-who-owns-code", "process-timeline", "process-after-launch"],
-    "relatedServices": ["product-engineering", "web-development"],
+    "engagementModels": [
+      "fixed-scope",
+      "dedicated-team",
+      "retainer"
+    ],
+    "faqs": [
+      "technical-mobile-platforms",
+      "process-who-owns",
+      "process-timeline",
+      "process-after-launch"
+    ],
+    "relatedServices": [
+      "product-engineering",
+      "web-development"
+    ],
     "icon": "device",
     "order": 3,
     "seo": {
-      "title": "Mobile Development",
-      "description": "Cross-platform iOS and Android apps in React Native, with offline handling, API versioning, release engineering and store submission."
+      "title": "Mobile Apps",
+      "description": "Apps for iPhone and Android built once and released to both, including offline behaviour, notifications, releases and app store submission."
     }
   },
   {
-    "slug": "codebase-rescue",
-    "title": "Codebase Rescue",
+    "slug": "rescue-and-support",
+    "title": "Rescue and Support",
     "shortTitle": "Rescue",
-    "tagline": "Take over the codebase nobody wants to touch.",
-    "summary": "Audit, stabilisation and ongoing maintenance for software that was built fast — by a previous agency, a departed developer, or an AI coding tool — and now has to be safe to run.",
+    "tagline": "Take on the software nobody wants to touch.",
+    "summary": "For software that already exists and has become risky to run. We check it, tell you plainly what is wrong, fix what matters, and keep it working.",
     "isFlagship": true,
-    "problem": "Working software and safe software are different things, and the gap only becomes visible at the worst moment. We open codebases and find live API keys in the git history, permission checks written in the browser, backups that have never once been restored, and errors caught and thrown away so nothing ever alerts. The people who built these are not careless. They shipped under pressure with tools that do not warn you which parts are missing — and AI coding assistants, which now write a large share of this code, warn you least of all.",
+    "problem": "Working software and safe software are two different things, and the gap only shows up on the worst possible day. When we look inside software built in a hurry, we usually find the same handful of problems. The passwords to the system are sitting somewhere anyone who looks can find them. There is no backup, or there is one that nobody has ever tried to restore. Faults happen and nobody is told. The people who built it were not careless. They were working fast, with tools that never mention which parts are missing.",
     "outcomes": [
-      "A written, severity-rated picture of what is actually wrong",
-      "Secrets rotated and removed from history, not just from the current files",
-      "Backups you have watched being restored",
-      "Alerts that reach a person before a customer does"
+      "A plain English report on what is actually wrong and what each problem would cost you",
+      "The passwords to your system changed and properly hidden",
+      "Backups that work, which you have watched being restored",
+      "Someone told when something breaks, before your customers notice"
     ],
     "whatWeDo": [
       {
-        "title": "Audit",
-        "description": "Three to five days reading everything: the code, the full git history where deleted secrets still live, the schema and its indexes, the dependency tree, and the deployment path. It ends in a written report with every finding rated by severity and by what it would cost you, plus a walkthrough call."
+        "title": "A full check",
+        "description": "Three to five days going through everything, including the history of every change ever made, which is where old passwords tend to hide. It ends in a written report with every problem rated by how serious it is, and an hour on a call going through it with you."
       },
       {
-        "title": "Stabilisation",
-        "description": "Closing what the audit found. Credentials rotated and purged from history, authorisation moved server-side, automated backups configured and restored in front of you, monitoring wired to alert a human, vulnerable dependencies upgraded in reviewable steps, and a rollback path put in place."
+        "title": "Fixing what matters",
+        "description": "Passwords changed and hidden properly. The lock moved to the right side of the door. Backups switched on and restored in front of you. Alerts wired up so a person is told. Out of date parts brought up to date carefully. A tested way to undo a bad change."
       },
       {
-        "title": "Ongoing maintenance",
-        "description": "Security patching on a schedule, backup restore tests that actually run, uptime and error monitoring answered by us rather than by you, and a written monthly report. This is what stops a stabilised system drifting back."
+        "title": "Ongoing support",
+        "description": "Security updates on a schedule, backups tested rather than assumed, someone watching for faults so you are not the one who finds them, and a short written report each month. This is what stops everything drifting back."
       },
       {
-        "title": "Documentation and handover",
-        "description": "Most rescued codebases have no documentation at all. We write the architecture notes, the runbooks and the deployment procedure as we go, so the knowledge is not trapped in whoever last touched it."
+        "title": "Writing it all down",
+        "description": "Most software we take on has no instructions at all. We write them as we go, so how it works is not trapped inside whoever touched it last."
       },
       {
-        "title": "Taking over from a departed team",
-        "description": "Where the original developer or agency is gone, we reconstruct how the system works from the code itself, then take responsibility for it."
+        "title": "Taking over from someone who left",
+        "description": "Where the original developer or agency is gone, we work out how everything fits together by reading it, then take responsibility for it."
       },
       {
-        "title": "Continuing the roadmap",
-        "description": "Once a codebase is stable and we know it properly, we build on it. We do not add features to a system we have not read."
+        "title": "Building on it again",
+        "description": "Once it is stable and we know it properly, we can add to it. We will not add features to software we have not read."
       }
     ],
     "whatYouGet": [
-      "A written report with a plain-language summary at the front for non-technical readers",
-      "Every finding rated critical, high, medium or low, with the actual consequence spelled out",
-      "A prioritised fix list ordered by risk rather than by effort",
-      "Working, verified backups and a rollback procedure you have seen used",
-      "Monitoring and alerting that reaches a person"
+      "A written report with a plain English summary at the front for whoever is not technical",
+      "Every problem rated by how serious it is, with the real world consequence spelled out",
+      "A list of what to fix first, ordered by risk rather than by how easy it is",
+      "Backups that work and a tested way to undo a bad change",
+      "Alerts that reach a person"
     ],
     "whatsNotIncluded": [
-      "Penetration testing or formal security certification — we find the obvious holes, we are not an accredited auditor",
-      "A guarantee that an audit finds every defect. Nobody can honestly offer that.",
-      "Rewrites sold as patches. If a rewrite is the right answer we say so, including when it costs us the work.",
-      "New features before the codebase is stable"
+      "Formal security certification. We find the obvious problems, we are not an accredited auditor.",
+      "A promise that a check finds every fault. Nobody can honestly offer that.",
+      "Selling you a patch when the honest answer is starting again. If that is the answer, we say so, even when it costs us the work.",
+      "New features before the software is safe to change"
     ],
-    "timeline": "Audit in three to five days; stabilisation usually one to three weeks",
+    "timeline": "The check takes three to five days. Fixes usually take one to three weeks.",
     "process": [
-      { "step": 1, "title": "Mutual NDA", "description": "Signed before you grant any access at all. It covers your code, your data and anything else we happen to see." },
-      { "step": 2, "title": "Read-only access", "description": "An audit needs to read your code, not change it. No write access, no deploy access, no production database." },
-      { "step": 3, "title": "The audit", "description": "Three to five days of reading. If we find something genuinely urgent — a live credential in a public repository — you hear that the same hour, not in the report." },
-      { "step": 4, "title": "Report and walkthrough", "description": "The written report, then an hour on a call going through it. What you do next is entirely your decision, and taking the report to your own developer is a perfectly good outcome." },
-      { "step": 5, "title": "Stabilise, then maintain", "description": "If you want the work done, it arrives as small reviewable pull requests on a working branch. Your main branch is untouched until you approve a merge." }
+      {
+        "step": 1,
+        "title": "Sign a confidentiality agreement",
+        "description": "Signed before you give us access to anything. It covers your software, your information and anything else we happen to see."
+      },
+      {
+        "step": 2,
+        "title": "Read only access",
+        "description": "Checking your software means reading it, not changing it. We do not ask for the ability to change anything, and we do not ask for your customers' information."
+      },
+      {
+        "step": 3,
+        "title": "The check",
+        "description": "Three to five days of reading. If we find something genuinely urgent, you hear about it the same hour rather than waiting for the report."
+      },
+      {
+        "step": 4,
+        "title": "Report and walkthrough",
+        "description": "The written report, then an hour on a call going through it. What you do next is entirely your decision. Taking the report to your own developer is a perfectly good outcome."
+      },
+      {
+        "step": 5,
+        "title": "Fix, then keep it working",
+        "description": "If you want us to do the work, it arrives in small pieces you can check. Your live site is untouched until you approve."
+      }
     ],
-    "engagementModels": ["fixed-scope", "retainer"],
-    "technologies": ["typescript", "react", "nextjs", "node", "postgresql", "docker", "github-actions"],
-    "faqs": ["rescue-give-code", "rescue-code-is-bad", "rescue-ai-tools", "security-who-sees", "security-credentials", "process-after-launch"],
-    "relatedServices": ["web-development", "product-engineering"],
+    "engagementModels": [
+      "fixed-scope",
+      "retainer"
+    ],
+    "faqs": [
+      "rescue-give-access",
+      "rescue-code-is-bad",
+      "rescue-built-with-ai",
+      "security-who-sees",
+      "security-passwords",
+      "process-after-launch"
+    ],
+    "relatedServices": [
+      "web-development",
+      "product-engineering"
+    ],
     "icon": "shield",
     "order": 4,
     "seo": {
-      "title": "Codebase Rescue",
-      "description": "Audit, stabilisation and maintenance for software built fast — by a previous agency, a departed developer or an AI coding tool. Read-only access, NDA first."
+      "title": "Rescue and Support",
+      "description": "For software that already exists and has become risky to run. We check it, report plainly what is wrong, fix what matters and keep it working."
     }
   }
 ]

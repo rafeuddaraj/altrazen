@@ -7,6 +7,12 @@ import { readFileSync, readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import * as content from '../lib/content'
 
+const walk = (dir: string): string[] =>
+  readdirSync(dir).flatMap((name) => {
+    const full = join(dir, name)
+    return statSync(full).isDirectory() ? walk(full) : [full]
+  })
+
 const checks: [string, () => unknown][] = [
   ['site/company.json', content.getCompany],
   ['site/seo.json', content.getSeoDefaults],
@@ -14,7 +20,6 @@ const checks: [string, () => unknown][] = [
   ['pages/home.json', content.getHomePage],
   ['pages/services-index.json', content.getServicesIndexPage],
   ['pages/how-we-work.json', content.getHowWeWorkPage],
-  ['pages/technologies.json', content.getTechnologiesPage],
   ['pages/about.json', content.getAboutPage],
   ['pages/work-index.json', content.getWorkIndexPage],
   ['pages/careers-index.json', content.getCareersIndexPage],
@@ -65,23 +70,17 @@ try {
   const modelIds = new Set(
     content.getHowWeWorkPage().engagementModels.items.map((model) => model.id),
   )
-  const techIds = new Set(
-    content.getTechnologiesPage().categories.flatMap((c) => c.items.map((i) => i.id)),
-  )
   const broken: string[] = []
   for (const service of content.getServices()) {
     for (const id of service.engagementModels) {
       if (!modelIds.has(id)) broken.push(`${service.slug} → engagementModel "${id}"`)
     }
-    for (const id of service.technologies) {
-      if (!techIds.has(id)) broken.push(`${service.slug} → technology "${id}"`)
-    }
   }
   if (broken.length) throw new Error(`\n  unknown references: ${broken.join(', ')}\n`)
-  process.stdout.write(`  ok   engagement model + technology references\n`)
+  process.stdout.write(`  ok   engagement model references\n`)
 } catch (error) {
   failures += 1
-  process.stdout.write(`  FAIL engagement model + technology references`)
+  process.stdout.write(`  FAIL engagement model references`)
   process.stdout.write(`${error instanceof Error ? error.message : String(error)}\n`)
 }
 
@@ -100,11 +99,6 @@ try {
 
 /* No published prices anywhere in the content layer. */
 try {
-  const walk = (dir: string): string[] =>
-    readdirSync(dir).flatMap((name) => {
-      const full = join(dir, name)
-      return statSync(full).isDirectory() ? walk(full) : [full]
-    })
   const priceLike = /\$\s?\d|\bper month\b|\bUSD\b|\bstarting at\b/i
   const offenders = walk('content')
     .filter((file) => !file.includes(`legal${'/'}`))
@@ -134,6 +128,116 @@ try {
 } catch (error) {
   failures += 1
   process.stdout.write(`  FAIL related service references`)
+  process.stdout.write(`${error instanceof Error ? error.message : String(error)}\n`)
+}
+
+
+/* ------------------------------------------------------------------ *
+ * Voice guards
+ *
+ * The site is for people who do not write software. These two checks turn
+ * that from an intention into something the build enforces, because the
+ * jargon and the em dashes both crept back in once already.
+ * `legal/` is exempt: contracts need precise terms.
+ * ------------------------------------------------------------------ */
+
+const contentFiles = walk('content').filter((file) => !file.includes(`legal${'/'}`))
+
+/* 1. Em dashes and en dashes. The clearest tell that copy was generated. */
+try {
+  const offenders: string[] = []
+  for (const file of contentFiles) {
+    const text = readFileSync(file, 'utf8')
+    for (const match of text.matchAll(/[\u2013\u2014]/g)) {
+      const at = match.index ?? 0
+      const phrase = text.slice(Math.max(0, at - 35), at + 35).replace(/\s+/g, ' ')
+      offenders.push(`${file}: ...${phrase}...`)
+    }
+  }
+  if (offenders.length) {
+    throw new Error(
+      `\n  ${offenders.length} dash(es) found. Rewrite the sentence; do not swap in a hyphen.\n` +
+        offenders.slice(0, 12).map((o) => `    ${o}`).join('\n') +
+        (offenders.length > 12 ? `\n    ...and ${offenders.length - 12} more` : '') +
+        '\n',
+    )
+  }
+  process.stdout.write('  ok   no em or en dashes\n')
+} catch (error) {
+  failures += 1
+  process.stdout.write('  FAIL no em or en dashes')
+  process.stdout.write(`${error instanceof Error ? error.message : String(error)}\n`)
+}
+
+/* 2. Jargon. Anything a non-technical reader would have to look up. */
+/**
+ * Written as regular expressions rather than plain substrings: "ORM" matched
+ * inside "information" and "performance", and "Expo" inside "exposed", which
+ * made the first version of this guard useless.
+ */
+const JARGON: [label: string, pattern: RegExp][] = [
+  ['multi-tenancy', /\bmulti[- ]tenan\w*/i],
+  ['idempotent', /\bidempoten\w*/i],
+  ['webhook', /\bwebhooks?\b/i],
+  ['N+1', /\bN\+1\b/i],
+  ['dead-letter', /\bdead[- ]letter\b/i],
+  ['proration', /\bprorat\w*/i],
+  ['dunning', /\bdunning\b/i],
+  ['middleware', /\bmiddleware\b/i],
+  ['WCAG', /\bWCAG\b/],
+  ['git', /\bgit\b|\bgit hub\b|\bgithub\b/i],
+  ['repository', /\brepositor(y|ies)\b/i],
+  ['pull request', /\bpull requests?\b/i],
+  ['schema', /\bschemas?\b/i],
+  ['API', /\bAPIs?\b/],
+  ['CI/CD', /\bCI\b|\bCI\/CD\b/],
+  ['TypeScript', /\bTypeScript\b/i],
+  ['JavaScript', /\bJavaScript\b/i],
+  ['PostgreSQL', /\bPostgre(SQL)?\b/i],
+  ['SQL', /\bSQL\b/],
+  ['Docker', /\bDocker\b/i],
+  ['Redis', /\bRedis\b/i],
+  ['React', /\bReact( Native)?\b/i],
+  ['Node.js', /\bNode\.?js\b/i],
+  ['Next.js', /\bNext\.?js\b/i],
+  ['Tailwind', /\bTailwind\b/i],
+  ['Playwright', /\bPlaywright\b/i],
+  ['Vitest', /\bVitest\b/i],
+  ['Expo', /\bExpo\b/],
+  ['AWS', /\bAWS\b/],
+  ['ORM', /\bORMs?\b/],
+  ['server-side / client-side', /\b(server|client)[- ]side\b/i],
+  ['query', /\bqueries\b|\bquery plan\b/i],
+  ['indexing', /\bindexe?s\b|\bindexing\b/i],
+  ['runbook', /\brunbooks?\b/i],
+  ['observability', /\bobservabilit\w*/i],
+  ['Core Web Vitals', /\bCore Web Vitals\b/i],
+  ['headless CMS', /\bheadless\b|\bCMS\b/i],
+  ['staging', /\bstaging\b/i],
+  ['codebase', /\bcode ?bases?\b/i],
+]
+
+try {
+  const offenders: string[] = []
+  for (const file of contentFiles) {
+    const text = readFileSync(file, 'utf8')
+    for (const [label, pattern] of JARGON) {
+      const global = new RegExp(pattern.source, `${pattern.flags.replace('g', '')}g`)
+      const count = [...text.matchAll(global)].length
+      if (count > 0) offenders.push(`${file}: "${label}" x${count}`)
+    }
+  }
+  if (offenders.length) {
+    throw new Error(
+      `\n  Technical terms found. Replace each with what it means for the reader.\n` +
+        offenders.map((o) => `    ${o}`).join('\n') +
+        '\n',
+    )
+  }
+  process.stdout.write('  ok   no jargon\n')
+} catch (error) {
+  failures += 1
+  process.stdout.write('  FAIL no jargon')
   process.stdout.write(`${error instanceof Error ? error.message : String(error)}\n`)
 }
 

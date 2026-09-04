@@ -1,36 +1,36 @@
 {
   "seo": {
     "title": "Services",
-    "description": "Web development, product engineering, mobile development and codebase rescue. A short list of things we do deeply, in TypeScript."
+    "description": "Websites and web apps, online products, mobile apps, and rescuing software that already exists. Four things we do well, explained plainly."
   },
   "hero": {
     "eyebrow": "Services",
     "heading": "Four things, done properly",
-    "description": "We would rather be genuinely good at a few things than available for everything. Here is what we take on, and what we deliberately do not."
+    "description": "We would rather be genuinely good at a few things than available for everything. Here is what we take on, and what we deliberately leave to other people."
   },
   "funnelExplanation": {
     "heading": "How the four fit together",
     "paragraphs": [
-      "Three of these build software: a web application, a product with customers and billing behind it, or an app in the stores. Which one you need is usually obvious within ten minutes of the first call, and sometimes the answer is that you need two of them.",
-      "The fourth is different. Codebase Rescue takes over software that already exists and is not safe to run — inherited from an agency that moved on, a developer who left, or an AI coding tool. It is our specialism, and it feeds everything else: reading other people's failures is the fastest way to learn what not to build."
+      "Three of these build something new: a website, a product that customers pay to use, or an app in the stores. Which one you need is usually clear within ten minutes of a first call, and sometimes the answer is two of them.",
+      "The fourth is different. Rescue and Support takes on software that already exists and has become risky to run, whether it came from an agency that moved on, a developer who left, or a rush to get something live. It is the part of our work we are best known for, and it makes the other three better, because fixing other people's software teaches you exactly what not to build."
     ]
   },
   "whatWeDontDo": {
-    "heading": "What we don't do",
-    "description": "Being specific about this saves everyone a call, and a studio that claims everything is telling you nothing.",
+    "heading": "What we do not do",
+    "description": "Saying this clearly saves everyone a call, and a studio that claims to do everything is telling you nothing.",
     "items": [
-      "Brand identity, logo design or naming — we will happily work alongside whoever does.",
-      "Marketing, SEO campaigns, content strategy or paid acquisition.",
-      "Games, real-time 3D, or embedded and hardware firmware.",
-      "Ongoing development in stacks we do not work in. We will say so rather than learn on your budget.",
-      "Penetration testing or formal security certification. We find the obvious holes; we are not an accredited auditor.",
-      "Staff augmentation by the hour. Our dedicated team model is close, but it comes with our standards attached."
+      "Logo design, brand identity or naming. We are happy to work alongside whoever does.",
+      "Marketing campaigns, advertising, or writing your content.",
+      "Games and heavy graphics work.",
+      "Software for physical devices and hardware.",
+      "Formal security certification. We find the obvious problems, but we are not an accredited auditor.",
+      "Renting out people by the hour. Our dedicated team arrangement is close, but our way of working comes with it."
     ]
   },
   "cta": {
     "heading": "Not sure which one you need?",
     "description": "That is a normal place to start. One conversation is usually enough to work it out, and we will tell you if the answer is none of them.",
     "primaryCta": { "label": "Start a conversation", "href": "/contact" },
-    "secondaryCta": { "label": "Read how we work", "href": "/how-we-work" }
+    "secondaryCta": { "label": "See how we work", "href": "/how-we-work" }
   }
 }
