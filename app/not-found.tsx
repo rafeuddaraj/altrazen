@@ -18,7 +18,7 @@ export default function NotFound() {
   return (
     <main id="main" className="px-6 pb-24 pt-32 md:pt-40">
       <Container width="narrow">
-        <span className="mb-4 block font-mono text-xs uppercase tracking-widest text-primary/80">
+        <span className="mb-4 block font-mono text-xs uppercase tracking-widest text-primary">
           404
         </span>
         <SectionHeading

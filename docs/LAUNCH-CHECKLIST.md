@@ -41,6 +41,24 @@ that way until real entries exist.
   key (or equivalent) in `.env.local` and in the host's environment settings.
   Without it the form falls back to a visible mailto link.
 
+## Image placeholders
+
+`components/ui/placeholder-image.tsx` stands in wherever real photography will
+go. It is abstract art built from the design tokens, marked `aria-hidden`, and
+claims nothing. Replace it at these points:
+
+| Where | Seed |
+|---|---|
+| Home hero | `altrazen-hero` |
+| Home, engineering standards | `altrazen-standards` |
+| Home, the studio | `altrazen-studio-team` |
+| Services index, one per service | `services-index-<slug>` |
+| Each service detail hero | `service-<slug>` |
+| About, story | `about-story` |
+| Careers, what it is like | `careers-working` |
+| Team profiles, once people are added | `team-<id>` |
+| Case study cards, once published | `work-<slug>` |
+
 ## Verify after replacing
 
 ```bash

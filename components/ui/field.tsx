@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 
 const control =
   'w-full rounded-md border border-border/50 bg-card/50 px-5 py-4 text-sm text-foreground ' +
-  'transition-colors duration-300 placeholder:text-muted-foreground/50 ' +
+  'transition-colors duration-300 placeholder:text-muted-foreground ' +
   'hover:border-border focus:border-primary/50 disabled:opacity-50 ' +
   'aria-[invalid=true]:border-destructive'
 

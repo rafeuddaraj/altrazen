@@ -27,7 +27,7 @@ export default function HowWeWorkPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <Reveal>
+          <div className="rise">
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -37,7 +37,7 @@ export default function HowWeWorkPage() {
                 {page.hero.description}
               </p>
             ) : null}
-          </Reveal>
+          </div>
         </Container>
       </section>
 
@@ -63,7 +63,7 @@ export default function HowWeWorkPage() {
                   <p className="text-sm font-light leading-relaxed text-muted-foreground text-pretty sm:text-base">
                     {entry.description}
                   </p>
-                  <p className="mt-4 flex gap-2 text-sm font-light leading-relaxed text-muted-foreground/90">
+                  <p className="mt-4 flex gap-2 text-sm font-light leading-relaxed text-muted-foreground">
                     <span className="shrink-0 font-mono text-xs uppercase tracking-widest text-muted-foreground">
                       You:
                     </span>

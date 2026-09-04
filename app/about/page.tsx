@@ -25,7 +25,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[42rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <Reveal>
+          <div className="rise">
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-4xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -35,7 +35,7 @@ export default function AboutPage() {
                 {page.hero.description}
               </p>
             ) : null}
-          </Reveal>
+          </div>
         </Container>
       </section>
 

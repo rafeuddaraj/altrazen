@@ -33,7 +33,7 @@ export function IndexList({
 
         const body = (
           <>
-            <span className="font-mono text-xs text-muted-foreground/60">{number}</span>
+            <span className="font-mono text-xs text-muted-foreground">{number}</span>
             <span className="text-lg font-medium tracking-tight text-balance text-foreground transition-colors duration-300 group-hover:text-primary">
               {row.title}
             </span>

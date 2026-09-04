@@ -114,7 +114,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <p className="max-w-md text-muted-foreground/70 sm:text-right">{footer.trustLine}</p>
+          <p className="max-w-md text-muted-foreground sm:text-right">{footer.trustLine}</p>
         </div>
       </div>
     </footer>

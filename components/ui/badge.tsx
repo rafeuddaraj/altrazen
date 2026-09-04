@@ -1,11 +1,15 @@
 import { cn } from '@/lib/utils'
 import type { Severity } from '@/lib/content'
 
+/*
+ * Severity has its own tokens rather than borrowing `destructive` and a chart
+ * colour. Both borrowed values failed AA at this 10px size once the badge's own
+ * tinted background was composited in: destructive measured 4.12:1 in the light
+ * theme, and the chart colour 3.68:1.
+ */
 const severityStyles: Record<Severity, string> = {
-  critical: 'border-destructive/40 bg-destructive/10 text-destructive',
-  // chart-1 rather than chart-2: chart-2 in the light theme is only 3.68:1
-  // against white, which fails AA at this 10px size.
-  high: 'border-chart-1/40 bg-chart-1/10 text-chart-1',
+  critical: 'border-severity-critical/40 bg-severity-critical/10 text-severity-critical',
+  high: 'border-severity-high/40 bg-severity-high/10 text-severity-high',
   medium: 'border-border bg-muted text-muted-foreground',
   low: 'border-border/60 bg-transparent text-muted-foreground',
 }

@@ -26,6 +26,8 @@
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
+  --severity-critical: #b91c1c;
+  --severity-high: #0e7490;
   --border: #e5e5e5;
   --input: #e5e5e5;
   --ring: #0e7490;
@@ -65,6 +67,8 @@
   --accent-foreground: #000000;
   --destructive: #ef4444;
   --destructive-foreground: #fafafa;
+  --severity-critical: #ef4444;
+  --severity-high: #06b6d4;
   --border: #262626;
   --input: #262626;
   --ring: #06b6d4;
@@ -107,6 +111,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-severity-critical: var(--severity-critical);
+  --color-severity-high: var(--severity-high);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -179,7 +185,31 @@
     transform: none;
   }
 
-  /* Duplicated track scrolls one full copy, then resets — seamless. */
+  /*
+   * Entrance for content that is above the fold.
+   *
+   * Pure CSS, starting the moment the stylesheet parses. Scroll reveal cannot
+   * be used here: it waits for hydration and an observer, which delayed the
+   * largest paint on the home page by about 2.5 seconds for content that was
+   * on screen the whole time.
+   */
+  .rise {
+    animation: rise var(--duration-slow) var(--ease-out-quart) both;
+    animation-delay: var(--rise-delay, 0ms);
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Duplicated track scrolls one full copy, then resets, seamlessly. */
   .marquee-track {
     animation: marquee var(--marquee-duration, 40s) linear infinite;
   }
@@ -207,6 +237,9 @@
     transform: none;
   }
   .marquee-track {
+    animation: none;
+  }
+  .rise {
     animation: none;
   }
 }

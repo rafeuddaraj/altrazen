@@ -39,7 +39,7 @@ export function ServiceDetail({ service }: { service: Service }) {
 
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div>
-              <Reveal>
+              <div className="rise">
                 <Eyebrow className="mb-5">Service</Eyebrow>
                 <h1 className="text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
                   {service.title}
@@ -47,8 +47,8 @@ export function ServiceDetail({ service }: { service: Service }) {
                 <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-muted-foreground text-pretty md:text-xl">
                   {service.tagline}
                 </p>
-              </Reveal>
-              <Reveal delay={100}>
+              </div>
+              <div className="rise" style={{ '--rise-delay': '80ms' } as React.CSSProperties}>
                 <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
                   <span className="rounded-md border border-border/50 px-3 py-1.5 text-xs font-light text-muted-foreground">
                     {service.timeline}
@@ -57,11 +57,14 @@ export function ServiceDetail({ service }: { service: Service }) {
                 <div className="mt-8">
                   <Button href="/contact">Start a conversation</Button>
                 </div>
-              </Reveal>
+              </div>
             </div>
-            <Reveal delay={120} className="hidden lg:block">
+            <div
+              className="rise hidden lg:block"
+              style={{ '--rise-delay': '120ms' } as React.CSSProperties}
+            >
               <PlaceholderImage seed={`service-${service.slug}`} ratio="photo" />
-            </Reveal>
+            </div>
           </div>
         </Container>
       </section>
