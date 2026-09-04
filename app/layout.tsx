@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SiteHeader } from '@/components/layout/site-header'
+import { Footer } from '@/components/layout/footer'
+import { SkipToContent } from '@/components/layout/skip-to-content'
 import { JsonLd } from '@/components/seo/json-ld'
 import { getCompany, getSeoDefaults } from '@/lib/content'
 import { organizationSchema, webSiteSchema } from '@/lib/structured-data'
@@ -82,7 +85,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
+          <SkipToContent />
+          <SiteHeader />
           {children}
+          <Footer />
         </ThemeProvider>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={webSiteSchema()} />

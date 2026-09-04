@@ -12,7 +12,7 @@ export default function HomePage() {
   const { hero } = getHomePage()
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-6">
+    <main id="main" className="flex min-h-screen flex-col items-center justify-center px-6">
       <div className="mx-auto max-w-4xl text-center">
         <span className="mb-4 block text-xs uppercase tracking-widest text-primary/70">
           {hero.eyebrow}
