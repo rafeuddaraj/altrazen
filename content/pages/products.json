@@ -1,0 +1,16 @@
+{
+  "seo": {
+    "title": "Products",
+    "description": "Products Altrazen is building, drawn from the patterns we keep finding across the codebases we maintain."
+  },
+  "hero": {
+    "eyebrow": "Products",
+    "heading": "What we're building",
+    "description": "Everything here starts as a problem we hit repeatedly in client work."
+  },
+  "emptyState": {
+    "heading": "Nothing shipped yet",
+    "description": "We are building, but there is nothing worth your attention yet and we are not going to put up a coming-soon page with a waitlist. The first product will come out of the patterns we keep seeing across the codebases we maintain, because those are the problems we can prove are real.",
+    "primaryCta": { "label": "See what we maintain", "href": "/services/maintenance" }
+  }
+}

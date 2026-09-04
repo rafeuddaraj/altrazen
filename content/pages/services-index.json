@@ -1,0 +1,34 @@
+{
+  "seo": {
+    "title": "Services",
+    "description": "Codebase audit, stabilisation, monthly maintenance and automation for applications built with AI coding tools. From $250."
+  },
+  "hero": {
+    "eyebrow": "Services",
+    "heading": "Find it, fix it, keep it fixed",
+    "description": "Three services in a deliberate order, plus a fourth that only exists because of the first three."
+  },
+  "funnelExplanation": {
+    "heading": "Why the order matters",
+    "paragraphs": [
+      "The audit tells you what is wrong. Stabilisation fixes the parts that can hurt you. Maintenance stops it drifting back. Automation and AI work grows out of that relationship, once we know a codebase well enough to build on it safely.",
+      "You can stop after any step. Most people buy the audit first, read it, and then decide. That is exactly how it is meant to work, and plenty of people take the report to their own developer instead. We would rather that than sell you a fix for a problem you did not have."
+    ]
+  },
+  "whatWeDontDo": {
+    "heading": "What we don't do",
+    "description": "Being clear about this saves everyone a call.",
+    "items": [
+      "New builds from scratch for people we have not worked with. We take over existing systems.",
+      "Design, branding or UI work. We keep what you have running; we do not restyle it.",
+      "Marketing, SEO or content. Different job, different people.",
+      "Penetration testing or formal security certification. We find the obvious holes; we are not an accredited auditor.",
+      "Staff augmentation. We are not a body you rent by the hour."
+    ]
+  },
+  "cta": {
+    "heading": "Start with a conversation",
+    "description": "Thirty minutes, no preparation needed. We will tell you which of these you actually need, including if the answer is none of them.",
+    "primaryCta": { "label": "Book a call", "href": "/book" }
+  }
+}

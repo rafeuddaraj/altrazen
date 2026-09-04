@@ -1,0 +1,7 @@
+# Native postinstall builds. These three ship prebuilt binaries and are
+# required by tsx (esbuild), eslint's resolver (unrs-resolver) and Next's
+# optional image pipeline (sharp).
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+  sharp: true

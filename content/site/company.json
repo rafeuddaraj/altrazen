@@ -1,0 +1,24 @@
+{
+  "name": "Altrazen",
+  "legalName": "Altrazen",
+  "tagline": "Your AI built it. We keep it running.",
+  "positioning": "Altrazen takes over your AI generated codebase, makes it production safe, and keeps it running.",
+  "description": "Altrazen audits, stabilises, and maintains applications built with AI coding tools, so the people who built them can keep shipping without wondering what is about to break.",
+  "url": "https://altrazen.com",
+  "email": "hello@altrazen.com",
+  "phone": null,
+  "location": {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "addressLine": null
+  },
+  "businessHours": "Sunday to Thursday, 10:00 to 18:00 (GMT+6, Asia/Dhaka)",
+  "responseTime": "We reply to every enquiry within one business day.",
+  "foundedYear": 2025,
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/altrazen" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/company/altrazen" },
+    { "label": "X", "url": "https://x.com/altrazen" }
+  ],
+  "bookingUrl": "https://calendly.com/altrazen/30min"
+}

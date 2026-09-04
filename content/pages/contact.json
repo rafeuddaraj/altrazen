@@ -1,0 +1,34 @@
+{
+  "seo": {
+    "title": "Contact",
+    "description": "Get in touch with Altrazen. Send a repository link for a free review, ask about an audit, or just say hello."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "heading": "Tell us what you're worried about",
+    "description": "Send a repository link and we will tell you the three things we would fix first. No charge, and no follow-up sequence."
+  },
+  "form": {
+    "heading": "Send a message",
+    "enquiryTypes": [
+      { "value": "free-repo-review", "label": "Free repo review" },
+      { "value": "audit", "label": "Codebase audit" },
+      { "value": "stabilisation", "label": "Stabilisation" },
+      { "value": "maintenance", "label": "Monthly maintenance" },
+      { "value": "careers", "label": "Careers" },
+      { "value": "other", "label": "Something else" }
+    ],
+    "successMessage": "Message sent. We reply to every enquiry within one business day.",
+    "errorMessage": "That did not send. Nothing you typed has been lost — try again, or email us directly.",
+    "submitLabel": "Send message"
+  },
+  "map": {
+    "enabled": true,
+    "title": "Altrazen location, Dhaka, Bangladesh",
+    "embedUrl": "https://www.google.com/maps?q=Dhaka,Bangladesh&output=embed"
+  },
+  "alternatives": {
+    "heading": "Or skip the form",
+    "description": "If you would rather just talk, book a slot directly."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Careers",
+    "description": "Working at Altrazen: what the job is, who it suits, and how hiring works. Open roles listed when we have them."
+  },
+  "hero": {
+    "eyebrow": "Careers",
+    "heading": "Maintenance is the job, not the punishment",
+    "description": "Most engineering teams treat keeping things running as what you do when you are not building. Here it is the entire point."
+  },
+  "whatItsLike": {
+    "heading": "What it's like to work here",
+    "paragraphs": [
+      "You read a lot of other people's code. Some of it is strange, most of it was written under time pressure by a machine, and none of it is your fault. Curiosity survives this better than perfectionism does.",
+      "You talk to clients directly. There is no account manager between you and the person whose business depends on the thing you are fixing, which means you have to be able to explain a race condition to someone who does not write software.",
+      "The work is small and reviewable. Nobody here ships a two-thousand-line pull request, and nobody is asked to review one.",
+      "We are remote and asynchronous by default, with a small amount of overlap for calls. We do not measure hours."
+    ]
+  },
+  "whoFits": {
+    "heading": "Who this suits",
+    "items": [
+      "You would rather delete code than add it.",
+      "You find a well-placed index more satisfying than a new framework.",
+      "You can write. Reports and handover documents are half the deliverable here.",
+      "You are comfortable saying \"I do not know yet\" to a client, and then going and finding out.",
+      "You have opinions about backups. Actual opinions."
+    ]
+  },
+  "hiringProcess": {
+    "heading": "How hiring works",
+    "steps": [
+      { "step": 1, "title": "You write to us", "description": "A short note about what you have worked on. No cover letter theatre, and we do not need a portfolio site." },
+      { "step": 2, "title": "A conversation", "description": "Forty-five minutes about how you think, not a quiz on algorithms you last used at university." },
+      { "step": 3, "title": "A paid exercise", "description": "A real, small piece of work that looks like the actual job: read a messy codebase, tell us what is wrong with it. Paid at our normal rate, timeboxed, and yours to keep." },
+      { "step": 4, "title": "A decision, quickly", "description": "You hear back within a week either way, with a real reason. We will not leave you waiting." }
+    ]
+  },
+  "openRoles": {
+    "heading": "Open roles",
+    "emptyState": {
+      "heading": "We're not hiring right now",
+      "description": "No open roles today, and we are not going to collect applications for jobs that do not exist. If you work on maintenance and reliability and want to be first in line when that changes, send us a note about what you have worked on and we will keep it.",
+      "cta": { "label": "Send us a note", "href": "/contact" }
+    }
+  }
+}

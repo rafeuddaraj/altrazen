@@ -1,0 +1,74 @@
+{
+  "seo": {
+    "title": "How it works",
+    "description": "The Altrazen process end to end: first call, read-only access, written report, your decision, stabilisation, then ongoing maintenance. Including exactly how we handle your code and credentials."
+  },
+  "hero": {
+    "eyebrow": "The process",
+    "heading": "From first call to a system someone is watching",
+    "description": "No discovery phase you pay for, no proposal deck. Here is exactly what happens, day by day, and exactly what we need from you at each point."
+  },
+  "timeline": [
+    {
+      "day": "Day 0",
+      "title": "Book a call",
+      "description": "Thirty minutes. You tell us what the product does, who depends on it, and what keeps you up. We tell you whether an audit is worth buying. Sometimes it is not, and we say so.",
+      "whatWeNeed": "Half an hour and honest answers. No preparation, no documents."
+    },
+    {
+      "day": "Day 1",
+      "title": "NDA and read-only access",
+      "description": "We sign a mutual NDA before you grant anything. Then you add us as a read-only collaborator on the repository. Not write access, not deploy access, not your production database.",
+      "whatWeNeed": "A signature and one repository invite. Roughly fifteen minutes."
+    },
+    {
+      "day": "Days 1 to 5",
+      "title": "The read",
+      "description": "We read everything: the current code, the git history, the schema, the dependency tree, the deployment path. You hear nothing from us during this, which is intentional. If we find something genuinely urgent, like a live credential in a public repository, you hear about it the same hour.",
+      "whatWeNeed": "Nothing. This is the part where you get on with your work."
+    },
+    {
+      "day": "Days 3 to 5",
+      "title": "Report and walkthrough",
+      "description": "You get a written report with a plain-language summary at the front, every finding rated by severity, and a prioritised fix list. Then an hour on a call going through it, where you can ask why about anything.",
+      "whatWeNeed": "An hour, and whoever else needs to hear it."
+    },
+    {
+      "day": "Your decision",
+      "title": "You decide, with no pressure from us",
+      "description": "The report is yours. Take it to your own developer, act on it yourself, or ask us to do the work. If you want us to, you get a fixed-price stabilisation quote based on what we found, not on what we guessed.",
+      "whatWeNeed": "Nothing. There is no expiry date on the quote and no follow-up sequence."
+    },
+    {
+      "day": "Weeks 2 to 4",
+      "title": "Stabilisation",
+      "description": "Credentials rotated, secrets pulled out of history, authorisation moved server-side, backups configured and restored in front of you, monitoring wired to alert a human, vulnerable dependencies upgraded, rollback put in place. Changes arrive as small pull requests, not one enormous commit.",
+      "whatWeNeed": "Write access to a working branch, and you reachable for decisions. Your main branch is untouched until you approve a merge."
+    },
+    {
+      "day": "Ongoing",
+      "title": "Monthly maintenance",
+      "description": "Patching, backup restore tests, uptime and error monitoring, and a written monthly report. When something breaks, we notice before you do. Rolling monthly, thirty days' notice to cancel, and a handover document if you leave.",
+      "whatWeNeed": "Continued access and about fifteen minutes a month to read the report."
+    }
+  ],
+  "security": {
+    "eyebrow": "Access and confidentiality",
+    "heading": "What happens to your code",
+    "description": "This is the question everyone has and most people are too polite to ask, so here is the answer in public.",
+    "items": [
+      { "title": "Mutual NDA first", "description": "Signed before you grant any access at all. It covers your code, your data, your business model and anything we happen to see along the way." },
+      { "title": "Read-only to start", "description": "An audit needs to read your code, not change it. Write access only exists during stabilisation, only on a working branch, and only after you have agreed to the work." },
+      { "title": "Credentials in an encrypted manager", "description": "Anything you send us goes into an encrypted password manager. Never email, never chat, never a shared document. We ask for the narrowest access that does the job, and we ask you to revoke it when we are done." },
+      { "title": "One engineer, no subcontractors", "description": "Only the person doing the work sees your repository. We do not pass it to a third party, an offshore team, or a rotating pool of contractors." },
+      { "title": "Findings stay private", "description": "We do not discuss what we found in your codebase with anyone. Anything that ever appears in a public case study is anonymised and shown to you for approval first. If you say no, it does not go up." },
+      { "title": "Your data stays yours", "description": "We do not need production data to do an audit and we do not ask for it. Where stabilisation touches a live database, it is your infrastructure, not a copy on our machines." }
+    ]
+  },
+  "faqIds": ["process-give-code", "process-how-long", "process-involvement", "process-what-next", "security-credentials", "security-disclosure"],
+  "cta": {
+    "heading": "Start at Day 0",
+    "description": "Thirty minutes, no preparation needed.",
+    "primaryCta": { "label": "Book a call", "href": "/book" }
+  }
+}

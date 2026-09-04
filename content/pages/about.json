@@ -1,0 +1,83 @@
+{
+  "seo": {
+    "title": "About",
+    "description": "Why Altrazen exists: AI made building software cheap and running it expensive. We took the second half of the problem."
+  },
+  "hero": {
+    "eyebrow": "About",
+    "heading": "AI made building cheap. It did not make running cheap.",
+    "description": "That gap is the whole reason this company exists."
+  },
+  "story": {
+    "heading": "Why we started",
+    "paragraphs": [
+      "In two years, the cost of building a working application collapsed. Something that used to take a small team a season now takes one determined person a weekend. That is a genuinely good thing, and the people doing it are not amateurs for using the tools that made it possible.",
+      "But the cost of running an application did not move at all. Backups still have to exist. Credentials still have to be kept out of public repositories. Somebody still has to be told when the site is down. None of that got cheaper, and none of it is something an AI coding tool does for you.",
+      "So a very large number of real products now exist, with real customers and real revenue, sitting on foundations nobody has ever inspected. The people who built them are not careless. They simply were never told which parts were missing, because the tool that built it does not know either.",
+      "Altrazen took the second half of the problem. We read those codebases, we tell people the truth about what is in them, and then we keep the ones we are trusted with running."
+    ]
+  },
+  "mission": {
+    "heading": "Mission",
+    "statement": "To make every AI generated software product production ready, and give the people who built it the confidence to grow without fear of their own codebase."
+  },
+  "vision": {
+    "heading": "Vision",
+    "statement": "To become the default engineering partner for every founder and small team building with AI, from their first prototype to their scaled product."
+  },
+  "values": {
+    "eyebrow": "How we operate",
+    "heading": "Five values, each with a consequence",
+    "description": "A value that does not change a decision is decoration. Each of these costs us something.",
+    "items": [
+      {
+        "title": "Honest over impressive",
+        "description": "If your codebase is fine, we tell you it is fine and we do not sell you an audit. If a rewrite is the right answer, we say so even though the patch would have been our invoice. A report that inflates severity to justify the fee is worth nothing to you and we would rather not write one."
+      },
+      {
+        "title": "Ownership, not tickets",
+        "description": "When something breaks, the answer is never that it was not in scope. One named engineer owns your system end to end and follows a problem to where it actually lives, including into the parts nobody assigned them."
+      },
+      {
+        "title": "Boring technology wins",
+        "description": "We reach for the least interesting solution that works. A cron job and a well-placed index beat a new service almost every time. We are not going to introduce a technology into your stack because we wanted to learn it."
+      },
+      {
+        "title": "Document everything",
+        "description": "If only one person understands how something works, that is a fault we introduced. Every change we make comes with a written record of what and why, so you are never held hostage by knowledge only we have, including when you leave."
+      },
+      {
+        "title": "Say no early",
+        "description": "We turn down work we are not right for, at the first call rather than three weeks in. Saying no on Monday is a short conversation. Saying it after taking your money is a different thing entirely."
+      }
+    ]
+  },
+  "howWeWork": {
+    "eyebrow": "Engineering standards",
+    "heading": "How we actually work",
+    "items": [
+      "Small, reviewable pull requests. Nobody should have to read a two-thousand-line diff to know what changed.",
+      "Nothing ships without a way to undo it.",
+      "Tests where a failure costs money, not tests for a coverage number.",
+      "Secrets never touch the repository, in any branch, at any point in history.",
+      "Every alert reaches a person. An alert that only reaches a dashboard is not an alert.",
+      "The client is told about problems we caused, immediately and in plain language."
+    ]
+  },
+  "team": {
+    "eyebrow": "Team",
+    "heading": "Who you'll work with",
+    "description": "Altrazen is small on purpose. You talk to the person reading your code, not to an account manager who will relay it.",
+    "emptyState": {
+      "heading": "Profiles are being written",
+      "description": "We would rather leave this blank than fill it with stock photographs and invented titles. If you want to know exactly who would be handling your codebase, ask on the call and we will tell you.",
+      "cta": { "label": "Book a call", "href": "/book" }
+    }
+  },
+  "cta": {
+    "heading": "Work with us",
+    "description": "Start with a thirty-minute call. We will tell you honestly whether we are the right people.",
+    "primaryCta": { "label": "Book a call", "href": "/book" },
+    "secondaryCta": { "label": "Or send a message", "href": "/contact" }
+  }
+}

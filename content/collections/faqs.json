@@ -1,0 +1,116 @@
+[
+  {
+    "id": "general-what-we-do",
+    "category": "general",
+    "question": "What does Altrazen actually do?",
+    "answer": "Three things, in order. We audit an existing codebase and tell you exactly what is wrong with it. We fix the things that can hurt you. Then we keep it running month to month so it stays fixed. We work almost entirely on applications that were built quickly with AI coding tools."
+  },
+  {
+    "id": "general-too-early",
+    "category": "general",
+    "question": "My product is small and barely has users. Is it too early for this?",
+    "answer": "If nobody depends on it yet, an audit is cheap insurance and a stabilisation is probably premature. If you have paying customers, or you are about to demo to an investor, or you are storing anyone else's data, it is not too early. The cost of finding a leaked API key today is a rotated key. The cost of finding it after someone else does is your product."
+  },
+  {
+    "id": "general-not-technical",
+    "category": "general",
+    "question": "I'm not a developer. Will I understand the report?",
+    "answer": "Yes. The report has a plain-language summary at the front that says what is broken, what it would cost you if it broke, and what we would do about it. The technical detail sits behind that for whoever you hand it to next. We also walk you through it on a call rather than emailing a PDF and disappearing."
+  },
+  {
+    "id": "general-build-new",
+    "category": "general",
+    "question": "Can you just build my next feature instead?",
+    "answer": "For clients we already maintain, yes. For a codebase we have never seen, no. Building a feature on top of a foundation we have not read is how we would end up shipping something on top of the exact problem you hired us to find."
+  },
+  {
+    "id": "process-give-code",
+    "category": "process",
+    "question": "Do I have to give you my code?",
+    "answer": "For an audit, we need to read it. Read-only access is enough, and that is all we ask for at the start. We sign a mutual NDA before you grant anything. We do not need write access, deploy access, or your production database to tell you what is wrong."
+  },
+  {
+    "id": "process-code-is-bad",
+    "category": "process",
+    "question": "My code is a mess. Will you judge it?",
+    "answer": "No, and not out of politeness. You used the tool that got you to a working product fastest, which was the correct decision. Every codebase we open looks like this. The mess is the job."
+  },
+  {
+    "id": "process-how-long",
+    "category": "process",
+    "question": "How long does an audit take?",
+    "answer": "Three to five working days from the moment we have repository access. You get a written report and a walkthrough call. Larger or multi-service codebases can run longer, and we tell you that before you pay, not after."
+  },
+  {
+    "id": "process-what-next",
+    "category": "process",
+    "question": "What happens after the audit? Am I locked into anything?",
+    "answer": "Nothing. The audit is a standalone piece of work and the report is yours. Plenty of people take it to their own developer. If you want us to fix what we found, stabilisation is a separate decision you make after you have read the report."
+  },
+  {
+    "id": "process-involvement",
+    "category": "process",
+    "question": "How much of my time does this take?",
+    "answer": "About two hours in total for an audit: a thirty-minute call at the start, granting access, and an hour-long walkthrough at the end. During stabilisation we need you reachable for decisions, not present for the work."
+  },
+  {
+    "id": "pricing-monthly-commit",
+    "category": "pricing",
+    "question": "Do I have to commit to a monthly retainer?",
+    "answer": "No. Audit and stabilisation are one-off engagements. Maintenance is monthly and rolling, cancellable with thirty days' notice. We would rather you stay because the alternative is worse than because a contract says so."
+  },
+  {
+    "id": "pricing-leaving",
+    "category": "pricing",
+    "question": "What if I want to leave?",
+    "answer": "You give thirty days' notice and we spend part of that time writing a handover document for whoever comes next: what we changed, what we monitor, where the credentials live, and what we would have done in the following quarter. You do not get held hostage by knowledge only we have."
+  },
+  {
+    "id": "pricing-why-audit-first",
+    "category": "pricing",
+    "question": "Why can't you just quote me for the fix upfront?",
+    "answer": "Because any number we gave you before reading the code would be invented. The audit is the cheapest way to turn an unknown into a fixed price. After it, the stabilisation quote is exact."
+  },
+  {
+    "id": "security-who-sees",
+    "category": "security",
+    "question": "Who at Altrazen sees my code?",
+    "answer": "Only the engineer doing the work. We are small, which is the point. There is no offshore subcontractor, no rotating pool of contractors, and no third party we pass your repository to."
+  },
+  {
+    "id": "security-credentials",
+    "category": "security",
+    "question": "How do you handle credentials?",
+    "answer": "Anything you send us goes into an encrypted password manager, never into email, chat, or a shared document. We ask for the narrowest access that lets us do the work, and we ask you to revoke it when the engagement ends. If we find your secrets committed to git history, rotating them is the first thing in the report."
+  },
+  {
+    "id": "security-disclosure",
+    "category": "security",
+    "question": "Will you tell anyone what you found in my code?",
+    "answer": "No. Findings are confidential and covered by the NDA. Anything that ever appears in a public case study is anonymised and shown to you for approval before it is published. If you say no, it does not go up."
+  },
+  {
+    "id": "technical-stacks",
+    "category": "technical",
+    "question": "Which stacks do you work with?",
+    "answer": "Anything in the JavaScript and TypeScript ecosystem, which is most of what AI tools generate: React, Next.js, Node, Express, and the usual database and hosting layers underneath. If your project is outside that, tell us on the call and we will say honestly whether we are the right people."
+  },
+  {
+    "id": "technical-tools",
+    "category": "technical",
+    "question": "Does it matter which AI tool I built it with?",
+    "answer": "Not much. Lovable, Cursor, Bolt, v0, Replit and Claude all produce different flavours of the same six or seven structural problems. Knowing which tool you used just tells us where to look first."
+  },
+  {
+    "id": "technical-no-tests",
+    "category": "technical",
+    "question": "There are no tests at all. Is that a dealbreaker?",
+    "answer": "No, it is the normal starting point. We do not try to backfill a full test suite, which would cost more than it returns. We write tests around the paths where a failure costs you money, and leave the rest alone."
+  },
+  {
+    "id": "technical-hosting",
+    "category": "technical",
+    "question": "Do I have to move hosting providers?",
+    "answer": "Almost never. We work with what you have. If your current setup is genuinely the problem, we say so in the report with the reasoning and the cost, and moving is your decision, not a condition of working with us."
+  }
+]

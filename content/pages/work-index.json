@@ -1,0 +1,17 @@
+{
+  "seo": {
+    "title": "Work",
+    "description": "Case studies from codebases Altrazen has audited, stabilised and maintained. Anonymised, published only with client approval."
+  },
+  "hero": {
+    "eyebrow": "Work",
+    "heading": "What the work looks like",
+    "description": "Every case study here is published with the client's written approval and anonymised where they asked for it."
+  },
+  "emptyState": {
+    "heading": "No case studies published yet",
+    "description": "We are early, and we will not fill this page with invented clients or borrowed logos to look otherwise. Published work needs a client who has read the write-up and said yes to it, and that takes time we would rather spend on the engagements themselves. What we can tell you about the work is on the services and process pages, in more detail than a case study would give you anyway.",
+    "primaryCta": { "label": "See how we work", "href": "/how-it-works" },
+    "secondaryCta": { "label": "Ask us directly", "href": "/book" }
+  }
+}

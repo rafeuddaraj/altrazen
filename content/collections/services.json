@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "codebase-audit",
+    "title": "Codebase Audit",
+    "shortTitle": "Audit",
+    "tagline": "Find out what is wrong before it costs you a customer.",
+    "summary": "A three to five day read of your codebase that ends in a written report and a walkthrough call. You learn exactly what is broken, what it would cost you, and what to do first.",
+    "problem": "You cannot fix what you cannot see. An AI coding tool will happily produce an application that works on your laptop, passes your manual click-through, and ships to production with your database credentials sitting in the repository. Nothing warns you. The first signal is usually a customer, an invoice, or an outage.",
+    "whatWeDo": [
+      "Read every file in the repository, including the git history, where secrets tend to hide after being deleted from the current version",
+      "Check for exposed credentials, API keys and tokens, in the code and in every commit that came before it",
+      "Map how authentication and authorisation actually work, and find the routes where they are enforced on the client instead of the server",
+      "Review the database schema, indexes, and every query on a user-facing path",
+      "Confirm whether backups exist, whether they run, and whether anyone has ever restored one",
+      "Audit dependencies for known vulnerabilities and for versions far enough behind that upgrading is itself a project",
+      "Check error handling: what happens when a call fails, and whether anyone finds out",
+      "Measure real load performance rather than local performance",
+      "Review the deployment path and whether a bad release can be rolled back"
+    ],
+    "whatYouGet": [
+      "A written report, typically fifteen to thirty pages, with a plain-language summary at the front",
+      "Every finding rated critical, high, medium or low, with what it would actually cost you if it went wrong",
+      "A prioritised fix list, ordered by risk rather than by effort",
+      "A one-hour walkthrough call where you can ask why about anything in it",
+      "A fixed-price quote for the stabilisation work, if you want it"
+    ],
+    "whatsNotIncluded": [
+      "We do not fix anything during the audit. Reading and changing at the same time is how findings get lost.",
+      "No new features, no design work, no redesign proposals",
+      "No penetration testing or formal security certification",
+      "No infrastructure changes"
+    ],
+    "timeline": "3 to 5 working days from repository access",
+    "startingPrice": "From $250",
+    "process": [
+      { "step": 1, "title": "Thirty-minute call", "description": "You tell us what the product does, who uses it, and what you are worried about. We tell you whether an audit is the right thing to buy." },
+      { "step": 2, "title": "NDA and read-only access", "description": "We sign a mutual NDA, then you grant read-only access to the repository. Nothing else, and no write permissions." },
+      { "step": 3, "title": "The read", "description": "Three to five days of reading the codebase, the history, the schema, and the deployment path." },
+      { "step": 4, "title": "Report and walkthrough", "description": "You get the written report, then an hour on a call going through it. What you do next is entirely your call." }
+    ],
+    "faqs": ["process-give-code", "process-how-long", "process-code-is-bad", "process-what-next", "security-who-sees"],
+    "relatedServices": ["stabilisation", "maintenance"],
+    "icon": "search",
+    "order": 1,
+    "seo": {
+      "title": "Codebase Audit",
+      "description": "A 3 to 5 day audit of your AI generated codebase. Written report, severity-rated findings, prioritised fix list, and a walkthrough call. From $250."
+    }
+  },
+  {
+    "slug": "stabilisation",
+    "title": "Stabilisation",
+    "shortTitle": "Stabilise",
+    "tagline": "Fix the things that can actually hurt you.",
+    "summary": "One to three weeks of focused work closing the critical and high findings from the audit, so your application stops being one bad day away from a serious problem.",
+    "problem": "A report tells you where the holes are. It does not close them. Most people who read an audit intend to act on it, then get pulled back into shipping features, and the critical findings are still open six months later. Stabilisation exists so that does not happen.",
+    "whatWeDo": [
+      "Rotate every exposed credential and move secrets out of the repository into proper environment configuration",
+      "Purge secrets from git history where they were committed and later deleted",
+      "Move authorisation checks to the server on every route where they were only enforced in the browser",
+      "Set up automated database backups, then restore one to prove the backup is real",
+      "Add error tracking and uptime monitoring, wired to alert a human rather than a dashboard nobody opens",
+      "Upgrade dependencies with known vulnerabilities, in reviewable steps rather than one large jump",
+      "Add tests around the paths where a failure costs money: payment, authentication, data writes",
+      "Fix the queries and pages that are slow under real load",
+      "Put a deployment path in place that can be rolled back in one step"
+    ],
+    "whatYouGet": [
+      "Every critical and high finding from the audit closed, or explicitly deferred with your agreement and the reason written down",
+      "Working backups you have watched us restore",
+      "Monitoring and alerting that reaches a person",
+      "A documented deployment and rollback procedure",
+      "A short written handover explaining everything that changed and why"
+    ],
+    "whatsNotIncluded": [
+      "No new features. Stabilisation makes what exists safe; it does not extend it.",
+      "No redesign or visual changes",
+      "No full rewrite. If a rewrite is genuinely the right answer we tell you, and we tell you not to pay us for a patch instead.",
+      "No backfilling of a complete test suite"
+    ],
+    "timeline": "1 to 3 weeks, quoted exactly after the audit",
+    "startingPrice": "From $600",
+    "process": [
+      { "step": 1, "title": "Fixed quote", "description": "Based on the audit findings, you get an exact price and an exact scope. No hourly billing, no surprises." },
+      { "step": 2, "title": "Access and branch", "description": "We take write access to a working branch. Your main branch is untouched until you approve a merge." },
+      { "step": 3, "title": "Work in reviewable pieces", "description": "Changes arrive as small pull requests you or your developer can read, not one enormous commit at the end." },
+      { "step": 4, "title": "Verify and hand over", "description": "We restore a backup in front of you, trigger a test alert, and walk you through the rollback. Then you get the written handover." }
+    ],
+    "faqs": ["pricing-why-audit-first", "process-what-next", "technical-no-tests", "security-credentials", "technical-hosting"],
+    "relatedServices": ["codebase-audit", "maintenance"],
+    "icon": "shield",
+    "order": 2,
+    "seo": {
+      "title": "Stabilisation",
+      "description": "One to three weeks closing the critical findings in your codebase: secrets rotated, backups working, monitoring live, rollback in place. From $600."
+    }
+  },
+  {
+    "slug": "maintenance",
+    "title": "Monthly Maintenance",
+    "shortTitle": "Maintain",
+    "tagline": "Someone is watching it, so you do not have to.",
+    "summary": "A monthly retainer that keeps your application patched, monitored, backed up and answered for. You stop being the person who finds out from a customer.",
+    "problem": "Stabilisation is a snapshot. Dependencies keep releasing security patches, providers keep deprecating things, certificates keep expiring, and a codebase nobody is watching drifts back towards the state the audit found. Maintenance is the difference between fixed once and staying fixed.",
+    "whatWeDo": [
+      "Monitor uptime and errors continuously, and respond when something breaks rather than waiting for you to report it",
+      "Apply security patches and dependency updates on a regular cadence, tested before they ship",
+      "Verify backups actually restore, on a schedule, rather than trusting that they run",
+      "Watch performance and cost, and flag when a query or a provider bill starts trending the wrong way",
+      "Keep documentation current as things change",
+      "Send a monthly written report: what happened, what we changed, what we are watching",
+      "Be reachable when you have a question about your own system"
+    ],
+    "whatYouGet": [
+      "A named engineer who knows your codebase, not a ticket queue",
+      "Monthly written reports you can forward to an investor or a co-founder",
+      "Response commitments that match your tier",
+      "A system that gets slightly better every month instead of slightly worse"
+    ],
+    "whatsNotIncluded": [
+      "Feature development is quoted separately, though we do it for maintenance clients",
+      "No 24/7 on-call at the entry tiers. We tell you exactly what the response window is before you sign.",
+      "No design or marketing work"
+    ],
+    "timeline": "Rolling monthly, thirty days' notice to cancel",
+    "startingPrice": "From $150 per month",
+    "tiers": [
+      { "name": "Essential", "price": "$150 / month", "description": "Uptime and error monitoring, monthly security patching, verified backups, monthly report. Next business day response." },
+      { "name": "Standard", "price": "$400 / month", "description": "Everything in Essential, plus a monthly block of engineering time for small fixes and changes, and same business day response." },
+      { "name": "Embedded", "price": "$900 / month", "description": "Everything in Standard, plus a larger time allocation, priority response, and involvement in what you build next." }
+    ],
+    "process": [
+      { "step": 1, "title": "Start from a known state", "description": "Maintenance begins after an audit, and usually after stabilisation. We do not agree to maintain a system whose problems we have not seen." },
+      { "step": 2, "title": "Instrument", "description": "Monitoring, alerting and backup verification are wired up in the first week if they are not already." },
+      { "step": 3, "title": "Monthly rhythm", "description": "Patching, backup restore tests, and a written report on a predictable schedule." },
+      { "step": 4, "title": "Respond", "description": "When something breaks, we are the ones who notice and the ones who fix it." }
+    ],
+    "faqs": ["pricing-monthly-commit", "pricing-leaving", "general-build-new", "security-who-sees", "technical-hosting"],
+    "relatedServices": ["stabilisation", "automation-ai"],
+    "icon": "activity",
+    "order": 3,
+    "seo": {
+      "title": "Monthly Maintenance",
+      "description": "Monthly maintenance for AI generated applications: monitoring, security patching, verified backups and a named engineer. From $150 per month."
+    }
+  },
+  {
+    "slug": "automation-ai",
+    "title": "Automation & AI Integration",
+    "shortTitle": "Automate",
+    "tagline": "Build on top of a foundation we already trust.",
+    "summary": "Workflow automation and AI features built into an application we already maintain. Available to existing clients only, quoted per project.",
+    "problem": "Adding an AI feature or an automated workflow to a system nobody has audited multiplies whatever is already wrong with it. A background job with unbounded retries against an unindexed table is a small feature and a large bill. We only do this work on codebases we know.",
+    "whatWeDo": [
+      "Automate manual internal processes: reporting, data entry, reconciliation, notifications",
+      "Integrate language model features where they solve a real problem, with cost ceilings and sensible failure behaviour",
+      "Build and monitor background jobs and scheduled tasks that fail loudly rather than silently",
+      "Connect the third-party systems your operation already runs on",
+      "Instrument the whole thing so you can see what it is doing and what it is costing"
+    ],
+    "whatYouGet": [
+      "A working automation with monitoring and cost controls attached from day one",
+      "Documentation of what it does and how to turn it off",
+      "The same maintenance coverage as the rest of your system"
+    ],
+    "whatsNotIncluded": [
+      "Not available as a standalone engagement. We only build on codebases we already maintain.",
+      "No AI feature added because it is expected to be there. If it does not solve a problem, we say so.",
+      "No model training or data science work"
+    ],
+    "timeline": "Quoted per project",
+    "startingPrice": "Quoted per project, existing clients only",
+    "process": [
+      { "step": 1, "title": "Scope against what exists", "description": "Because we already know the codebase, scoping is a conversation rather than a discovery project." },
+      { "step": 2, "title": "Fixed quote", "description": "A price and a scope before any work starts." },
+      { "step": 3, "title": "Build with the brakes on", "description": "Cost ceilings, rate limits, retries with backoff and alerting are part of the build, not a later addition." },
+      { "step": 4, "title": "Fold into maintenance", "description": "Whatever we build becomes part of what we monitor and patch every month." }
+    ],
+    "faqs": ["general-build-new", "technical-stacks", "pricing-monthly-commit"],
+    "relatedServices": ["maintenance"],
+    "icon": "workflow",
+    "order": 4,
+    "seo": {
+      "title": "Automation & AI Integration",
+      "description": "Workflow automation and AI features built into applications Altrazen already maintains, with cost controls and monitoring from day one."
+    }
+  }
+]

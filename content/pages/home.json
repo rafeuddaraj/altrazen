@@ -1,0 +1,108 @@
+{
+  "seo": {
+    "title": "Your AI built it. We keep it running.",
+    "description": "Altrazen audits, stabilises and maintains applications built with AI coding tools. Free 30 minute review. Find out what is wrong before it costs you a customer."
+  },
+  "hero": {
+    "eyebrow": "Codebase audit, stabilisation & maintenance",
+    "headline": "Your AI built it. We keep it running.",
+    "subheadline": "Altrazen audits, stabilises, and maintains applications built with AI coding tools, so you can keep shipping without wondering what's about to break.",
+    "primaryCta": { "label": "Book a free 30-minute review", "href": "/book" },
+    "secondaryCta": { "label": "See how it works", "href": "/how-it-works" }
+  },
+  "trustStrip": {
+    "line": null
+  },
+  "problem": {
+    "eyebrow": "The gap",
+    "heading": "You shipped fast. That was the right call.",
+    "paragraphs": [
+      "You had an idea and a tool that could build it, and you used it. Six months of engineering time turned into a weekend. The product exists, people can use it, and some of them are paying. Nobody sensible would tell you that was the wrong decision.",
+      "But AI coding tools write code that works. They do not write code that lasts. There is a difference, and it only shows up later.",
+      "Your AI did not set up backups. It did not tell you your API keys are sitting in your git history. It did not add a way to know when the site goes down, so the first person who finds out is a customer, and they find out by leaving."
+    ]
+  },
+  "commonIssues": {
+    "eyebrow": "What we find",
+    "heading": "Six things that are almost always wrong",
+    "description": "Not a scare list. This is what we actually find, over and over, in codebases built with Lovable, Cursor, Bolt, v0 and Replit.",
+    "items": [
+      {
+        "label": "Secrets in the code",
+        "description": "API keys, database URLs and tokens committed to the repository. Deleting them later does not help, because the git history keeps them.",
+        "severity": "critical"
+      },
+      {
+        "label": "No backups",
+        "description": "No automated backup, or one that has never been restored. An untested backup is a belief, not a backup.",
+        "severity": "critical"
+      },
+      {
+        "label": "Auth in the wrong place",
+        "description": "Permission checks written in the browser rather than on the server. Anyone who opens developer tools can walk straight past them.",
+        "severity": "critical"
+      },
+      {
+        "label": "Silent failures",
+        "description": "Errors caught and swallowed with no logging and no alert. The application looks fine while quietly losing writes.",
+        "severity": "high"
+      },
+      {
+        "label": "No way to roll back",
+        "description": "Deploys go straight to production with no staging and no one-step revert. A bad release becomes an emergency instead of an inconvenience.",
+        "severity": "high"
+      },
+      {
+        "label": "Stale dependencies",
+        "description": "Packages months or years behind, several with published vulnerabilities, and now far enough behind that upgrading is its own project.",
+        "severity": "high"
+      }
+    ]
+  },
+  "servicesOverview": {
+    "eyebrow": "Services",
+    "heading": "Three steps, in order",
+    "description": "The audit tells you what is wrong. Stabilisation fixes it. Maintenance keeps it that way.",
+    "cta": { "label": "All services", "href": "/services" }
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "heading": "From first call to a system someone is watching",
+    "steps": [
+      { "number": "01", "title": "Audit", "duration": "3 to 5 days", "outcome": "A written report telling you exactly what is broken and what it would cost you." },
+      { "number": "02", "title": "Stabilise", "duration": "1 to 3 weeks", "outcome": "The critical findings closed, backups working, monitoring live, rollback in place." },
+      { "number": "03", "title": "Maintain", "duration": "Monthly", "outcome": "Patched, monitored and answered for, so it stays fixed." }
+    ],
+    "cta": { "label": "See the full process", "href": "/how-it-works" }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "heading": "What this costs",
+    "paragraphs": [
+      "An audit starts at $250. Stabilisation starts at $600 and is quoted exactly once we have read the code. Maintenance runs from $150 a month.",
+      "For most people this lands somewhere between a fraction of a part-time engineer and the cost of one bad outage. The difference is that you only pay for the second one after it has already happened.",
+      "We will give you an exact number after a 30-minute call. Not a range, and not an hourly rate that grows quietly."
+    ],
+    "cta": { "label": "Get an exact number", "href": "/book" }
+  },
+  "whoYouWorkWith": {
+    "eyebrow": "Who you'll work with",
+    "heading": "You talk to the person doing the work",
+    "paragraphs": [
+      "Altrazen is deliberately small. There is no account manager, no handoff to a delivery team, and nobody translating your problem into a ticket for someone who has never spoken to you.",
+      "The engineer who reads your codebase is the engineer who writes your report, joins your walkthrough call, and answers your message four months later. That is not a limitation we are hiding. It is the reason the work is any good."
+    ]
+  },
+  "faqPreview": {
+    "eyebrow": "Questions",
+    "heading": "The things people actually ask",
+    "faqIds": ["process-give-code", "process-code-is-bad", "pricing-monthly-commit", "general-too-early", "security-who-sees"],
+    "cta": { "label": "All questions", "href": "/faq" }
+  },
+  "finalCta": {
+    "heading": "Not sure if you need this?",
+    "description": "Send us your repo link and we'll tell you the three things we'd fix first. No charge, no pitch.",
+    "primaryCta": { "label": "Request a free repo review", "href": "/contact" },
+    "secondaryCta": { "label": "Or book a call", "href": "/book" }
+  }
+}

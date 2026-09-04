@@ -1,0 +1,17 @@
+{
+  "defaultTitle": "Altrazen — Your AI built it. We keep it running.",
+  "titleTemplate": "%s | Altrazen",
+  "defaultDescription": "Altrazen audits, stabilises, and maintains applications built with AI coding tools. Find out what is wrong before it costs you a customer.",
+  "defaultOgImage": "/og-default.png",
+  "twitterHandle": "@altrazen",
+  "locale": "en_US",
+  "keywords": [
+    "codebase audit",
+    "AI generated code",
+    "vibe coding",
+    "application maintenance",
+    "code stabilisation",
+    "technical debt",
+    "production readiness"
+  ]
+}
