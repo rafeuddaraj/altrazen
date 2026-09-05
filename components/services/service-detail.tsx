@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
+import type { ImageSlug } from '@/lib/images'
 import { IndexList } from '@/components/ui/index-list'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { JsonLd } from '@/components/seo/json-ld'
@@ -11,6 +12,18 @@ import { CheckIcon, CrossIcon } from '@/components/ui/icons'
 import { serviceSchema } from '@/lib/structured-data'
 import { getEngagementModelsByIds, getFaqsByIds, getServices } from '@/lib/content'
 import type { Service } from '@/lib/content'
+
+/** Maps a service to its photo. A plain lookup, not part of lib/images.ts,
+ * since it is specific to how this one component uses the map. */
+function serviceImageSlug(slug: Service['slug']): ImageSlug {
+  const map: Record<string, ImageSlug> = {
+    'web-development': 'serviceWebDevelopment',
+    'product-engineering': 'serviceProductEngineering',
+    'mobile-development': 'serviceMobileDevelopment',
+    'rescue-and-support': 'serviceRescueAndSupport',
+  }
+  return map[slug] ?? 'serviceWebDevelopment'
+}
 
 export function ServiceDetail({ service }: { service: Service }) {
   const faqs = getFaqsByIds(service.faqs)
@@ -55,7 +68,7 @@ export function ServiceDetail({ service }: { service: Service }) {
               </div>
             </div>
             <div className="hidden lg:block">
-              <PlaceholderImage seed={`service-${service.slug}`} ratio="photo" />
+              <Photo slug={serviceImageSlug(service.slug)} ratio="photo" priority />
             </div>
           </div>
         </Container>

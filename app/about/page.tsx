@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
 import { EmptyState } from '@/components/ui/empty-state'
 
 export function generateMetadata(): Metadata {
@@ -60,7 +60,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <PlaceholderImage seed="about-story" ratio="portrait" />
+              <Photo slug="aboutStory" ratio="portrait" />
             </div>
           </div>
         </Container>
@@ -151,7 +151,16 @@ export default function AboutPage() {
             <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {team.map((member) => (
                 <li key={member.id}>
-                  <PlaceholderImage seed={`team-${member.id}`} ratio="portrait" />
+                  {member.photo ? (
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      loading="lazy"
+                      className="aspect-[3/4] w-full rounded-lg border border-border/40 object-cover"
+                    />
+                  ) : (
+                    <div className="aspect-[3/4] w-full rounded-lg border border-border/40 bg-card/40" />
+                  )}
                   <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">
                     {member.name}
                   </h3>

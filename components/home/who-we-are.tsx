@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow } from '@/components/ui/section-heading'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
 import type { HomePage } from '@/lib/content'
 
 export function WhoWeAre({ content }: { content: HomePage['whoWeAre'] }) {
@@ -10,7 +10,7 @@ export function WhoWeAre({ content }: { content: HomePage['whoWeAre'] }) {
     <Section className="bg-card/25">
       <Container width="wide" className="px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <PlaceholderImage seed="altrazen-studio-team" ratio="photo" />
+          <Photo slug="studioTeam" ratio="photo" />
           <Eyebrow className="mb-4">{content.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
             {content.heading}

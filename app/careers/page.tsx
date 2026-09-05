@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
 import { EmptyState } from '@/components/ui/empty-state'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
 import { Tag } from '@/components/ui/badge'
 import { ArrowRightIcon, CheckIcon } from '@/components/ui/icons'
 
@@ -105,7 +105,7 @@ export default function CareersPage() {
               </div>
             </div>
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <PlaceholderImage seed="careers-working" ratio="portrait" />
+              <Photo slug="careersWorking" ratio="portrait" />
             </div>
           </div>
         </Container>

@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Eyebrow } from '@/components/ui/section-heading'
 import { Tag } from '@/components/ui/badge'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
 import { ArrowRightIcon } from '@/components/ui/icons'
 import type { HomePage } from '@/lib/content'
 
@@ -35,7 +35,7 @@ export function Hero({ content }: { content: HomePage['hero'] }) {
           </div>
 
           <div className="hidden lg:block">
-            <PlaceholderImage seed="altrazen-hero" ratio="photo" />
+            <Photo slug="hero" ratio="photo" priority />
           </div>
         </div>
       </Container>

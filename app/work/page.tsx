@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow } from '@/components/ui/section-heading'
 import { EmptyState } from '@/components/ui/empty-state'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
 import { Tag } from '@/components/ui/badge'
 import { ArrowRightIcon } from '@/components/ui/icons'
 
@@ -27,7 +27,7 @@ export default function WorkPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -55,7 +55,7 @@ export default function WorkPage() {
                       href={`/work/${study.slug}` as Route}
                       className="group flex h-full flex-col rounded-lg border border-border/40 bg-card/30 p-7 transition-colors duration-300 hover:border-border"
                     >
-                      <PlaceholderImage seed={`work-${study.slug}`} ratio="wide" className="mb-7" />
+                      <Photo slug="workCard" ratio="wide" className="mb-7" />
                       <div className="flex flex-wrap gap-2">
                         <Tag>{study.industry}</Tag>
                         <Tag>{study.builtWith}</Tag>

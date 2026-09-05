@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow } from '@/components/ui/section-heading'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
 import type { HomePage } from '@/lib/content'
 
 export function Standards({ content }: { content: HomePage['standards'] }) {
@@ -17,7 +17,7 @@ export function Standards({ content }: { content: HomePage['standards'] }) {
             <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground text-pretty">
               {content.description}
             </p>
-            <PlaceholderImage seed="altrazen-standards" ratio="photo" className="mt-8 hidden lg:block" />
+            <Photo slug="standards" ratio="photo" className="mt-8 hidden lg:block" />
           </div>
 
           <ul className="border-t border-border/25">

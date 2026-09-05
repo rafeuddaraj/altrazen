@@ -5,13 +5,26 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
-import { PlaceholderImage } from '@/components/ui/placeholder-image'
+import { Photo } from '@/components/ui/photo'
+import type { ImageSlug } from '@/lib/images'
 import { CrossIcon, ArrowRightIcon } from '@/components/ui/icons'
 import Link from 'next/link'
 import type { Route } from 'next'
 
 export function generateMetadata(): Metadata {
   return buildMetadata({ ...getServicesIndexPage().seo, pathname: '/services' })
+}
+
+/** Same mapping as components/services/service-detail.tsx, kept local since
+ * this is the only other place a service needs an image. */
+function serviceImageSlug(slug: string): ImageSlug {
+  const map: Record<string, ImageSlug> = {
+    'web-development': 'serviceWebDevelopment',
+    'product-engineering': 'serviceProductEngineering',
+    'mobile-development': 'serviceMobileDevelopment',
+    'rescue-and-support': 'serviceRescueAndSupport',
+  }
+  return map[slug] ?? 'serviceWebDevelopment'
 }
 
 export default function ServicesPage() {
@@ -26,7 +39,7 @@ export default function ServicesPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -51,11 +64,7 @@ export default function ServicesPage() {
                   href={`/services/${service.slug}` as Route}
                   className="group flex h-full flex-col rounded-lg border border-border/40 bg-card/30 p-7 transition-colors duration-300 hover:border-border"
                 >
-                  <PlaceholderImage
-                    seed={`services-index-${service.slug}`}
-                    ratio="wide"
-                    className="mb-7"
-                  />
+                  <Photo slug={serviceImageSlug(service.slug)} ratio="wide" className="mb-7" />
                   <span className="font-mono text-xs text-muted-foreground">
                     {String(service.order).padStart(2, '0')}
                   </span>
