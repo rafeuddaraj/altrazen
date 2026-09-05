@@ -22,10 +22,13 @@ const checks: [string, () => unknown][] = [
   ['pages/how-we-work.json', content.getHowWeWorkPage],
   ['pages/about.json', content.getAboutPage],
   ['pages/work-index.json', content.getWorkIndexPage],
+  ['pages/products.json', content.getProductsPage],
+  ['pages/clients.json', content.getClientsPage],
   ['pages/careers-index.json', content.getCareersIndexPage],
   ['pages/contact.json', content.getContactPage],
   ['pages/faq.json', content.getFaqPage],
   ['collections/services.json', content.getServices],
+  ['collections/products.json', content.getProducts],
   ['collections/case-studies.json', content.getPublicCaseStudies],
   ['collections/team.json', content.getTeam],
   ['collections/jobs.json', content.getPublishedJobs],
@@ -35,6 +38,9 @@ const checks: [string, () => unknown][] = [
   ['blog/posts', content.getPublishedPosts],
   ['legal/terms.md', () => content.getLegalDocument('terms')],
   ['legal/privacy.md', () => content.getLegalDocument('privacy')],
+  ['legal/cookies.md', () => content.getLegalDocument('cookies')],
+  ['legal/refund.md', () => content.getLegalDocument('refund')],
+  ['legal/accessibility.md', () => content.getLegalDocument('accessibility')],
 ]
 
 let failures = 0

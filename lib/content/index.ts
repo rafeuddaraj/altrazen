@@ -5,6 +5,8 @@ import type {
   Faq,
   FaqCategory,
   Job,
+  LegalDocumentName,
+  Product,
   Service,
   TeamMember,
 } from './schemas'
@@ -30,6 +32,8 @@ export const getHowWeWorkPage = () =>
   loadJson('pages/how-we-work.json', s.howItWorksPageSchema)
 export const getAboutPage = () => loadJson('pages/about.json', s.aboutPageSchema)
 export const getWorkIndexPage = () => loadJson('pages/work-index.json', s.workIndexPageSchema)
+export const getProductsPage = () => loadJson('pages/products.json', s.productsPageSchema)
+export const getClientsPage = () => loadJson('pages/clients.json', s.clientsPageSchema)
 export const getCareersIndexPage = () =>
   loadJson('pages/careers-index.json', s.careersIndexPageSchema)
 export const getContactPage = () => loadJson('pages/contact.json', s.contactPageSchema)
@@ -73,6 +77,23 @@ export function getCaseStudySlugs(): string[] {
 
 export function getFeaturedCaseStudy(): CaseStudy | undefined {
   return getPublicCaseStudies()[0]
+}
+
+/* ------------------------------------------------------------------ *
+ * Products — same shape as Services: empty today, generated from JSON
+ * the moment a real entry exists.
+ * ------------------------------------------------------------------ */
+
+export function getProducts(): Product[] {
+  return loadJsonArray('collections/products.json', s.productSchema)
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return getProducts().find((product) => product.slug === slug)
+}
+
+export function getProductSlugs(): string[] {
+  return getProducts().map((product) => product.slug)
 }
 
 /* ------------------------------------------------------------------ *
@@ -170,7 +191,7 @@ export function getClients() {
  * Legal
  * ------------------------------------------------------------------ */
 
-export function getLegalDocument(name: 'terms' | 'privacy') {
+export function getLegalDocument(name: LegalDocumentName) {
   return loadMarkdown(`legal/${name}.md`, s.legalFrontmatterSchema)
 }
 

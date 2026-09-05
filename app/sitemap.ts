@@ -3,6 +3,7 @@ import {
   getCaseStudySlugs,
   getCompany,
   getJobSlugs,
+  getProductSlugs,
   getPublishedPosts,
   getServiceSlugs,
 } from '@/lib/content'
@@ -26,12 +27,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/how-we-work', 0.9],
     ['/about', 0.7],
     ['/work', 0.6],
+    ['/products', 0.6],
+    ['/clients', 0.5],
     ['/careers', 0.5],
     ['/blog', 0.7],
     ['/faq', 0.7],
     ['/contact', 0.8],
     ['/terms', 0.2],
     ['/privacy', 0.2],
+    ['/cookies', 0.2],
+    ['/refund', 0.2],
+    ['/accessibility', 0.3],
   ]
 
   return [
@@ -57,6 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: url(`/careers/${slug}`),
       lastModified,
       changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    })),
+    ...getProductSlugs().map((slug) => ({
+      url: url(`/products/${slug}`),
+      lastModified,
+      changeFrequency: 'monthly' as const,
       priority: 0.5,
     })),
     ...getPublishedPosts().map((post) => ({

@@ -1,0 +1,17 @@
+{
+  "seo": {
+    "title": "Clients",
+    "description": "Businesses Altrazen has worked with. Published only once a client has agreed to be named."
+  },
+  "hero": {
+    "eyebrow": "Clients",
+    "heading": "Who we have worked with",
+    "description": "Every name on this page will be here because the business agreed to it in writing."
+  },
+  "emptyState": {
+    "heading": "Not published yet",
+    "description": "We are early, and no client has yet gone through the approval step this page requires before their name goes up. Rather than showing a logo wall that looks busier than we actually are, we are leaving this honestly empty until that changes.",
+    "primaryCta": { "label": "See how we work", "href": "/how-we-work" },
+    "secondaryCta": { "label": "Talk to us", "href": "/contact" }
+  }
+}

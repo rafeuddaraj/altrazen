@@ -125,6 +125,21 @@ export const serviceSchema = z.object({
   seo: seoSchema,
 })
 
+/**
+ * No pricing field, consistent with the rest of the site. `status` lets a
+ * product be listed honestly before it is finished.
+ */
+export const productSchema = z.object({
+  slug: nonEmpty,
+  name: nonEmpty,
+  tagline: nonEmpty,
+  summary: nonEmpty,
+  status: z.enum(['coming-soon', 'beta', 'live']),
+  description: nonEmpty,
+  features: z.array(nonEmpty).min(1),
+  seo: seoSchema,
+})
+
 export const caseStudySchema = z
   .object({
     slug: nonEmpty,
@@ -220,6 +235,15 @@ export const legalFrontmatterSchema = z.object({
   title: nonEmpty,
   lastUpdated: z.iso.date(),
 })
+
+export const legalDocumentNames = [
+  'terms',
+  'privacy',
+  'cookies',
+  'refund',
+  'accessibility',
+] as const
+export type LegalDocumentName = (typeof legalDocumentNames)[number]
 
 /* ------------------------------------------------------------------ *
  * Pages
@@ -381,6 +405,18 @@ export const workIndexPageSchema = z.object({
   emptyState: emptyStateSchema,
 })
 
+export const productsPageSchema = z.object({
+  seo: seoSchema,
+  hero: heroSchema,
+  emptyState: emptyStateSchema,
+})
+
+export const clientsPageSchema = z.object({
+  seo: seoSchema,
+  hero: heroSchema,
+  emptyState: emptyStateSchema,
+})
+
 export const careersIndexPageSchema = z.object({
   seo: seoSchema,
   hero: heroSchema,
@@ -425,6 +461,7 @@ export type Navigation = z.infer<typeof navigationSchema>
 export type NavLink = Navigation['header']['links'][number]
 export type Service = z.infer<typeof serviceSchema>
 export type CaseStudy = z.infer<typeof caseStudySchema>
+export type Product = z.infer<typeof productSchema>
 export type TeamMember = z.infer<typeof teamMemberSchema>
 export type Job = z.infer<typeof jobSchema>
 export type Faq = z.infer<typeof faqSchema>
@@ -439,6 +476,8 @@ export type HowItWorksPage = z.infer<typeof howItWorksPageSchema>
 export type EngagementModel = HowItWorksPage['engagementModels']['items'][number]
 export type AboutPage = z.infer<typeof aboutPageSchema>
 export type WorkIndexPage = z.infer<typeof workIndexPageSchema>
+export type ProductsPage = z.infer<typeof productsPageSchema>
+export type ClientsPage = z.infer<typeof clientsPageSchema>
 export type CareersIndexPage = z.infer<typeof careersIndexPageSchema>
 export type ContactPage = z.infer<typeof contactPageSchema>
 export type FaqPage = z.infer<typeof faqPageSchema>

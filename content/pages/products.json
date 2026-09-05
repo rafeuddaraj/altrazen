@@ -1,0 +1,17 @@
+{
+  "seo": {
+    "title": "Products",
+    "description": "What Altrazen is building of its own. Nothing published yet, but this page will grow directly from what we learn maintaining other people's software."
+  },
+  "hero": {
+    "eyebrow": "Products",
+    "heading": "What we are building",
+    "description": "Alongside client work, we keep a short list of our own product ideas. Nothing here is invented to fill space."
+  },
+  "emptyState": {
+    "heading": "Nothing published yet",
+    "description": "We would rather this page stayed empty than filled it with an idea we are not actually building. When we start something real, the plan is to grow it out of a pattern we keep seeing across the software we look after for clients, since that is the problem we understand best.",
+    "primaryCta": { "label": "See what we build for clients", "href": "/services" },
+    "secondaryCta": { "label": "Talk to us", "href": "/contact" }
+  }
+}
