@@ -78,14 +78,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${geistMono.variable}`}>
-      <head>
-        {/* Marks scripting as available before first paint. Scroll-reveal
-            hides content only under this class, so with JavaScript off the
-            page renders as ordinary static markup. */}
-        <script
-          dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js')` }}
-        />
-      </head>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"

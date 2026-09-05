@@ -1,4 +1,3 @@
-import { Reveal } from '@/components/motion/reveal'
 import { cn } from '@/lib/utils'
 
 export interface Stat {
@@ -19,8 +18,8 @@ export function StatStrip({ stats, className }: { stats: readonly Stat[]; classN
         className,
       )}
     >
-      {stats.map((stat, index) => (
-        <Reveal key={stat.label} delay={index * 70} className="bg-background p-6">
+      {stats.map((stat) => (
+        <div key={stat.label} className="bg-background p-6">
           <dt className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
             {stat.label}
           </dt>
@@ -32,7 +31,7 @@ export function StatStrip({ stats, className }: { stats: readonly Stat[]; classN
               {stat.note}
             </p>
           ) : null}
-        </Reveal>
+        </div>
       ))}
     </dl>
   )

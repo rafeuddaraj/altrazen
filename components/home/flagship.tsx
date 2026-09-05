@@ -3,7 +3,6 @@ import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { SeverityBadge } from '@/components/ui/badge'
-import { Reveal } from '@/components/motion/reveal'
 import type { HomePage } from '@/lib/content'
 
 /**
@@ -21,23 +20,16 @@ export function Flagship({ content }: { content: HomePage['flagship'] }) {
       />
       <Container width="wide" className="relative px-6">
         <div className="max-w-3xl">
-          <Reveal>
-            <SectionHeading
-              eyebrow={content.eyebrow}
-              title={content.heading}
-              description={content.description}
-            />
-          </Reveal>
+          <SectionHeading
+            eyebrow={content.eyebrow}
+            title={content.heading}
+            description={content.description}
+          />
         </div>
 
         <ul className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border/40 bg-border/40 md:grid-cols-2">
-          {content.findings.map((finding, index) => (
-            <Reveal
-              as="li"
-              key={finding.label}
-              delay={index * 60}
-              className="flex flex-col gap-3 bg-background p-6 sm:p-7"
-            >
+          {content.findings.map((finding) => (
+            <li key={finding.label} className="flex flex-col gap-3 bg-background p-6 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-base font-medium tracking-tight text-balance text-foreground sm:text-lg">
                   {finding.label}
@@ -47,13 +39,13 @@ export function Flagship({ content }: { content: HomePage['flagship'] }) {
               <p className="text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                 {finding.description}
               </p>
-            </Reveal>
+            </li>
           ))}
         </ul>
 
-        <Reveal delay={120} className="mt-10">
+        <div className="mt-10">
           <Button href={content.cta.href}>{content.cta.label}</Button>
-        </Reveal>
+        </div>
       </Container>
     </Section>
   )

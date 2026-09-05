@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Eyebrow } from '@/components/ui/section-heading'
-import { Marquee } from '@/components/ui/marquee'
+import { Tag } from '@/components/ui/badge'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { ArrowRightIcon } from '@/components/ui/icons'
 import type { HomePage } from '@/lib/content'
@@ -18,42 +18,38 @@ export function Hero({ content }: { content: HomePage['hero'] }) {
       <Container width="wide" className="relative px-6">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <Eyebrow className="rise mb-6">{content.eyebrow}</Eyebrow>
-            <h1
-              className="rise text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
-              style={{ '--rise-delay': '60ms' } as React.CSSProperties}
-            >
+            <Eyebrow className="mb-6">{content.eyebrow}</Eyebrow>
+            <h1 className="text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
               {content.headline}
             </h1>
-            <p
-              className="rise mt-6 max-w-xl text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg md:text-xl"
-              style={{ '--rise-delay': '120ms' } as React.CSSProperties}
-            >
+            <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg md:text-xl">
               {content.subheadline}
             </p>
-            <div
-              className="rise mt-10 flex flex-wrap items-center gap-4"
-              style={{ '--rise-delay': '180ms' } as React.CSSProperties}
-            >
-                <Button href={content.primaryCta.href}>{content.primaryCta.label}</Button>
-                <Button href={content.secondaryCta.href} variant="ghost" className="group">
-                  {content.secondaryCta.label}
-                  <ArrowRightIcon className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Button href={content.primaryCta.href}>{content.primaryCta.label}</Button>
+              <Button href={content.secondaryCta.href} variant="ghost" className="group">
+                {content.secondaryCta.label}
+                <ArrowRightIcon className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
             </div>
           </div>
 
-          <div
-            className="rise hidden lg:block"
-            style={{ '--rise-delay': '140ms' } as React.CSSProperties}
-          >
+          <div className="hidden lg:block">
             <PlaceholderImage seed="altrazen-hero" ratio="photo" />
           </div>
         </div>
       </Container>
 
       <div className="mt-16 border-y border-border/25 py-5 md:mt-20">
-        <Marquee items={content.marquee} label="What we build" durationSeconds={45} />
+        <Container width="wide" className="px-6">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+            {content.marquee.map((item) => (
+              <li key={item}>
+                <Tag>{item}</Tag>
+              </li>
+            ))}
+          </ul>
+        </Container>
       </div>
     </section>
   )

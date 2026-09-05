@@ -4,7 +4,6 @@ import { buildMetadata } from '@/lib/seo'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow } from '@/components/ui/section-heading'
-import { Reveal } from '@/components/motion/reveal'
 import { ContactForm } from '@/components/contact/contact-form'
 
 export function generateMetadata(): Metadata {
@@ -23,7 +22,7 @@ export default function ContactPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -40,16 +39,16 @@ export default function ContactPage() {
       <Section bordered={false} padding="compact">
         <Container width="wide">
           <div className="grid gap-14 lg:grid-cols-[1fr_minmax(0,20rem)] lg:gap-20">
-            <Reveal>
+            <div>
               <h2 className="text-2xl font-semibold tracking-tight text-foreground">
                 {page.form.heading}
               </h2>
               <div className="mt-8">
                 <ContactForm content={page.form} email={company.email} />
               </div>
-            </Reveal>
+            </div>
 
-            <Reveal delay={90} className="lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <div className="flex flex-col gap-8 rounded-lg border border-border/40 bg-card/30 p-6">
                 <div>
                   <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -111,7 +110,7 @@ export default function ContactPage() {
                   </div>
                 </dl>
               </div>
-            </Reveal>
+            </div>
           </div>
         </Container>
       </Section>

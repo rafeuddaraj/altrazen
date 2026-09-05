@@ -7,7 +7,6 @@ import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { EmptyState } from '@/components/ui/empty-state'
-import { Reveal } from '@/components/motion/reveal'
 
 export function generateMetadata(): Metadata {
   return buildMetadata({ ...getAboutPage().seo, pathname: '/about' })
@@ -25,7 +24,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[42rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-4xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -45,24 +44,24 @@ export default function AboutPage() {
         <Container width="wide">
           <div className="grid gap-12 lg:grid-cols-[1fr_minmax(0,26rem)] lg:gap-16">
             <div>
-              <Reveal>
+              <div>
                 <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                   {page.story.heading}
                 </h2>
-              </Reveal>
+              </div>
               <div className="mt-8 flex max-w-2xl flex-col gap-6">
-                {page.story.paragraphs.map((paragraph, index) => (
-                  <Reveal key={paragraph} delay={index * 60}>
+                {page.story.paragraphs.map((paragraph) => (
+                  <div key={paragraph}>
                     <p className="text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg">
                       {paragraph}
                     </p>
-                  </Reveal>
+                  </div>
                 ))}
               </div>
             </div>
-            <Reveal delay={100} className="lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <PlaceholderImage seed="about-story" ratio="portrait" />
-            </Reveal>
+            </div>
           </div>
         </Container>
       </Section>
@@ -71,13 +70,13 @@ export default function AboutPage() {
       <Section>
         <Container width="wide">
           <div className="grid gap-px overflow-hidden rounded-lg border border-border/40 bg-border/40 md:grid-cols-2">
-            {[page.mission, page.vision].map((block, index) => (
-              <Reveal key={block.heading} delay={index * 80} className="bg-background p-8 sm:p-10">
+            {[page.mission, page.vision].map((block) => (
+              <div key={block.heading} className="bg-background p-8 sm:p-10">
                 <Eyebrow className="mb-5">{block.heading}</Eyebrow>
                 <p className="text-xl font-light leading-snug tracking-tight text-balance text-foreground sm:text-2xl">
                   {block.statement}
                 </p>
-              </Reveal>
+              </div>
             ))}
           </div>
         </Container>
@@ -86,21 +85,16 @@ export default function AboutPage() {
       {/* Values */}
       <Section className="bg-card/25">
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading
               eyebrow={page.values.eyebrow}
               title={page.values.heading}
               description={page.values.description}
             />
-          </Reveal>
+          </div>
           <ol className="mt-14 border-t border-border/30">
             {page.values.items.map((value, index) => (
-              <Reveal
-                as="li"
-                key={value.title}
-                delay={index * 55}
-                className="grid gap-3 border-b border-border/30 py-7 sm:grid-cols-[2.5rem_minmax(0,16rem)_1fr] sm:gap-8"
-              >
+              <li key={value.title} className="grid gap-3 border-b border-border/30 py-7 sm:grid-cols-[2.5rem_minmax(0,16rem)_1fr] sm:gap-8">
                 <span className="font-mono text-xs text-muted-foreground">
                   {String(index + 1).padStart(2, '0')}
                 </span>
@@ -110,7 +104,7 @@ export default function AboutPage() {
                 <p className="text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {value.description}
                 </p>
-              </Reveal>
+              </li>
             ))}
           </ol>
         </Container>
@@ -120,25 +114,20 @@ export default function AboutPage() {
       <Section>
         <Container width="wide">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-20">
-            <Reveal className="lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <Eyebrow className="mb-4">{page.howWeWork.eyebrow}</Eyebrow>
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 {page.howWeWork.heading}
               </h2>
-            </Reveal>
+            </div>
             <ul className="flex flex-col gap-4">
-              {page.howWeWork.items.map((item, index) => (
-                <Reveal
-                  as="li"
-                  key={item}
-                  delay={index * 45}
-                  className="flex gap-4 border-b border-border/25 pb-4"
-                >
+              {page.howWeWork.items.map((item) => (
+                <li key={item} className="flex gap-4 border-b border-border/25 pb-4">
                   <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
                   <span className="text-base font-light leading-relaxed text-muted-foreground text-pretty">
                     {item}
                   </span>
-                </Reveal>
+                </li>
               ))}
             </ul>
           </div>
@@ -150,18 +139,18 @@ export default function AboutPage() {
           empty state stands in, rather than invented profiles. */}
       <Section>
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading
               eyebrow={page.team.eyebrow}
               title={page.team.heading}
               description={page.team.description}
             />
-          </Reveal>
+          </div>
 
           {team.length > 0 ? (
             <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {team.map((member, index) => (
-                <Reveal as="li" key={member.id} delay={index * 60}>
+              {team.map((member) => (
+                <li key={member.id}>
                   <PlaceholderImage seed={`team-${member.id}`} ratio="portrait" />
                   <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">
                     {member.name}
@@ -188,20 +177,20 @@ export default function AboutPage() {
                       ))}
                     </ul>
                   ) : null}
-                </Reveal>
+                </li>
               ))}
             </ul>
           ) : (
-            <Reveal delay={80}>
+            <div>
               <EmptyState content={page.team.emptyState} className="mt-14" />
-            </Reveal>
+            </div>
           )}
         </Container>
       </Section>
 
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <div className="rounded-lg border border-border/40 bg-card/40 px-6 py-14 text-center sm:px-12">
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 {page.cta.heading}
@@ -220,7 +209,7 @@ export default function AboutPage() {
                 ) : null}
               </div>
             </div>
-          </Reveal>
+          </div>
         </Container>
       </Section>
     </main>

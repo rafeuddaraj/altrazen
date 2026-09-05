@@ -23,7 +23,7 @@ export default function LegalPage() {
     <main id="main">
       <section className="px-6 pb-10 pt-32 md:pt-40">
         <Container width="prose">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">Legal</Eyebrow>
             <h1 className="text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl">
               {frontmatter.title}

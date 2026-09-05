@@ -7,7 +7,6 @@ import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
 import { CheckIcon, LockIcon } from '@/components/ui/icons'
-import { Reveal } from '@/components/motion/reveal'
 import { JsonLd } from '@/components/seo/json-ld'
 import { faqPageSchema } from '@/lib/structured-data'
 
@@ -27,7 +26,7 @@ export default function HowWeWorkPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -46,13 +45,8 @@ export default function HowWeWorkPage() {
       <Section bordered={false} padding="compact">
         <Container width="wide">
           <ol className="border-t border-border/25">
-            {page.timeline.map((entry, index) => (
-              <Reveal
-                as="li"
-                key={entry.title}
-                delay={index * 50}
-                className="grid gap-4 border-b border-border/25 py-8 lg:grid-cols-[minmax(0,9rem)_minmax(0,16rem)_1fr] lg:gap-10"
-              >
+            {page.timeline.map((entry) => (
+              <li key={entry.title} className="grid gap-4 border-b border-border/25 py-8 lg:grid-cols-[minmax(0,9rem)_minmax(0,16rem)_1fr] lg:gap-10">
                 <span className="font-mono text-xs uppercase tracking-widest text-primary">
                   {entry.day}
                 </span>
@@ -70,7 +64,7 @@ export default function HowWeWorkPage() {
                     <span className="text-pretty">{entry.whatWeNeed}</span>
                   </p>
                 </div>
-              </Reveal>
+              </li>
             ))}
           </ol>
         </Container>
@@ -80,20 +74,16 @@ export default function HowWeWorkPage() {
           what they are actually buying. */}
       <Section className="bg-card/25">
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading
               eyebrow={page.engagementModels.eyebrow}
               title={page.engagementModels.heading}
               description={page.engagementModels.description}
             />
-          </Reveal>
+          </div>
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
-            {page.engagementModels.items.map((model, index) => (
-              <Reveal
-                key={model.id}
-                delay={index * 70}
-                className="flex flex-col rounded-lg border border-border/40 bg-background p-7"
-              >
+            {page.engagementModels.items.map((model) => (
+              <div key={model.id} className="flex flex-col rounded-lg border border-border/40 bg-background p-7">
                 <h3 className="text-xl font-medium tracking-tight text-foreground">{model.name}</h3>
                 <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {model.description}
@@ -114,7 +104,7 @@ export default function HowWeWorkPage() {
                     </li>
                   ))}
                 </ul>
-              </Reveal>
+              </div>
             ))}
           </div>
         </Container>
@@ -123,16 +113,16 @@ export default function HowWeWorkPage() {
       {/* Access and privacy. The biggest unasked objection, answered in public. */}
       <Section>
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading
               eyebrow={page.security.eyebrow}
               title={page.security.heading}
               description={page.security.description}
             />
-          </Reveal>
+          </div>
           <ul className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border/40 bg-border/40 md:grid-cols-2 lg:grid-cols-3">
-            {page.security.items.map((item, index) => (
-              <Reveal as="li" key={item.title} delay={index * 55} className="bg-background p-6">
+            {page.security.items.map((item) => (
+              <li key={item.title} className="bg-background p-6">
                 <LockIcon className="size-4 text-primary" />
                 <h3 className="mt-4 text-base font-medium tracking-tight text-balance text-foreground">
                   {item.title}
@@ -140,7 +130,7 @@ export default function HowWeWorkPage() {
                 <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {item.description}
                 </p>
-              </Reveal>
+              </li>
             ))}
           </ul>
         </Container>
@@ -148,18 +138,18 @@ export default function HowWeWorkPage() {
 
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <SectionHeading eyebrow="Questions" title="What people ask about working together" />
-          </Reveal>
-          <Reveal delay={80}>
+          </div>
+          <div>
             <Accordion className="mt-12" items={faqs} />
-          </Reveal>
+          </div>
         </Container>
       </Section>
 
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <div className="rounded-lg border border-border/40 bg-card/40 px-6 py-14 text-center sm:px-12">
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 {page.cta.heading}
@@ -178,7 +168,7 @@ export default function HowWeWorkPage() {
                 ) : null}
               </div>
             </div>
-          </Reveal>
+          </div>
         </Container>
       </Section>
 

@@ -10,7 +10,6 @@ import { EmptyState } from '@/components/ui/empty-state'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { Tag } from '@/components/ui/badge'
 import { ArrowRightIcon, CheckIcon } from '@/components/ui/icons'
-import { Reveal } from '@/components/motion/reveal'
 
 export function generateMetadata(): Metadata {
   return buildMetadata({ ...getCareersIndexPage().seo, pathname: '/careers' })
@@ -28,7 +27,7 @@ export default function CareersPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -46,16 +45,16 @@ export default function CareersPage() {
           read a culture essay to find out whether anything is open. */}
       <Section bordered={false} padding="compact">
         <Container width="wide">
-          <Reveal>
+          <div>
             <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
               {page.openRoles.heading}
             </h2>
-          </Reveal>
+          </div>
 
           {jobs.length > 0 ? (
             <ul className="mt-10 border-t border-border/25">
-              {jobs.map((job, index) => (
-                <Reveal as="li" key={job.slug} delay={index * 60} className="border-b border-border/25">
+              {jobs.map((job) => (
+                <li key={job.slug} className="border-b border-border/25">
                   <Link
                     href={`/careers/${job.slug}` as Route}
                     className="group grid gap-3 py-7 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-8"
@@ -75,13 +74,13 @@ export default function CareersPage() {
                     </div>
                     <ArrowRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
                   </Link>
-                </Reveal>
+                </li>
               ))}
             </ul>
           ) : (
-            <Reveal delay={60}>
+            <div>
               <EmptyState content={page.openRoles.emptyState} className="mt-10" />
-            </Reveal>
+            </div>
           )}
         </Container>
       </Section>
@@ -90,43 +89,43 @@ export default function CareersPage() {
         <Container width="wide">
           <div className="grid gap-12 lg:grid-cols-[1fr_minmax(0,24rem)] lg:gap-16">
             <div>
-              <Reveal>
+              <div>
                 <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                   {page.whatItsLike.heading}
                 </h2>
-              </Reveal>
+              </div>
               <div className="mt-8 flex max-w-2xl flex-col gap-6">
-                {page.whatItsLike.paragraphs.map((paragraph, index) => (
-                  <Reveal key={paragraph} delay={index * 55}>
+                {page.whatItsLike.paragraphs.map((paragraph) => (
+                  <div key={paragraph}>
                     <p className="text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg">
                       {paragraph}
                     </p>
-                  </Reveal>
+                  </div>
                 ))}
               </div>
             </div>
-            <Reveal delay={100} className="lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <PlaceholderImage seed="careers-working" ratio="portrait" />
-            </Reveal>
+            </div>
           </div>
         </Container>
       </Section>
 
       <Section className="bg-card/25">
         <Container width="wide">
-          <Reveal>
+          <div>
             <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
               {page.whoFits.heading}
             </h2>
-          </Reveal>
+          </div>
           <ul className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border/40 bg-border/40 md:grid-cols-2">
-            {page.whoFits.items.map((item, index) => (
-              <Reveal as="li" key={item} delay={index * 50} className="flex gap-3 bg-background p-5">
+            {page.whoFits.items.map((item) => (
+              <li key={item} className="flex gap-3 bg-background p-5">
                 <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
                 <span className="text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {item}
                 </span>
-              </Reveal>
+              </li>
             ))}
           </ul>
         </Container>
@@ -134,12 +133,12 @@ export default function CareersPage() {
 
       <Section>
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading title={page.hiringProcess.heading} />
-          </Reveal>
+          </div>
           <ol className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-            {page.hiringProcess.steps.map((step, index) => (
-              <Reveal as="li" key={step.step} delay={index * 70} className="border-t border-border/40 pt-6">
+            {page.hiringProcess.steps.map((step) => (
+              <li key={step.step} className="border-t border-border/40 pt-6">
                 <span className="font-mono text-xs text-primary">
                   {String(step.step).padStart(2, '0')}
                 </span>
@@ -149,7 +148,7 @@ export default function CareersPage() {
                 <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {step.description}
                 </p>
-              </Reveal>
+              </li>
             ))}
           </ol>
         </Container>

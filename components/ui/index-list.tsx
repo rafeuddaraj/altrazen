@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { Route } from 'next'
-import { Reveal } from '@/components/motion/reveal'
 import { ArrowRightIcon } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
 
@@ -62,7 +61,7 @@ export function IndexList({
         )
 
         return (
-          <Reveal as="li" key={row.id} delay={index * 60} className="border-b border-border/25">
+          <li key={row.id} className="border-b border-border/25">
             {row.href ? (
               <Link href={row.href as Route} className={rowClass}>
                 {body}
@@ -70,7 +69,7 @@ export function IndexList({
             ) : (
               <div className={rowClass}>{body}</div>
             )}
-          </Reveal>
+          </li>
         )
       })}
     </ul>

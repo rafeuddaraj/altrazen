@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow } from '@/components/ui/section-heading'
-import { Reveal } from '@/components/motion/reveal'
 import { JsonLd } from '@/components/seo/json-ld'
 import { faqPageSchema } from '@/lib/structured-data'
 
@@ -34,7 +33,7 @@ export default function FaqPage() {
           className="pointer-events-none absolute -top-40 left-1/2 size-[40rem] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-3xl"
         />
         <Container width="wide" className="relative">
-          <div className="rise">
+          <div>
             <Eyebrow className="mb-5">{page.hero.eyebrow}</Eyebrow>
             <h1 className="max-w-3xl text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
               {page.hero.heading}
@@ -76,14 +75,14 @@ export default function FaqPage() {
             <div className="flex flex-col gap-16">
               {groups.map((group) => (
                 <section key={group.id} id={group.id} className="scroll-mt-28">
-                  <Reveal>
+                  <div>
                     <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                       {group.label}
                     </h2>
-                  </Reveal>
-                  <Reveal delay={60}>
+                  </div>
+                  <div>
                     <Accordion className="mt-8" items={group.items} />
-                  </Reveal>
+                  </div>
                 </section>
               ))}
             </div>
@@ -93,7 +92,7 @@ export default function FaqPage() {
 
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <div className="rounded-lg border border-border/40 bg-card/40 px-6 py-14 text-center sm:px-12">
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 {page.cta.heading}
@@ -112,7 +111,7 @@ export default function FaqPage() {
                 ) : null}
               </div>
             </div>
-          </Reveal>
+          </div>
         </Container>
       </Section>
 

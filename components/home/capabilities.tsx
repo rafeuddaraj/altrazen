@@ -3,7 +3,6 @@ import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { IndexList } from '@/components/ui/index-list'
-import { Reveal } from '@/components/motion/reveal'
 import { getServices } from '@/lib/content'
 import type { HomePage } from '@/lib/content'
 
@@ -22,18 +21,14 @@ export function Capabilities({ content }: { content: HomePage['capabilities'] })
     <Section id="services">
       <Container width="wide" className="px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <Reveal>
-            <SectionHeading
-              eyebrow={content.eyebrow}
-              title={content.heading}
-              description={content.description}
-            />
-          </Reveal>
-          <Reveal delay={80}>
-            <Button href={content.cta.href} variant="outline" size="sm">
-              {content.cta.label}
-            </Button>
-          </Reveal>
+          <SectionHeading
+            eyebrow={content.eyebrow}
+            title={content.heading}
+            description={content.description}
+          />
+          <Button href={content.cta.href} variant="outline" size="sm">
+            {content.cta.label}
+          </Button>
         </div>
 
         <IndexList

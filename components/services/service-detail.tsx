@@ -7,7 +7,6 @@ import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { IndexList } from '@/components/ui/index-list'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { JsonLd } from '@/components/seo/json-ld'
-import { Reveal } from '@/components/motion/reveal'
 import { CheckIcon, CrossIcon } from '@/components/ui/icons'
 import { serviceSchema } from '@/lib/structured-data'
 import { getEngagementModelsByIds, getFaqsByIds, getServices } from '@/lib/content'
@@ -39,30 +38,23 @@ export function ServiceDetail({ service }: { service: Service }) {
 
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div>
-              <div className="rise">
-                <Eyebrow className="mb-5">Service</Eyebrow>
-                <h1 className="text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
-                  {service.title}
-                </h1>
-                <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-muted-foreground text-pretty md:text-xl">
-                  {service.tagline}
-                </p>
+              <Eyebrow className="mb-5">Service</Eyebrow>
+              <h1 className="text-4xl font-bold tracking-tighter text-balance text-foreground sm:text-5xl md:text-6xl">
+                {service.title}
+              </h1>
+              <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-muted-foreground text-pretty md:text-xl">
+                {service.tagline}
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
+                <span className="rounded-md border border-border/50 px-3 py-1.5 text-xs font-light text-muted-foreground">
+                  {service.timeline}
+                </span>
               </div>
-              <div className="rise" style={{ '--rise-delay': '80ms' } as React.CSSProperties}>
-                <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
-                  <span className="rounded-md border border-border/50 px-3 py-1.5 text-xs font-light text-muted-foreground">
-                    {service.timeline}
-                  </span>
-                </div>
-                <div className="mt-8">
-                  <Button href="/contact">Start a conversation</Button>
-                </div>
+              <div className="mt-8">
+                <Button href="/contact">Start a conversation</Button>
               </div>
             </div>
-            <div
-              className="rise hidden lg:block"
-              style={{ '--rise-delay': '120ms' } as React.CSSProperties}
-            >
+            <div className="hidden lg:block">
               <PlaceholderImage seed={`service-${service.slug}`} ratio="photo" />
             </div>
           </div>
@@ -73,19 +65,19 @@ export function ServiceDetail({ service }: { service: Service }) {
       <Section>
         <Container width="wide">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-20">
-            <Reveal className="lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <Eyebrow className="mb-4">Why this matters</Eyebrow>
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 What usually goes wrong
               </h2>
-            </Reveal>
+            </div>
             <div>
-              <Reveal>
+              <div>
                 <p className="max-w-2xl text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg">
                   {service.problem}
                 </p>
-              </Reveal>
-              <Reveal delay={80}>
+              </div>
+              <div>
                 <h3 className="mt-12 text-sm font-medium uppercase tracking-widest text-foreground">
                   What you end up with
                 </h3>
@@ -99,7 +91,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                     </li>
                   ))}
                 </ul>
-              </Reveal>
+              </div>
             </div>
           </div>
         </Container>
@@ -108,19 +100,19 @@ export function ServiceDetail({ service }: { service: Service }) {
       {/* What we do */}
       <Section className="bg-card/25">
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading eyebrow="What we do" title={`Inside ${service.shortTitle.toLowerCase()} work`} />
-          </Reveal>
+          </div>
           <ul className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border/40 bg-border/40 md:grid-cols-2">
-            {service.whatWeDo.map((item, index) => (
-              <Reveal as="li" key={item.title} delay={index * 55} className="bg-background p-6 sm:p-7">
+            {service.whatWeDo.map((item) => (
+              <li key={item.title} className="bg-background p-6 sm:p-7">
                 <h3 className="text-base font-medium tracking-tight text-balance text-foreground sm:text-lg">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {item.description}
                 </p>
-              </Reveal>
+              </li>
             ))}
           </ul>
         </Container>
@@ -130,7 +122,7 @@ export function ServiceDetail({ service }: { service: Service }) {
       <Section>
         <Container width="wide">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <Reveal>
+            <div>
               <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 What you get
               </h2>
@@ -144,8 +136,8 @@ export function ServiceDetail({ service }: { service: Service }) {
                   </li>
                 ))}
               </ul>
-            </Reveal>
-            <Reveal delay={90}>
+            </div>
+            <div>
               <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 What is not included
               </h2>
@@ -162,7 +154,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                   </li>
                 ))}
               </ul>
-            </Reveal>
+            </div>
           </div>
         </Container>
       </Section>
@@ -170,17 +162,12 @@ export function ServiceDetail({ service }: { service: Service }) {
       {/* How it runs */}
       <Section>
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading eyebrow="Step by step" title="How this runs" />
-          </Reveal>
+          </div>
           <ol className="mt-14 border-t border-border/25">
-            {service.process.map((step, index) => (
-              <Reveal
-                as="li"
-                key={step.step}
-                delay={index * 60}
-                className="grid gap-3 border-b border-border/25 py-7 sm:grid-cols-[2.5rem_minmax(0,14rem)_1fr] sm:gap-8"
-              >
+            {service.process.map((step) => (
+              <li key={step.step} className="grid gap-3 border-b border-border/25 py-7 sm:grid-cols-[2.5rem_minmax(0,14rem)_1fr] sm:gap-8">
                 <span className="font-mono text-xs text-muted-foreground">
                   {String(step.step).padStart(2, '0')}
                 </span>
@@ -190,7 +177,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                 <p className="text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {step.description}
                 </p>
-              </Reveal>
+              </li>
             ))}
           </ol>
         </Container>
@@ -199,20 +186,16 @@ export function ServiceDetail({ service }: { service: Service }) {
       {/* Engagement models, in place of a price */}
       <Section className="bg-card/25">
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading
               eyebrow="Working together"
               title="How this is usually arranged"
               description="We do not publish rates, because a number without a clear scope would mislead you. You get a real, fixed figure in writing after one conversation."
             />
-          </Reveal>
+          </div>
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {models.map((model, index) => (
-              <Reveal
-                key={model.id}
-                delay={index * 70}
-                className="rounded-lg border border-border/40 bg-background p-6"
-              >
+            {models.map((model) => (
+              <div key={model.id} className="rounded-lg border border-border/40 bg-background p-6">
                 <h3 className="text-lg font-medium tracking-tight text-foreground">{model.name}</h3>
                 <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {model.description}
@@ -223,7 +206,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                 <p className="mt-2 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {model.bestFor}
                 </p>
-              </Reveal>
+              </div>
             ))}
           </div>
         </Container>
@@ -232,12 +215,12 @@ export function ServiceDetail({ service }: { service: Service }) {
       {/* Questions */}
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <SectionHeading eyebrow="Questions" title="What people ask about this" />
-          </Reveal>
-          <Reveal delay={80}>
+          </div>
+          <div>
             <Accordion className="mt-12" items={faqs} />
-          </Reveal>
+          </div>
         </Container>
       </Section>
 
@@ -245,9 +228,9 @@ export function ServiceDetail({ service }: { service: Service }) {
       {related.length > 0 ? (
         <Section>
           <Container width="wide">
-            <Reveal>
+            <div>
               <SectionHeading eyebrow="Also relevant" title="You might also need" />
-            </Reveal>
+            </div>
             <IndexList
               className="mt-12"
               rows={related.map((entry) => ({
@@ -263,7 +246,7 @@ export function ServiceDetail({ service }: { service: Service }) {
 
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <div className="rounded-lg border border-border/40 bg-card/40 px-6 py-14 text-center sm:px-12">
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 Talk to us about this
@@ -279,7 +262,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                 </Button>
               </div>
             </div>
-          </Reveal>
+          </div>
         </Container>
       </Section>
 

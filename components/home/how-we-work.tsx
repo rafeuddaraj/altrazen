@@ -2,20 +2,17 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { SectionHeading } from '@/components/ui/section-heading'
-import { Reveal } from '@/components/motion/reveal'
 import type { HomePage } from '@/lib/content'
 
 export function HowWeWork({ content }: { content: HomePage['howWeWork'] }) {
   return (
     <Section>
       <Container width="wide" className="px-6">
-        <Reveal>
-          <SectionHeading eyebrow={content.eyebrow} title={content.heading} />
-        </Reveal>
+        <SectionHeading eyebrow={content.eyebrow} title={content.heading} />
 
         <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {content.steps.map((step, index) => (
-            <Reveal as="li" key={step.number} delay={index * 80} className="border-t border-border/40 pt-6">
+          {content.steps.map((step) => (
+            <li key={step.number} className="border-t border-border/40 pt-6">
               <div className="flex items-baseline justify-between gap-4">
                 <span className="font-mono text-xs text-primary">{step.number}</span>
                 <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -28,15 +25,15 @@ export function HowWeWork({ content }: { content: HomePage['howWeWork'] }) {
               <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                 {step.outcome}
               </p>
-            </Reveal>
+            </li>
           ))}
         </ol>
 
-        <Reveal delay={100} className="mt-12">
+        <div className="mt-12">
           <Button href={content.cta.href} variant="outline" size="sm">
             {content.cta.label}
           </Button>
-        </Reveal>
+        </div>
       </Container>
     </Section>
   )

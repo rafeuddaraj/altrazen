@@ -4,7 +4,6 @@ import { Container } from '@/components/ui/container'
 import { Section } from '@/components/ui/section'
 import { Eyebrow } from '@/components/ui/section-heading'
 import { ArrowRightIcon } from '@/components/ui/icons'
-import { Reveal } from '@/components/motion/reveal'
 import { getFeaturedCaseStudy, getTestimonials } from '@/lib/content'
 
 /**
@@ -21,22 +20,20 @@ export function Proof() {
   return (
     <Section>
       <Container width="narrow" className="px-6">
-        <Reveal>
-          <Eyebrow className="mb-8">In their words</Eyebrow>
-          {quote ? (
-            <figure>
-              <blockquote className="text-2xl font-light leading-snug tracking-tight text-balance text-foreground sm:text-3xl">
-                {`“${quote.text}”`}
-              </blockquote>
-              <figcaption className="mt-6 text-sm text-muted-foreground">
-                {quote.author}, {quote.role}
-              </figcaption>
-            </figure>
-          ) : null}
-        </Reveal>
+        <Eyebrow className="mb-8">In their words</Eyebrow>
+        {quote ? (
+          <figure>
+            <blockquote className="text-2xl font-light leading-snug tracking-tight text-balance text-foreground sm:text-3xl">
+              {`“${quote.text}”`}
+            </blockquote>
+            <figcaption className="mt-6 text-sm text-muted-foreground">
+              {quote.author}, {quote.role}
+            </figcaption>
+          </figure>
+        ) : null}
 
         {caseStudy ? (
-          <Reveal delay={80} className="mt-12 border-t border-border/25 pt-8">
+          <div className="mt-12 border-t border-border/25 pt-8">
             <div className="flex flex-wrap gap-x-12 gap-y-6">
               {caseStudy.results.map((result) => (
                 <div key={result.metric}>
@@ -60,7 +57,7 @@ export function Proof() {
               Read the full story
               <ArrowRightIcon className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-          </Reveal>
+          </div>
         ) : null}
       </Container>
     </Section>

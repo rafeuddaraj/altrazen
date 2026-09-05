@@ -7,8 +7,6 @@ import { Section } from '@/components/ui/section'
 import { Eyebrow, SectionHeading } from '@/components/ui/section-heading'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { CrossIcon, ArrowRightIcon } from '@/components/ui/icons'
-import { Lift } from '@/components/ui/lift'
-import { Reveal } from '@/components/motion/reveal'
 import Link from 'next/link'
 import type { Route } from 'next'
 
@@ -47,36 +45,34 @@ export default function ServicesPage() {
       <Section bordered={false} padding="compact">
         <Container width="wide">
           <ul className="grid gap-6 md:grid-cols-2">
-            {services.map((service, index) => (
-              <Reveal as="li" key={service.slug} delay={index * 70}>
-                <Lift className="h-full">
-                  <Link
-                    href={`/services/${service.slug}` as Route}
-                    className="group flex h-full flex-col rounded-lg border border-border/40 bg-card/30 p-7 transition-colors duration-300 hover:border-border"
-                  >
-                    <PlaceholderImage
-                      seed={`services-index-${service.slug}`}
-                      ratio="wide"
-                      className="mb-7"
-                    />
-                    <span className="font-mono text-xs text-muted-foreground">
-                      {String(service.order).padStart(2, '0')}
+            {services.map((service) => (
+              <li key={service.slug} className="h-full">
+                <Link
+                  href={`/services/${service.slug}` as Route}
+                  className="group flex h-full flex-col rounded-lg border border-border/40 bg-card/30 p-7 transition-colors duration-300 hover:border-border"
+                >
+                  <PlaceholderImage
+                    seed={`services-index-${service.slug}`}
+                    ratio="wide"
+                    className="mb-7"
+                  />
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {String(service.order).padStart(2, '0')}
+                  </span>
+                  <h2 className="mt-3 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 group-hover:text-primary">
+                    {service.title}
+                  </h2>
+                  <p className="mt-3 text-base font-light leading-relaxed text-muted-foreground text-pretty">
+                    {service.summary}
+                  </p>
+                  <span className="mt-6 flex items-center justify-between gap-4 border-t border-border/30 pt-5">
+                    <span className="text-xs font-light leading-relaxed text-muted-foreground">
+                      {service.timeline}
                     </span>
-                    <h2 className="mt-3 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 group-hover:text-primary">
-                      {service.title}
-                    </h2>
-                    <p className="mt-3 text-base font-light leading-relaxed text-muted-foreground text-pretty">
-                      {service.summary}
-                    </p>
-                    <span className="mt-6 flex items-center justify-between gap-4 border-t border-border/30 pt-5">
-                      <span className="text-xs font-light leading-relaxed text-muted-foreground">
-                        {service.timeline}
-                      </span>
-                      <ArrowRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
-                    </span>
-                  </Link>
-                </Lift>
-              </Reveal>
+                    <ArrowRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
+                  </span>
+                </Link>
+              </li>
             ))}
           </ul>
         </Container>
@@ -85,18 +81,18 @@ export default function ServicesPage() {
       <Section>
         <Container width="wide">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-20">
-            <Reveal className="lg:sticky lg:top-28 lg:self-start">
+            <div className="lg:sticky lg:top-28 lg:self-start">
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 {page.funnelExplanation.heading}
               </h2>
-            </Reveal>
+            </div>
             <div className="flex max-w-2xl flex-col gap-6">
-              {page.funnelExplanation.paragraphs.map((paragraph, index) => (
-                <Reveal key={paragraph} delay={index * 70}>
+              {page.funnelExplanation.paragraphs.map((paragraph) => (
+                <div key={paragraph}>
                   <p className="text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg">
                     {paragraph}
                   </p>
-                </Reveal>
+                </div>
               ))}
             </div>
           </div>
@@ -105,25 +101,20 @@ export default function ServicesPage() {
 
       <Section className="bg-card/25">
         <Container width="wide">
-          <Reveal>
+          <div>
             <SectionHeading
               title={page.whatWeDontDo.heading}
               description={page.whatWeDontDo.description}
             />
-          </Reveal>
+          </div>
           <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-border/40 bg-border/40 md:grid-cols-2">
-            {page.whatWeDontDo.items.map((item, index) => (
-              <Reveal
-                as="li"
-                key={item}
-                delay={index * 50}
-                className="flex gap-3 bg-background p-5"
-              >
+            {page.whatWeDontDo.items.map((item) => (
+              <li key={item} className="flex gap-3 bg-background p-5">
                 <CrossIcon className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
                 <span className="text-sm font-light leading-relaxed text-muted-foreground text-pretty">
                   {item}
                 </span>
-              </Reveal>
+              </li>
             ))}
           </ul>
         </Container>
@@ -131,7 +122,7 @@ export default function ServicesPage() {
 
       <Section>
         <Container width="narrow">
-          <Reveal>
+          <div>
             <div className="rounded-lg border border-border/40 bg-card/40 px-6 py-14 text-center sm:px-12">
               <h2 className="text-3xl font-semibold tracking-tight text-balance text-foreground sm:text-4xl">
                 {page.cta.heading}
@@ -150,7 +141,7 @@ export default function ServicesPage() {
                 ) : null}
               </div>
             </div>
-          </Reveal>
+          </div>
         </Container>
       </Section>
     </main>

@@ -10,8 +10,6 @@ import { EmptyState } from '@/components/ui/empty-state'
 import { PlaceholderImage } from '@/components/ui/placeholder-image'
 import { Tag } from '@/components/ui/badge'
 import { ArrowRightIcon } from '@/components/ui/icons'
-import { Lift } from '@/components/ui/lift'
-import { Reveal } from '@/components/motion/reveal'
 
 export function generateMetadata(): Metadata {
   return buildMetadata({ ...getWorkIndexPage().seo, pathname: '/work' })
@@ -47,53 +45,51 @@ export default function WorkPage() {
         <Container width="wide">
           {studies.length > 0 ? (
             <ul className="grid gap-6 md:grid-cols-2">
-              {studies.map((study, index) => {
+              {studies.map((study) => {
                 const label = study.clientName ?? study.anonymisedLabel ?? study.slug
                 const headline = study.results[0]
 
                 return (
-                  <Reveal as="li" key={study.slug} delay={index * 70}>
-                    <Lift className="h-full">
-                      <Link
-                        href={`/work/${study.slug}` as Route}
-                        className="group flex h-full flex-col rounded-lg border border-border/40 bg-card/30 p-7 transition-colors duration-300 hover:border-border"
-                      >
-                        <PlaceholderImage seed={`work-${study.slug}`} ratio="wide" className="mb-7" />
-                        <div className="flex flex-wrap gap-2">
-                          <Tag>{study.industry}</Tag>
-                          <Tag>{study.builtWith}</Tag>
-                        </div>
-                        <h2 className="mt-4 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 group-hover:text-primary">
-                          {label}
-                        </h2>
-                        <p className="mt-3 text-base font-light leading-relaxed text-muted-foreground text-pretty">
-                          {study.challenge}
+                  <li key={study.slug} className="h-full">
+                    <Link
+                      href={`/work/${study.slug}` as Route}
+                      className="group flex h-full flex-col rounded-lg border border-border/40 bg-card/30 p-7 transition-colors duration-300 hover:border-border"
+                    >
+                      <PlaceholderImage seed={`work-${study.slug}`} ratio="wide" className="mb-7" />
+                      <div className="flex flex-wrap gap-2">
+                        <Tag>{study.industry}</Tag>
+                        <Tag>{study.builtWith}</Tag>
+                      </div>
+                      <h2 className="mt-4 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 group-hover:text-primary">
+                        {label}
+                      </h2>
+                      <p className="mt-3 text-base font-light leading-relaxed text-muted-foreground text-pretty">
+                        {study.challenge}
+                      </p>
+                      {headline ? (
+                        <p className="mt-5 text-sm text-foreground">
+                          <span className="text-muted-foreground">{headline.metric}: </span>
+                          <span className="text-muted-foreground line-through">
+                            {headline.before}
+                          </span>
+                          <span className="mx-2 text-muted-foreground" aria-hidden="true">
+                            &rarr;
+                          </span>
+                          <span className="text-primary">{headline.after}</span>
                         </p>
-                        {headline ? (
-                          <p className="mt-5 text-sm text-foreground">
-                            <span className="text-muted-foreground">{headline.metric}: </span>
-                            <span className="text-muted-foreground line-through">
-                              {headline.before}
-                            </span>
-                            <span className="mx-2 text-muted-foreground" aria-hidden="true">
-                              &rarr;
-                            </span>
-                            <span className="text-primary">{headline.after}</span>
-                          </p>
-                        ) : null}
-                        <span className="mt-6 flex items-center justify-end border-t border-border/30 pt-5">
-                          <ArrowRightIcon className="size-4 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
-                        </span>
-                      </Link>
-                    </Lift>
-                  </Reveal>
+                      ) : null}
+                      <span className="mt-6 flex items-center justify-end border-t border-border/30 pt-5">
+                        <ArrowRightIcon className="size-4 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
+                      </span>
+                    </Link>
+                  </li>
                 )
               })}
             </ul>
           ) : (
-            <Reveal>
+            <div>
               <EmptyState content={page.emptyState} headingLevel={2} />
-            </Reveal>
+            </div>
           )}
         </Container>
       </Section>
