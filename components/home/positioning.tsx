@@ -15,28 +15,31 @@ export function Positioning({ content }: { content: HomePage['positioning'] }) {
             </h2>
           </div>
 
-          <div className="flex max-w-2xl flex-col gap-6">
-            {content.paragraphs.map((paragraph) => (
-              <div key={paragraph}>
-                <p className="text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg">
+          <div>
+            <div className="flex max-w-2xl flex-col gap-6">
+              {content.paragraphs.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="text-base font-light leading-relaxed text-muted-foreground text-pretty sm:text-lg"
+                >
                   {paragraph}
                 </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <dl className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border/30 bg-border/30 sm:grid-cols-3">
-            {content.points.map((point) => (
-              <div key={point.title} className="bg-background p-6">
-                <dt className="text-base font-medium tracking-tight text-balance text-foreground">
-                  {point.title}
-                </dt>
-                <dd className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
-                  {point.description}
-                </dd>
-              </div>
-            ))}
-          </dl>
+            <dl className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border/30 bg-border/30 sm:grid-cols-3">
+              {content.points.map((point) => (
+                <div key={point.title} className="bg-background p-6">
+                  <dt className="text-base font-medium tracking-tight text-balance text-foreground">
+                    {point.title}
+                  </dt>
+                  <dd className="mt-3 text-sm font-light leading-relaxed text-muted-foreground text-pretty">
+                    {point.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </Container>
     </Section>
