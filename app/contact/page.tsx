@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { getCompany, getContactPage } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
 import { Container } from '@/components/ui/container'
@@ -44,7 +45,11 @@ export default function ContactPage() {
                 {page.form.heading}
               </h2>
               <div className="mt-8">
-                <ContactForm content={page.form} email={company.email} />
+                {/* useSearchParams (to preselect an enquiry type from a
+                    careers deep link) requires a Suspense boundary. */}
+                <Suspense fallback={<div className="h-[36rem]" aria-hidden="true" />}>
+                  <ContactForm content={page.form} email={company.email} />
+                </Suspense>
               </div>
             </div>
 

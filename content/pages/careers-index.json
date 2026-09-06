@@ -32,10 +32,26 @@
   "hiringProcess": {
     "heading": "How hiring works",
     "steps": [
-      { "step": 1, "title": "You write to us", "description": "A short note about what you have built and what you want to work on. No cover letter theatre, and you do not need a portfolio site. Something you are proud of is worth more than a CV." },
-      { "step": 2, "title": "A conversation", "description": "Forty five minutes about how you think and what you have worked on. Not a quiz on things you last used at university." },
-      { "step": 3, "title": "A paid exercise", "description": "A real, small piece of work that looks like the actual job, usually reading something messy and writing up what is wrong with it. Paid at our normal rate, with a time limit, and yours to keep whatever we decide." },
-      { "step": 4, "title": "A decision, quickly", "description": "You hear back within a week either way, with a real reason. We will not leave you waiting or send you a template." }
+      {
+        "step": 1,
+        "title": "You write to us",
+        "description": "A short note about what you have built and what you want to work on. No cover letter theatre, and you do not need a portfolio site. Something you are proud of is worth more than a CV."
+      },
+      {
+        "step": 2,
+        "title": "A conversation",
+        "description": "Forty five minutes about how you think and what you have worked on. Not a quiz on things you last used at university."
+      },
+      {
+        "step": 3,
+        "title": "A paid exercise",
+        "description": "A real, small piece of work that looks like the actual job, usually reading something messy and writing up what is wrong with it. Paid at our normal rate, with a time limit, and yours to keep whatever we decide."
+      },
+      {
+        "step": 4,
+        "title": "A decision, quickly",
+        "description": "You hear back within a week either way, with a real reason. We will not leave you waiting or send you a template."
+      }
     ]
   },
   "openRoles": {
@@ -43,7 +59,10 @@
     "emptyState": {
       "heading": "Nothing open right now",
       "description": "We are growing, but we only post a role when we are genuinely ready to hire. Collecting applications for jobs that do not exist wastes your time. If you work the way this page describes and want to be first in line when that changes, send us a note about what you have built and we will keep it.",
-      "cta": { "label": "Send us a note", "href": "/contact" }
+      "cta": {
+        "label": "Send us a note",
+        "href": "/contact?enquiry=careers"
+      }
     }
   }
 }

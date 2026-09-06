@@ -1,6 +1,7 @@
 'use client'
 
 import { useId, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Field, Input, Select, Textarea } from '@/components/ui/field'
 import { CheckIcon } from '@/components/ui/icons'
@@ -10,6 +11,15 @@ type Status = 'idle' | 'sending' | 'sent' | 'error'
 type Errors = Partial<Record<'name' | 'email' | 'message', string>>
 
 const ACCESS_KEY = process.env.NEXT_PUBLIC_FORM_ACCESS_KEY
+
+/**
+ * Below this, a submission is rejected as a bot rather than sent. No human
+ * reads five fields, including a textarea, and fills them in under this —
+ * a scripted submit is the only thing that clears a page load this fast.
+ * Kept deliberately low so a genuinely quick human (pasting from elsewhere)
+ * is never caught by it.
+ */
+const MIN_SUBMIT_MS = 2500
 
 export function ContactForm({
   content,
@@ -21,13 +31,26 @@ export function ContactForm({
   const id = useId()
   const [status, setStatus] = useState<Status>('idle')
   const [errors, setErrors] = useState<Errors>({})
+  // useState's lazy initializer runs exactly once, unlike useRef(Date.now()),
+  // which would call the impure Date.now() on every render even though only
+  // the first result is ever used.
+  const [mountedAt] = useState(() => Date.now())
+
+  // A job listing's Apply link can deep-link here with ?enquiry=careers to
+  // preselect the right option, without a second form or any server logic.
+  const searchParams = useSearchParams()
+  const requestedEnquiry = searchParams.get('enquiry')
+  const initialEnquiry =
+    (requestedEnquiry && content.enquiryTypes.some((t) => t.value === requestedEnquiry)
+      ? requestedEnquiry
+      : content.enquiryTypes[0]?.value) ?? 'other'
 
   // Held in state so a failed send never loses what someone typed.
   const [values, setValues] = useState({
     name: '',
     email: '',
     website: '',
-    enquiry: content.enquiryTypes[0]?.value ?? 'other',
+    enquiry: initialEnquiry,
     message: '',
   })
 
@@ -55,9 +78,16 @@ export function ContactForm({
     }
 
     // Spam traps: a field a person cannot see, and a form filled in
-    // impossibly fast. Both are checked before anything is sent.
+    // impossibly fast. Both are checked before anything is sent. The
+    // honeypot fails silently — a bot gets no signal at all. The timing
+    // check shows the same generic error a network failure would, so it
+    // does not reveal which defence caught it either.
     const form = event.currentTarget
     if ((form.elements.namedItem('company_website') as HTMLInputElement)?.value) return
+    if (Date.now() - mountedAt < MIN_SUBMIT_MS) {
+      setStatus('error')
+      return
+    }
 
     if (!ACCESS_KEY) {
       setStatus('error')
