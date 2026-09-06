@@ -65,7 +65,7 @@ export default function ClientsPage() {
             </ul>
           ) : (
             <div className="mx-auto max-w-2xl">
-              <Photo slug="clientsEmpty" ratio="wide" className="mb-8" />
+              <Photo slug="clientsEmpty" ratio="wide" className="mb-8" priority />
               <EmptyState content={page.emptyState} headingLevel={2} />
             </div>
           )}

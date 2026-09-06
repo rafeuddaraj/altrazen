@@ -73,7 +73,7 @@ export default function ProductsPage() {
             </ul>
           ) : (
             <div className="mx-auto max-w-2xl">
-              <Photo slug="productsEmpty" ratio="wide" className="mb-8" />
+              <Photo slug="productsEmpty" ratio="wide" className="mb-8" priority />
               <EmptyState content={page.emptyState} headingLevel={2} />
             </div>
           )}
