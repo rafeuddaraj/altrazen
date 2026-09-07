@@ -1,7 +1,14 @@
-# Native postinstall builds. These three ship prebuilt binaries and are
-# required by tsx (esbuild), eslint's resolver (unrs-resolver) and Next's
-# optional image pipeline (sharp).
-allowBuilds:
-  esbuild: true
-  unrs-resolver: true
-  sharp: true
+# Single-package project, not a real monorepo. This file exists only to
+# hold `onlyBuiltDependencies` (pnpm 10 blocks postinstall scripts by
+# default) — but Cloudflare Pages treats the mere presence of this file as
+# a monorepo declaration and fails install unless `packages` is set too.
+packages:
+  - .
+
+# These three ship prebuilt binaries via postinstall and are required by
+# tsx (esbuild), eslint's resolver (unrs-resolver) and Next's optional
+# image pipeline (sharp).
+onlyBuiltDependencies:
+  - esbuild
+  - unrs-resolver
+  - sharp
