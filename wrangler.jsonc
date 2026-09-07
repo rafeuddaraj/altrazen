@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Pure static hosting. The site is `output: 'export'` (see next.config.ts)
+  // and needs no server, so this deploys `out/` as static assets rather
+  // than letting wrangler auto-detect "Next.js" and migrate to a full
+  // OpenNext SSR Worker, which this project does not use and does not need.
+  "name": "altrazen",
+  "compatibility_date": "2026-09-07",
+  "assets": {
+    "directory": "out",
+    "not_found_handling": "404-page"
+  }
+}
